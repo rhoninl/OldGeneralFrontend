@@ -1,0 +1,6 @@
+framework module Pods_OldGeneral_OldGeneralUITests {
+  umbrella header "Pods-OldGeneral-OldGeneralUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -9,6 +9,9 @@ import SwiftUI
 import Spring
 
 struct HomeView: View {
+    private var Flags: Int = 123
+    private var Achieves: Int = 456
+    private var Sieges: Int = 789
     @State private var animationState: CGFloat = 1
     var body: some View {
         VStack {
@@ -24,7 +27,7 @@ struct HomeView: View {
                     Text("发起")
                         .foregroundColor(Color.gray)
                         .font(.system(size: 12))
-                    Text("1000")
+                    Text("\(Flags)")
                         .font(.system(size: 16))
                 }
                 Divider()
@@ -34,7 +37,7 @@ struct HomeView: View {
                     Text("成功")
                         .foregroundColor(Color.gray)
                         .font(.system(size: 12))
-                    Text("1000")
+                    Text("\(Achieves)")
                         .font(.system(size: 16))
                 }
                 Divider()
@@ -43,7 +46,7 @@ struct HomeView: View {
                     Text("围观")
                         .foregroundColor(Color.gray)
                         .font(.system(size: 12))
-                    Text("1000")
+                    Text("\(Sieges)")
                         .font(.system(size: 16))
                 }
                 Spacer()
@@ -57,7 +60,8 @@ struct HomeView: View {
                 QAButton()
                 SettingButton()
             }
-            .padding(.top,40)
+            .padding([.top,.bottom],20)
+            MyFlags()
             Spacer()
         }
         .padding(.top, 40.0)

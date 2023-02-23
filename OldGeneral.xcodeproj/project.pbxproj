@@ -15,6 +15,9 @@
 		71039534298E67230035400F /* SettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71039533298E67230035400F /* SettingButton.swift */; };
 		71039537298E67BB0035400F /* QAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71039536298E67BB0035400F /* QAButton.swift */; };
 		71039539298E68410035400F /* VIPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71039538298E68410035400F /* VIPButton.swift */; };
+		7103953C298F585F0035400F /* CreateFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7103953B298F585F0035400F /* CreateFlag.swift */; };
+		7150138129A65A7000FD155F /* FlagSquareItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150138029A65A7000FD155F /* FlagSquareItem.swift */; };
+		71737176299F7ACA009DF509 /* PayForFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71737175299F7ACA009DF509 /* PayForFlag.swift */; };
 		7193433D298E4D6B007C8E6A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193433C298E4D6B007C8E6A /* Home.swift */; };
 		71934340298E4D98007C8E6A /* OldgeneralContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193433F298E4D98007C8E6A /* OldgeneralContentView.swift */; };
 		719A61C629444B1100E9E7AD /* OldGeneralApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A61C529444B1100E9E7AD /* OldGeneralApp.swift */; };
@@ -23,6 +26,13 @@
 		719A61D729444B1300E9E7AD /* OldGeneralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A61D629444B1300E9E7AD /* OldGeneralTests.swift */; };
 		719A61E129444B1300E9E7AD /* OldGeneralUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A61E029444B1300E9E7AD /* OldGeneralUITests.swift */; };
 		719A61E329444B1300E9E7AD /* OldGeneralUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A61E229444B1300E9E7AD /* OldGeneralUITestsLaunchTests.swift */; };
+		71A5E50229A7A1480080124E /* time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5E50129A7A1480080124E /* time.swift */; };
+		71A5E50429A7A2830080124E /* MyFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5E50329A7A2830080124E /* MyFlags.swift */; };
+		71A5E50629A7A2E90080124E /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5E50529A7A2E90080124E /* Flag.swift */; };
+		71A5E50929A7AB7B0080124E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5E50829A7AB7B0080124E /* Login.swift */; };
+		71A5E50B29A7AB900080124E /* Regester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5E50A29A7AB900080124E /* Regester.swift */; };
+		71A5E50E29A7B40A0080124E /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5E50D29A7B40A0080124E /* Main.swift */; };
+		71F16DA129A797C6009F602F /* MyFlagItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F16DA029A797C6009F602F /* MyFlagItem.swift */; };
 		BA25FF53C8C36D57C95880AB /* Pods_OldGeneral_OldGeneralUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFF5CB5BFF17400C1768C00 /* Pods_OldGeneral_OldGeneralUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +66,9 @@
 		71039533298E67230035400F /* SettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingButton.swift; sourceTree = "<group>"; };
 		71039536298E67BB0035400F /* QAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAButton.swift; sourceTree = "<group>"; };
 		71039538298E68410035400F /* VIPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPButton.swift; sourceTree = "<group>"; };
+		7103953B298F585F0035400F /* CreateFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlag.swift; sourceTree = "<group>"; };
+		7150138029A65A7000FD155F /* FlagSquareItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagSquareItem.swift; sourceTree = "<group>"; };
+		71737175299F7ACA009DF509 /* PayForFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayForFlag.swift; sourceTree = "<group>"; };
 		7193433C298E4D6B007C8E6A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		7193433F298E4D98007C8E6A /* OldgeneralContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldgeneralContentView.swift; sourceTree = "<group>"; };
 		719A61C229444B1100E9E7AD /* OldGeneral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OldGeneral.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +80,13 @@
 		719A61DC29444B1300E9E7AD /* OldGeneralUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OldGeneralUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		719A61E029444B1300E9E7AD /* OldGeneralUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldGeneralUITests.swift; sourceTree = "<group>"; };
 		719A61E229444B1300E9E7AD /* OldGeneralUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldGeneralUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		71A5E50129A7A1480080124E /* time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = time.swift; sourceTree = "<group>"; };
+		71A5E50329A7A2830080124E /* MyFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFlags.swift; sourceTree = "<group>"; };
+		71A5E50529A7A2E90080124E /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
+		71A5E50829A7AB7B0080124E /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		71A5E50A29A7AB900080124E /* Regester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regester.swift; sourceTree = "<group>"; };
+		71A5E50D29A7B40A0080124E /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		71F16DA029A797C6009F602F /* MyFlagItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFlagItem.swift; sourceTree = "<group>"; };
 		7B2B7126118C106ED3AB4DC4 /* Pods-OldGeneralTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OldGeneralTests.release.xcconfig"; path = "Target Support Files/Pods-OldGeneralTests/Pods-OldGeneralTests.release.xcconfig"; sourceTree = "<group>"; };
 		CFE81309D67EFFA8037328BD /* Pods-OldGeneral-OldGeneralUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OldGeneral-OldGeneralUITests.release.xcconfig"; path = "Target Support Files/Pods-OldGeneral-OldGeneralUITests/Pods-OldGeneral-OldGeneralUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DAC9C328DF9DC48133DB2B0B /* Pods-OldGeneral.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OldGeneral.debug.xcconfig"; path = "Target Support Files/Pods-OldGeneral/Pods-OldGeneral.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				7103952D298E52B80035400F /* FlagSquare.swift */,
+				7150138029A65A7000FD155F /* FlagSquareItem.swift */,
 			);
 			name = FlagSquare;
 			sourceTree = "<group>";
@@ -131,12 +152,23 @@
 			name = Buttons;
 			sourceTree = "<group>";
 		};
+		7103953A298F58500035400F /* CreateFlag */ = {
+			isa = PBXGroup;
+			children = (
+				7103953B298F585F0035400F /* CreateFlag.swift */,
+				71737175299F7ACA009DF509 /* PayForFlag.swift */,
+			);
+			name = CreateFlag;
+			sourceTree = "<group>";
+		};
 		7193433B298E4D5E007C8E6A /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				71039535298E677E0035400F /* Buttons */,
 				7193433C298E4D6B007C8E6A /* Home.swift */,
 				7103952F298E56DC0035400F /* UserInfo.swift */,
+				71F16DA029A797C6009F602F /* MyFlagItem.swift */,
+				71A5E50329A7A2830080124E /* MyFlags.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -201,9 +233,29 @@
 			path = OldGeneralUITests;
 			sourceTree = "<group>";
 		};
+		71A5E50729A7AB6B0080124E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				71A5E50829A7AB7B0080124E /* Login.swift */,
+				71A5E50A29A7AB900080124E /* Regester.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		71A5E50C29A7B3FC0080124E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				71A5E50D29A7B40A0080124E /* Main.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
 		71FB60422944B5B2004079E2 /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				71A5E50C29A7B3FC0080124E /* Main */,
+				71A5E50729A7AB6B0080124E /* Login */,
+				7103953A298F58500035400F /* CreateFlag */,
 				7103952C298E52A80035400F /* FlagSquare */,
 				7193433B298E4D5E007C8E6A /* Home */,
 				71FB60502944D0E7004079E2 /* Helpers */,
@@ -215,6 +267,7 @@
 		71FB60432944B5C0004079E2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				71A5E50529A7A2E90080124E /* Flag.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,6 +282,7 @@
 		71FB60502944D0E7004079E2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				71A5E50129A7A1480080124E /* time.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -487,14 +541,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				7103952E298E52B80035400F /* FlagSquare.swift in Sources */,
+				71A5E50929A7AB7B0080124E /* Login.swift in Sources */,
+				71F16DA129A797C6009F602F /* MyFlagItem.swift in Sources */,
+				7150138129A65A7000FD155F /* FlagSquareItem.swift in Sources */,
+				71A5E50B29A7AB900080124E /* Regester.swift in Sources */,
 				719A61C629444B1100E9E7AD /* OldGeneralApp.swift in Sources */,
+				71737176299F7ACA009DF509 /* PayForFlag.swift in Sources */,
+				71A5E50429A7A2830080124E /* MyFlags.swift in Sources */,
 				71934340298E4D98007C8E6A /* OldgeneralContentView.swift in Sources */,
 				71039530298E56DC0035400F /* UserInfo.swift in Sources */,
 				71039532298E626A0035400F /* AccountButton.swift in Sources */,
+				7103953C298F585F0035400F /* CreateFlag.swift in Sources */,
 				71039539298E68410035400F /* VIPButton.swift in Sources */,
 				71039534298E67230035400F /* SettingButton.swift in Sources */,
 				7193433D298E4D6B007C8E6A /* Home.swift in Sources */,
+				71A5E50E29A7B40A0080124E /* Main.swift in Sources */,
+				71A5E50229A7A1480080124E /* time.swift in Sources */,
 				71039537298E67BB0035400F /* QAButton.swift in Sources */,
+				71A5E50629A7A2E90080124E /* Flag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

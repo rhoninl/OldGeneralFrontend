@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct UserInfo: View {
+    private var UserName: String = "TestUserName"
+    private var UserId: String = "TestUserId"
+    private var Sex: String = "男"
+    private var Days: Int = 10
     var body: some View {
         HStack{
             Image("turtlerock")
@@ -18,18 +22,18 @@ struct UserInfo: View {
             Spacer()
                 .frame(width: 30.0)
             VStack(alignment: .leading){
-                Text("UserName")
+                Text(UserName)
                     .font(.title2)
                     .multilineTextAlignment(.leading)
-                Text("id: userid")
+                Text("id: \(UserId)")
                     .font(.caption)
                     .fontWeight(.light)
                     .multilineTextAlignment(.leading)
                 HStack{
-                    Text("性别：男")
+                    Text("性别：\(Sex)")
                     Divider()
                         .fixedSize()
-                    Text("加入xx天")
+                    Text("加入 \(Days) 天")
                 }
                 .font(.footnote)
                 

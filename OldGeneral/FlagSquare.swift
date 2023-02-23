@@ -9,7 +9,10 @@ import SwiftUI
 
 struct FlagSquare: View {
     var body: some View {
-        Text("This is Flag Square Page")
+        VStack{
+            Text("This is Flag Square Page")
+            FlagSquareItem()
+        }
     }
 }
 

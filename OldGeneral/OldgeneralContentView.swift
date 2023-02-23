@@ -9,20 +9,9 @@ import SwiftUI
 
 struct OldgeneralContentView: View {
     var body: some View {
-        TabView {
-            FlagSquare()
-                .tabItem{
-                    Image(systemName: "theatermask.and.paintbrush")
-                    Text("戏台")
-                }
-            HomeView()
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("我")
-                }
-        }
-        .edgesIgnoringSafeArea(.all)
-
+        Login()
+            .ignoresSafeArea()
+            .edgesIgnoringSafeArea(.all)
     }
 }
 

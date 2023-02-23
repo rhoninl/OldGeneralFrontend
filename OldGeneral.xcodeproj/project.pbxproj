@@ -132,47 +132,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7103952C298E52A80035400F /* FlagSquare */ = {
-			isa = PBXGroup;
-			children = (
-				7103952D298E52B80035400F /* FlagSquare.swift */,
-				7150138029A65A7000FD155F /* FlagSquareItem.swift */,
-			);
-			name = FlagSquare;
-			sourceTree = "<group>";
-		};
-		71039535298E677E0035400F /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				71039531298E626A0035400F /* AccountButton.swift */,
-				71039533298E67230035400F /* SettingButton.swift */,
-				71039536298E67BB0035400F /* QAButton.swift */,
-				71039538298E68410035400F /* VIPButton.swift */,
-			);
-			name = Buttons;
-			sourceTree = "<group>";
-		};
-		7103953A298F58500035400F /* CreateFlag */ = {
-			isa = PBXGroup;
-			children = (
-				7103953B298F585F0035400F /* CreateFlag.swift */,
-				71737175299F7ACA009DF509 /* PayForFlag.swift */,
-			);
-			name = CreateFlag;
-			sourceTree = "<group>";
-		};
-		7193433B298E4D5E007C8E6A /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				71039535298E677E0035400F /* Buttons */,
-				7193433C298E4D6B007C8E6A /* Home.swift */,
-				7103952F298E56DC0035400F /* UserInfo.swift */,
-				71F16DA029A797C6009F602F /* MyFlagItem.swift */,
-				71A5E50329A7A2830080124E /* MyFlags.swift */,
-			);
-			name = Home;
-			sourceTree = "<group>";
-		};
 		719A61B929444B1100E9E7AD = {
 			isa = PBXGroup;
 			children = (
@@ -233,32 +192,81 @@
 			path = OldGeneralUITests;
 			sourceTree = "<group>";
 		};
-		71A5E50729A7AB6B0080124E /* Login */ = {
+		71A5E50F29A7BA670080124E /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				71A5E50829A7AB7B0080124E /* Login.swift */,
 				71A5E50A29A7AB900080124E /* Regester.swift */,
 			);
-			name = Login;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		71A5E50C29A7B3FC0080124E /* Main */ = {
+		71A5E51029A7BA920080124E /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				71A5E50D29A7B40A0080124E /* Main.swift */,
 			);
-			name = Main;
+			path = Main;
+			sourceTree = "<group>";
+		};
+		71A5E51129A7BAA10080124E /* CreateFlag */ = {
+			isa = PBXGroup;
+			children = (
+				7103953B298F585F0035400F /* CreateFlag.swift */,
+				71737175299F7ACA009DF509 /* PayForFlag.swift */,
+			);
+			path = CreateFlag;
+			sourceTree = "<group>";
+		};
+		71A5E51429A7BAC40080124E /* FlagSquare */ = {
+			isa = PBXGroup;
+			children = (
+				7103952D298E52B80035400F /* FlagSquare.swift */,
+				7150138029A65A7000FD155F /* FlagSquareItem.swift */,
+			);
+			name = FlagSquare;
+			sourceTree = "<group>";
+		};
+		71A5E51529A7BADB0080124E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				71A5E51729A7BB3B0080124E /* Buttons */,
+				7193433C298E4D6B007C8E6A /* Home.swift */,
+				7103952F298E56DC0035400F /* UserInfo.swift */,
+				71F16DA029A797C6009F602F /* MyFlagItem.swift */,
+				71A5E50329A7A2830080124E /* MyFlags.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		71A5E51629A7BAEA0080124E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				71A5E50129A7A1480080124E /* time.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		71A5E51729A7BB3B0080124E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				71039531298E626A0035400F /* AccountButton.swift */,
+				71039533298E67230035400F /* SettingButton.swift */,
+				71039536298E67BB0035400F /* QAButton.swift */,
+				71039538298E68410035400F /* VIPButton.swift */,
+			);
+			name = Buttons;
 			sourceTree = "<group>";
 		};
 		71FB60422944B5B2004079E2 /* VIews */ = {
 			isa = PBXGroup;
 			children = (
-				71A5E50C29A7B3FC0080124E /* Main */,
-				71A5E50729A7AB6B0080124E /* Login */,
-				7103953A298F58500035400F /* CreateFlag */,
-				7103952C298E52A80035400F /* FlagSquare */,
-				7193433B298E4D5E007C8E6A /* Home */,
-				71FB60502944D0E7004079E2 /* Helpers */,
+				71A5E51629A7BAEA0080124E /* Helpers */,
+				71A5E51529A7BADB0080124E /* Home */,
+				71A5E51429A7BAC40080124E /* FlagSquare */,
+				71A5E51129A7BAA10080124E /* CreateFlag */,
+				71A5E51029A7BA920080124E /* Main */,
+				71A5E50F29A7BA670080124E /* Login */,
 				7193433F298E4D98007C8E6A /* OldgeneralContentView.swift */,
 			);
 			name = VIews;
@@ -277,14 +285,6 @@
 			children = (
 			);
 			name = Resource;
-			sourceTree = "<group>";
-		};
-		71FB60502944D0E7004079E2 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				71A5E50129A7A1480080124E /* time.swift */,
-			);
-			name = Helpers;
 			sourceTree = "<group>";
 		};
 		B5F30F1F0115EB40B3777394 /* Pods */ = {

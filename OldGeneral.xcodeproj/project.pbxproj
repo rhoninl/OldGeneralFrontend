@@ -218,15 +218,6 @@
 			path = CreateFlag;
 			sourceTree = "<group>";
 		};
-		71A5E51429A7BAC40080124E /* FlagSquare */ = {
-			isa = PBXGroup;
-			children = (
-				7103952D298E52B80035400F /* FlagSquare.swift */,
-				7150138029A65A7000FD155F /* FlagSquareItem.swift */,
-			);
-			name = FlagSquare;
-			sourceTree = "<group>";
-		};
 		71A5E51529A7BADB0080124E /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,12 +249,21 @@
 			name = Buttons;
 			sourceTree = "<group>";
 		};
+		71A5E51D29A7BC1C0080124E /* FlagSquare */ = {
+			isa = PBXGroup;
+			children = (
+				7103952D298E52B80035400F /* FlagSquare.swift */,
+				7150138029A65A7000FD155F /* FlagSquareItem.swift */,
+			);
+			path = FlagSquare;
+			sourceTree = "<group>";
+		};
 		71FB60422944B5B2004079E2 /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				71A5E51D29A7BC1C0080124E /* FlagSquare */,
 				71A5E51629A7BAEA0080124E /* Helpers */,
 				71A5E51529A7BADB0080124E /* Home */,
-				71A5E51429A7BAC40080124E /* FlagSquare */,
 				71A5E51129A7BAA10080124E /* CreateFlag */,
 				71A5E51029A7BA920080124E /* Main */,
 				71A5E50F29A7BA670080124E /* Login */,

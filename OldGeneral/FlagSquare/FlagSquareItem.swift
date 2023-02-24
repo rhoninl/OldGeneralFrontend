@@ -8,13 +8,34 @@
 import SwiftUI
 
 struct FlagSquareItem: View {
+    var userName: String = "default"
+    var imageName: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GroupBox{
+            VStack(alignment: .leading){
+                Image(imageName)
+                    .resizable()
+                    .scaledToFit()
+                Text("This is the flag Name")
+                    .font(.subheadline)
+                    .lineLimit(1)
+                HStack{
+                    Text(userName)
+                        .lineLimit(1)
+                    Spacer()
+                    Text("100金")
+                        .lineLimit(1)
+                        .foregroundColor(Color("Money"))
+                }
+                .font(.caption2)
+            }
+        }
+//        .frame(width: UIScreen.main.bounds.width * 0.4)
     }
 }
 
 struct FlagSquareItem_Previews: PreviewProvider {
     static var previews: some View {
-        FlagSquareItem()
+        FlagSquareItem(imageName: "image1")
     }
 }

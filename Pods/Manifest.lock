@@ -1,8 +1,14 @@
 PODS:
   - Spring (1.0.6)
+  - WaterfallGrid (1.0.1)
 
 DEPENDENCIES:
   - Spring (from `https://github.com/MengTo/Spring.git`)
+  - WaterfallGrid (~> 1.0.0)
+
+SPEC REPOS:
+  trunk:
+    - WaterfallGrid
 
 EXTERNAL SOURCES:
   Spring:
@@ -15,7 +21,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
+  WaterfallGrid: 0554a759d9a8aa136fc1769480ddb01bc6fb94b9
 
-PODFILE CHECKSUM: 8957ca6c4a9c24726d3857e391b6b489093d44a8
+PODFILE CHECKSUM: ef56bb49770efaa14494f3e67f9b79dd1296dfd4
 
 COCOAPODS: 1.11.3

@@ -15,12 +15,12 @@ struct Main: View {
                     Image(systemName: "theatermask.and.paintbrush")
                     Text("戏台")
                 }
-            CreateFlag()
+            Message()
                 .tabItem{
-                    Image(systemName: "plus.circle.fill")
+                    Image(systemName: "message.fill")
                         .foregroundColor(.white)
                         .font(.title)
-                    Text("创建Flag")
+                    Text("消息")
                 }
             HomeView()
                 .tabItem {
@@ -28,6 +28,7 @@ struct Main: View {
                     Text("我")
                 }
         }
+        .navigationBarBackButtonHidden()
     }
 }
 

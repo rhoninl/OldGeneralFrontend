@@ -7,6 +7,7 @@ target 'OldGeneral' do
 
   # Pods for OldGeneral
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
+  pod 'WaterfallGrid', '~> 1.0.0'
 
   target 'OldGeneralTests' do
    inherit! :search_paths

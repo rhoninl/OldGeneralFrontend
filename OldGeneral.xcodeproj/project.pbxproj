@@ -32,6 +32,8 @@
 		71A5E50929A7AB7B0080124E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5E50829A7AB7B0080124E /* Login.swift */; };
 		71A5E50B29A7AB900080124E /* Regester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5E50A29A7AB900080124E /* Regester.swift */; };
 		71A5E50E29A7B40A0080124E /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5E50D29A7B40A0080124E /* Main.swift */; };
+		71A5E52929A8FE670080124E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5E52829A8FE670080124E /* SearchBar.swift */; };
+		71A5E52C29A90F5E0080124E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5E52B29A90F5E0080124E /* Message.swift */; };
 		71F16DA129A797C6009F602F /* MyFlagItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F16DA029A797C6009F602F /* MyFlagItem.swift */; };
 		BA25FF53C8C36D57C95880AB /* Pods_OldGeneral_OldGeneralUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFF5CB5BFF17400C1768C00 /* Pods_OldGeneral_OldGeneralUITests.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +88,8 @@
 		71A5E50829A7AB7B0080124E /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		71A5E50A29A7AB900080124E /* Regester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regester.swift; sourceTree = "<group>"; };
 		71A5E50D29A7B40A0080124E /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		71A5E52829A8FE670080124E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		71A5E52B29A90F5E0080124E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		71F16DA029A797C6009F602F /* MyFlagItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFlagItem.swift; sourceTree = "<group>"; };
 		7B2B7126118C106ED3AB4DC4 /* Pods-OldGeneralTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OldGeneralTests.release.xcconfig"; path = "Target Support Files/Pods-OldGeneralTests/Pods-OldGeneralTests.release.xcconfig"; sourceTree = "<group>"; };
 		CFE81309D67EFFA8037328BD /* Pods-OldGeneral-OldGeneralUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OldGeneral-OldGeneralUITests.release.xcconfig"; path = "Target Support Files/Pods-OldGeneral-OldGeneralUITests/Pods-OldGeneral-OldGeneralUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				71A5E50129A7A1480080124E /* time.swift */,
+				71A5E52829A8FE670080124E /* SearchBar.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -258,9 +263,18 @@
 			path = FlagSquare;
 			sourceTree = "<group>";
 		};
+		71A5E52A29A90F500080124E /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				71A5E52B29A90F5E0080124E /* Message.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
 		71FB60422944B5B2004079E2 /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				71A5E52A29A90F500080124E /* Message */,
 				71A5E51D29A7BC1C0080124E /* FlagSquare */,
 				71A5E51629A7BAEA0080124E /* Helpers */,
 				71A5E51529A7BADB0080124E /* Home */,
@@ -546,6 +560,7 @@
 				7150138129A65A7000FD155F /* FlagSquareItem.swift in Sources */,
 				71A5E50B29A7AB900080124E /* Regester.swift in Sources */,
 				719A61C629444B1100E9E7AD /* OldGeneralApp.swift in Sources */,
+				71A5E52C29A90F5E0080124E /* Message.swift in Sources */,
 				71737176299F7ACA009DF509 /* PayForFlag.swift in Sources */,
 				71A5E50429A7A2830080124E /* MyFlags.swift in Sources */,
 				71934340298E4D98007C8E6A /* OldgeneralContentView.swift in Sources */,
@@ -557,6 +572,7 @@
 				7193433D298E4D6B007C8E6A /* Home.swift in Sources */,
 				71A5E50E29A7B40A0080124E /* Main.swift in Sources */,
 				71A5E50229A7A1480080124E /* time.swift in Sources */,
+				71A5E52929A8FE670080124E /* SearchBar.swift in Sources */,
 				71039537298E67BB0035400F /* QAButton.swift in Sources */,
 				71A5E50629A7A2E90080124E /* Flag.swift in Sources */,
 			);

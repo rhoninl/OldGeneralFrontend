@@ -16,6 +16,7 @@ struct CreateFlag: View {
     @FocusState private var costomDays: Bool
     @State private var maskAlert = false
     @State private var messageAlert = false
+    @State private var flagNameIllegal = false
     @State private var days: Int = 7
     private var wordMax: Int = 40
     
@@ -29,6 +30,7 @@ struct CreateFlag: View {
                                 .font(.headline)
                                 .lineSpacing(5)
                                 .onChange(of: flagName) { _ in
+                                    flagNameIllegal = false
                                     if flagName.count > wordMax {
                                         self.flagName = String(flagName.prefix(wordMax))
                                     }
@@ -42,7 +44,7 @@ struct CreateFlag: View {
                                 .overlay(alignment: .bottomTrailing) {
                                     Text("\(wordCount)/\(wordMax)")
                                         .font(.headline)
-                                        .foregroundColor(wordCount < wordMax ? .secondary : .red)
+                                        .foregroundColor(flagNameIllegal || wordCount < wordMax ? .secondary : .red)
                                         .padding([.bottom, .trailing],10.0)
                                 }
                         }
@@ -126,22 +128,8 @@ struct CreateFlag: View {
                 // dismiss keyboard when tap the from
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
             }
-//                Button {
-//                    messageAlert = true
-//                } label: {
-//                    Text("开干!")
-//                        .frame(maxWidth: .infinity)
-//                        .foregroundColor(.primary)
-//                }
-//                .padding(.horizontal)
-//                .buttonStyle(.borderedProminent)
-//                .tint(.yellow)
-//                .alert(isPresented: $messageAlert) {
-//                    Alert(title: Text("提交信息"), message: Text("Flag名称: \(flagName)\n坚持天数: \(days)\n从 \(startToday ? today() : tomorrow()) 开始")
-//                          , dismissButton: .default(Text("我知道了！")))
-//                }
             NavigationLink {
-                PayForFlag()
+                PayForFlag(flagName: flagName,startDate: startToday ? today() : tomorrow(),totalDays: days)
             } label: {
                 Text("开干!")
                     .frame(maxWidth: .infinity,minHeight: 40)
@@ -151,6 +139,13 @@ struct CreateFlag: View {
             }
             .padding()
             .buttonStyle(.plain)
+            .disabled(flagName.isEmpty)
+            .onTapGesture {
+                if flagName.isEmpty {
+                    flagNameIllegal = true
+                }
+            }
+
         }
     }
 }

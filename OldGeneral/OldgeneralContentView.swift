@@ -9,9 +9,13 @@ import SwiftUI
 
 struct OldgeneralContentView: View {
     var body: some View {
-        Login()
-            .ignoresSafeArea()
-            .edgesIgnoringSafeArea(.all)
+        if CheckLoginStatus(){
+            Main()
+        }else {
+            Login()
+                .ignoresSafeArea()
+                .edgesIgnoringSafeArea(.all)
+        }
     }
 }
 

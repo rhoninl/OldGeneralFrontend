@@ -8,15 +8,32 @@
 import SwiftUI
 
 struct PayForFlag: View {
+    var flagName: String = ""
+    var daysNum: Int = 0
+    var startDate: String = today()
+    var totalDays: Int = 0
+    var goldNum: Int = 10000
     @State private var money: Int = 6
     let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
 
     var body: some View {
         VStack{
             Form {
+                Section("🚩Flag 信息") {
+                    VStack(alignment: .leading,spacing: 7){
+                        Text("Flag 名称: \(flagName)")
+                            .lineLimit(1)
+                        Text("从 \(startDate) 开始，坚持 \(totalDays) 天")
+                    }
+                    .font(.footnote)
+                    .padding(.all,1)
+                }
+                .textCase(nil)
+                
                 Section(){
                     VStack{
                         Text("💰为你的Flag充个钱吧💰")
+                            .font(.subheadline)
                         LazyVGrid(columns: columns){
                             Button {
                                 money = 6
@@ -65,6 +82,7 @@ struct PayForFlag: View {
                         .buttonStyle(.bordered)
                         .controlGroupStyle(.navigation)
                     }
+                    .font(.caption)
                     HStack{
                         Spacer()
                             .frame(width: 77)
@@ -93,15 +111,26 @@ struct PayForFlag: View {
                 // dismiss keyboard when tap the from
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
             }
-
-            Button {
-            } label: {
-                Text("支付")
-                    .frame(maxWidth: .infinity)
+            VStack(alignment: .trailing){
+                NavigationLink{
+                    Wallet()
+                }label: {
+                    Text("当前 \(goldNum) 💰")
+                        .font(.caption2)
+                }
+                .buttonStyle(.bordered)
+                .tint(.orange)
+                HStack{
+                    Button {
+                    } label: {
+                        Text("支付")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .padding()
+                    .buttonStyle(.borderedProminent)
+                    .tint(.yellow)
+                }
             }
-            .padding()
-            .buttonStyle(.borderedProminent)
-            .tint(.yellow)
         }
         .foregroundColor(.primary)
     }
@@ -109,6 +138,6 @@ struct PayForFlag: View {
 
 struct PayForFlag_Previews: PreviewProvider {
     static var previews: some View {
-        PayForFlag()
+        PayForFlag(flagName: "flagName")
     }
 }

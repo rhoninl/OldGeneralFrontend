@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-OldGeneral-OldGeneralUITests/Pods-OldGeneral-OldGeneralUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework
 ${BUILT_PRODUCTS_DIR}/Spring/Spring.framework
 ${BUILT_PRODUCTS_DIR}/WaterfallGrid/WaterfallGrid.framework

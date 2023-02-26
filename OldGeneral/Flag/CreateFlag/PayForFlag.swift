@@ -12,7 +12,7 @@ struct PayForFlag: View {
     var daysNum: Int = 0
     var startDate: String = today()
     var totalDays: Int = 0
-    var goldNum: Int = 10000
+    var goldNum: Int = 6
     @State private var money: Int = 6
     let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
 
@@ -37,6 +37,7 @@ struct PayForFlag: View {
                         LazyVGrid(columns: columns){
                             Button {
                                 money = 6
+                                CheckMoney()
                             } label: {
                                 Text("6金")
                                     .padding([.leading,.trailing],16)
@@ -44,6 +45,7 @@ struct PayForFlag: View {
                             .cornerRadius(14)
                             Button {
                                 money = 32
+                                CheckMoney()
                             } label: {
                                 Text("32金")
                                     .padding([.leading,.trailing],12)
@@ -51,6 +53,7 @@ struct PayForFlag: View {
                             .cornerRadius(14)
                             Button {
                                 money = 66
+                                CheckMoney()
                             } label: {
                                 Text("66金")
                                     .padding([.leading,.trailing],12)
@@ -58,6 +61,7 @@ struct PayForFlag: View {
                             .cornerRadius(14)
                             Button {
                                 money = 128
+                                CheckMoney()
                             } label: {
                                 Text("128金")
                                     .padding([.leading,.trailing],7)
@@ -65,6 +69,7 @@ struct PayForFlag: View {
                             .cornerRadius(14)
                             Button {
                                 money = 256
+                                CheckMoney()
                             } label: {
                                 Text("256金")
                                     .padding([.leading,.trailing],7)
@@ -72,6 +77,7 @@ struct PayForFlag: View {
                             .cornerRadius(14)
                             Button {
                                 money = 648
+                                CheckMoney()
                             } label: {
                                 Text("648金")
                                     .padding([.leading,.trailing],7)
@@ -94,6 +100,7 @@ struct PayForFlag: View {
                             .onChange(of: money) { newValue in
                                 if newValue > 9999 {
                                     money = Int(String(money).prefix(4)) ?? 0
+                                    CheckMoney()
                                 } else if newValue <= 6 {
                                     money = 6
                                 }
@@ -113,7 +120,7 @@ struct PayForFlag: View {
             }
             VStack(alignment: .trailing){
                 NavigationLink{
-                    Wallet()
+                    WalletPage()
                 }label: {
                     Text("当前 \(goldNum) 💰")
                         .font(.caption2)
@@ -129,10 +136,16 @@ struct PayForFlag: View {
                     .padding()
                     .buttonStyle(.borderedProminent)
                     .tint(.yellow)
+                    .disabled(goldNum < 6)
                 }
             }
         }
         .foregroundColor(.primary)
+    }
+    func CheckMoney() {
+        if money > goldNum {
+            money = goldNum
+        }
     }
 }
 

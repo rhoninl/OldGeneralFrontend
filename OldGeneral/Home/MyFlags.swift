@@ -14,15 +14,12 @@ struct MyFlags: View {
                 .padding(.leading,15)
             Divider()
             List {
-                MyFlagItem(info: FlagInfo(id: "This is userId", FlagName: "This is FlagName1", CreatedAt: today(), FlagCurrentCount: 10, FlagTotalCount: 10, FlagStatus: "running"))
-                MyFlagItem(info: FlagInfo(id: "This is userId", FlagName: "This is FlagName1", CreatedAt: today(), FlagCurrentCount: 10, FlagTotalCount: 10, FlagStatus: "running"))
-                MyFlagItem(info: FlagInfo(id: "This is userId", FlagName: "This is FlagName1", CreatedAt: today(), FlagCurrentCount: 10, FlagTotalCount: 10, FlagStatus: "running"))
-                MyFlagItem(info: FlagInfo(id: "This is userId", FlagName: "This is FlagName1", CreatedAt: today(), FlagCurrentCount: 10, FlagTotalCount: 10, FlagStatus: "running"))
-                MyFlagItem(info: FlagInfo(id: "This is userId", FlagName: "This is FlagName1", CreatedAt: today(), FlagCurrentCount: 10, FlagTotalCount: 10, FlagStatus: "running"))
-                MyFlagItem(info: FlagInfo(id: "This is userId", FlagName: "This is FlagName1", CreatedAt: today(), FlagCurrentCount: 10, FlagTotalCount: 10, FlagStatus: "running"))
-                MyFlagItem(info: FlagInfo(id: "This is userId", FlagName: "This is FlagName1", CreatedAt: today(), FlagCurrentCount: 10, FlagTotalCount: 10, FlagStatus: "running"))
-                MyFlagItem(info: FlagInfo(id: "This is userId", FlagName: "This is FlagName1", CreatedAt: today(), FlagCurrentCount: 10, FlagTotalCount: 10, FlagStatus: "running"))
-                
+                NavigationLink{
+                    FlagInfoPage()
+                }label: {
+                    MyFlagItem(info: FlagInfo(id: "This is userId", FlagName: "This is FlagName1", CreatedAt: today(), FlagCurrentCount: 10, FlagTotalCount: 10, FlagStatus: "running"))
+                }
+                .buttonStyle(.plain)
             }
         }
         .listStyle(.plain)

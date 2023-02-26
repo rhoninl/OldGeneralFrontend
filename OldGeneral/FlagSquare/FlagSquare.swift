@@ -17,7 +17,12 @@ struct FlagSquare: View {
                     SearchBar(searchText: $SearchString,onSearchButtonClicked: handleSearch)
                     ScrollView(showsIndicators: true) {
                         WaterfallGrid((1..<10), id: \.self) { index in
-                            FlagSquareItem(imageName: "image\(index)")
+                            NavigationLink{
+                                FlagInfoPage()
+                            } label: {
+                                FlagSquareItem(imageName: "image\(index)")
+                            }
+                            .buttonStyle(.plain)
                         }
                         .gridStyle(spacing:13)
                     }
@@ -35,6 +40,10 @@ struct FlagSquare: View {
                 }
                 .buttonStyle(PlainButtonStyle())
             }
+        }
+        .onTapGesture {
+            print("lose focus")
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
     }
     func handleSearch() {

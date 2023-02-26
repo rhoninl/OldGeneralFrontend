@@ -12,7 +12,7 @@ struct OldgeneralContentView: View {
         if CheckLoginStatus(){
             Main()
         }else {
-            Login()
+            LoginPage()
                 .ignoresSafeArea()
                 .edgesIgnoringSafeArea(.all)
         }

@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct Wallet: View {
+struct WalletPage: View {
     var body: some View {
         Text("This is Wallet Page")
     }
 }
 
-struct Wallet_Previews: PreviewProvider {
+struct WalletPage_Previews: PreviewProvider {
     static var previews: some View {
-        Wallet()
+        WalletPage()
     }
 }

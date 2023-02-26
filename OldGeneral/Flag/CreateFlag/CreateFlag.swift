@@ -25,31 +25,30 @@ struct CreateFlag: View {
             Form {
                 Section(header: Text("🚩Flag名称")) {
                     VStack(alignment: .leading){
-                        ZStack{
-                            TextEditor(text: $flagName)
-                                .font(.headline)
-                                .lineSpacing(5)
-                                .onChange(of: flagName) { _ in
-                                    flagNameIllegal = false
-                                    if flagName.count > wordMax {
-                                        self.flagName = String(flagName.prefix(wordMax))
-                                    }
-                                    self.wordCount = flagName.count
+                        TextEditor(text: $flagName)
+                            .font(.headline)
+                            .lineSpacing(5)
+                            .onChange(of: flagName) { _ in
+                                flagNameIllegal = false
+                                if flagName.count > wordMax {
+                                    self.flagName = String(flagName.prefix(wordMax))
                                 }
-                                .foregroundColor(wordCount < wordMax ? .primary : Color.red)
-                                .scrollContentBackground(.hidden)
-                                .frame(height: 100)
-                                .padding(.all,5)
-                                .focused($flagNameIsFocus)
-                                .overlay(alignment: .bottomTrailing) {
-                                    Text("\(wordCount)/\(wordMax)")
-                                        .font(.headline)
-                                        .foregroundColor(flagNameIllegal || wordCount < wordMax ? .secondary : .red)
-                                        .padding([.bottom, .trailing],10.0)
-                                }
-                        }
+                                self.wordCount = flagName.count
+                            }
+                            .foregroundColor(wordCount < wordMax ? .primary : Color.red)
+                            .scrollContentBackground(.hidden)
+                            .frame(height: 100)
+                            .padding(.all,5)
+                            .focused($flagNameIsFocus)
+                            .overlay(alignment: .bottomTrailing) {
+                                Text("\(wordCount)/\(wordMax)")
+                                    .font(.headline)
+                                    .foregroundColor(flagNameIllegal || wordCount < wordMax ? .secondary : .red)
+                                    .padding([.bottom, .trailing],10.0)
+                            }
                     }
                 }
+                .textCase(.none)
                 Section(header:Text("💪坚持天数")){
                     HStack(spacing: 15.0){
                         Button("30天") {
@@ -153,11 +152,5 @@ struct CreateFlag: View {
 struct CreateFlag_Previews: PreviewProvider {
     static var previews: some View {
         CreateFlag()
-    }
-}
-
-extension UIApplication {
-    func endEditing() {
-        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }

@@ -15,8 +15,13 @@ struct HomeView: View {
     @State private var animationState: CGFloat = 1
     var body: some View {
         VStack {
-            UserInfo()
-                .padding(.trailing, 70.0)
+            NavigationLink {
+                UserInfoEditPage()
+            } label: {
+                UserInfo()
+                    .padding(.trailing, 70.0)
+            }
+
                 
             Divider()
                 .padding(.horizontal, 30.0)
@@ -55,16 +60,34 @@ struct HomeView: View {
                 .padding(.horizontal, 30.0)
                 .frame(minHeight: 7)
             HStack(alignment: .bottom, spacing: 45.0){
-                AccountButton()
-                VIPButton()
-                QAButton()
-                SettingButton()
+                NavigationLink {
+                    WalletPage()
+                } label: {
+                    AccountButton()
+                }
+                NavigationLink {
+                    VIPPage()
+                } label: {
+                    VIPButton()
+                }
+                NavigationLink {
+                    QAPage()
+                } label: {
+                    QAButton()
+                }
+                NavigationLink {
+                    SettingsPage()
+                } label: {
+                    SettingButton()
+                }
+                
             }
             .padding([.top,.bottom],20)
             MyFlags()
             Spacer()
         }
         .padding(.top, 40.0)
+        .buttonStyle(.plain)
     }
 }
 

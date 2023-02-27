@@ -18,7 +18,6 @@ struct UserInfo: View {
                 .resizable()
                 .frame(width: 100.0, height: 100.0)
                 .clipShape(Circle())
-                
             Spacer()
                 .frame(width: 30.0)
             VStack(alignment: .leading){

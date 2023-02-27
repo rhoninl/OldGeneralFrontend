@@ -45,6 +45,10 @@
 		71BEA7CE29ABAF9600C8C3DE /* VIPPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7CD29ABAF9600C8C3DE /* VIPPage.swift */; };
 		71BEA7D129ABB07D00C8C3DE /* UserInfoEditPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7D029ABB07D00C8C3DE /* UserInfoEditPage.swift */; };
 		71BEA7D529ABB10200C8C3DE /* FlagInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7D429ABB10200C8C3DE /* FlagInfoPage.swift */; };
+		71C8269529ACD90D0084885B /* FlowDetailsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8269429ACD90D0084885B /* FlowDetailsPage.swift */; };
+		71C8269729ACDB3A0084885B /* RechargePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8269629ACDB3A0084885B /* RechargePage.swift */; };
+		71C8269A29ACDDC80084885B /* FlowDetailsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8269929ACDDC80084885B /* FlowDetailsItem.swift */; };
+		71C8269C29ACE18A0084885B /* RechargeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8269B29ACE18A0084885B /* RechargeItem.swift */; };
 		71F16DA129A797C6009F602F /* MyFlagItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F16DA029A797C6009F602F /* MyFlagItem.swift */; };
 		BA25FF53C8C36D57C95880AB /* Pods_OldGeneral_OldGeneralUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFF5CB5BFF17400C1768C00 /* Pods_OldGeneral_OldGeneralUITests.framework */; };
 /* End PBXBuildFile section */
@@ -112,6 +116,10 @@
 		71BEA7CD29ABAF9600C8C3DE /* VIPPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPPage.swift; sourceTree = "<group>"; };
 		71BEA7D029ABB07D00C8C3DE /* UserInfoEditPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoEditPage.swift; sourceTree = "<group>"; };
 		71BEA7D429ABB10200C8C3DE /* FlagInfoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagInfoPage.swift; sourceTree = "<group>"; };
+		71C8269429ACD90D0084885B /* FlowDetailsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowDetailsPage.swift; sourceTree = "<group>"; };
+		71C8269629ACDB3A0084885B /* RechargePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargePage.swift; sourceTree = "<group>"; };
+		71C8269929ACDDC80084885B /* FlowDetailsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowDetailsItem.swift; sourceTree = "<group>"; };
+		71C8269B29ACE18A0084885B /* RechargeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeItem.swift; sourceTree = "<group>"; };
 		71F16DA029A797C6009F602F /* MyFlagItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFlagItem.swift; sourceTree = "<group>"; };
 		7B2B7126118C106ED3AB4DC4 /* Pods-OldGeneralTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OldGeneralTests.release.xcconfig"; path = "Target Support Files/Pods-OldGeneralTests/Pods-OldGeneralTests.release.xcconfig"; sourceTree = "<group>"; };
 		CFE81309D67EFFA8037328BD /* Pods-OldGeneral-OldGeneralUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OldGeneral-OldGeneralUITests.release.xcconfig"; path = "Target Support Files/Pods-OldGeneral-OldGeneralUITests/Pods-OldGeneral-OldGeneralUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -316,7 +324,6 @@
 		71BEA7C829ABAA6B00C8C3DE /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				71BEA7BC29AA5E8B00C8C3DE /* WalletPage.swift */,
 				71BEA7C929ABAA8E00C8C3DE /* SettingsPage.swift */,
 				71BEA7CB29ABAF7F00C8C3DE /* QAPage.swift */,
 				71BEA7CD29ABAF9600C8C3DE /* VIPPage.swift */,
@@ -349,13 +356,26 @@
 			path = FlagInfo;
 			sourceTree = "<group>";
 		};
+		71C8269829ACDDAE0084885B /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				71BEA7BC29AA5E8B00C8C3DE /* WalletPage.swift */,
+				71C8269929ACDDC80084885B /* FlowDetailsItem.swift */,
+				71C8269629ACDB3A0084885B /* RechargePage.swift */,
+				71C8269429ACD90D0084885B /* FlowDetailsPage.swift */,
+				71C8269B29ACE18A0084885B /* RechargeItem.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
 		71FB60422944B5B2004079E2 /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				71C8269829ACDDAE0084885B /* Wallet */,
 				71BEA7D229ABB0E900C8C3DE /* Flag */,
 				71BEA7CF29ABB06A00C8C3DE /* UserInfo */,
-				71BEA7C829ABAA6B00C8C3DE /* Components */,
 				71A5E52A29A90F500080124E /* Message */,
+				71BEA7C829ABAA6B00C8C3DE /* Components */,
 				71A5E51D29A7BC1C0080124E /* FlagSquare */,
 				71A5E51629A7BAEA0080124E /* Helpers */,
 				71A5E51529A7BADB0080124E /* Home */,
@@ -644,8 +664,10 @@
 				7150138129A65A7000FD155F /* FlagSquareItem.swift in Sources */,
 				71A5E50B29A7AB900080124E /* RegisterPage.swift in Sources */,
 				719A61C629444B1100E9E7AD /* OldGeneralApp.swift in Sources */,
+				71C8269729ACDB3A0084885B /* RechargePage.swift in Sources */,
 				71A5E52C29A90F5E0080124E /* Message.swift in Sources */,
 				71737176299F7ACA009DF509 /* PayForFlag.swift in Sources */,
+				71C8269529ACD90D0084885B /* FlowDetailsPage.swift in Sources */,
 				71A5E50429A7A2830080124E /* MyFlags.swift in Sources */,
 				71934340298E4D98007C8E6A /* OldgeneralContentView.swift in Sources */,
 				71039530298E56DC0035400F /* UserInfo.swift in Sources */,
@@ -662,9 +684,11 @@
 				71A5E50229A7A1480080124E /* time.swift in Sources */,
 				71BEA7CC29ABAF7F00C8C3DE /* QAPage.swift in Sources */,
 				71BEA7BA29AA49FD00C8C3DE /* Token.swift in Sources */,
+				71C8269A29ACDDC80084885B /* FlowDetailsItem.swift in Sources */,
 				71BEA7C129AB814200C8C3DE /* Login.swift in Sources */,
 				71A5E52929A8FE670080124E /* SearchBar.swift in Sources */,
 				71039537298E67BB0035400F /* QAButton.swift in Sources */,
+				71C8269C29ACE18A0084885B /* RechargeItem.swift in Sources */,
 				71BEA7C729ABA73C00C8C3DE /* error.swift in Sources */,
 				71A5E50629A7A2E90080124E /* Flag.swift in Sources */,
 			);

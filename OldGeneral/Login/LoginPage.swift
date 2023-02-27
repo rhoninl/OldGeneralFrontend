@@ -23,10 +23,16 @@ struct LoginPage: View {
             GroupBox()  {
                 VStack{
                     Spacer()
+                        .frame(height: 130)
                     HStack {
                         Spacer().frame(width: 50)
                         VStack {
-                            Text("Hello, World!")
+                            Image("Icon")
+                                .resizable()
+                                .frame(width: 100,height: 100)
+                                .padding()
+                            Text("守住你的戏台，老将军!")
+                                .padding()
                             HStack{
                                 Text("账号: ")
                                 TextField("UserName", text: $UserName)

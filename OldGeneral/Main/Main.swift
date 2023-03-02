@@ -20,6 +20,9 @@ struct Main: View {
                     Image(systemName: "message.fill")
                         .foregroundColor(.white)
                         .font(.title)
+                        .overlay {
+                            
+                        }
                     Text("消息")
                 }
             HomeView()

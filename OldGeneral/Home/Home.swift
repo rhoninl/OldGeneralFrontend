@@ -9,6 +9,7 @@ import SwiftUI
 import Spring
 
 struct HomeView: View {
+    private var username: String = "TestUserName"
     private var Flags: Int = 123
     private var Achieves: Int = 456
     private var Sieges: Int = 789
@@ -16,7 +17,7 @@ struct HomeView: View {
     var body: some View {
         VStack {
             NavigationLink {
-                UserInfoEditPage()
+                UserInfoEditPage(username: username)
             } label: {
                 UserInfo()
                     .padding(.trailing, 70.0)
@@ -66,7 +67,7 @@ struct HomeView: View {
                     AccountButton()
                 }
                 NavigationLink {
-                    VIPPage()
+                    VIPPage(username: "nil")
                 } label: {
                     VIPButton()
                 }

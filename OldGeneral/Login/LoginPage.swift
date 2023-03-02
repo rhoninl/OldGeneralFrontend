@@ -45,6 +45,8 @@ struct LoginPage: View {
                                             self.UserName = String(limited)
                                         }
                                     }
+                                
+                                
                             }
                             HStack{
                                 Text("密码: ")

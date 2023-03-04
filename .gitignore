@@ -94,3 +94,6 @@ iOSInjectionProject/
 
 # Mac
 .DS_Store
+
+# symbolic link
+OldGeneral/OldgeneralProto

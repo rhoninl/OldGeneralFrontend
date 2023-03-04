@@ -21,6 +21,9 @@
 		7151160A29B0DBFE006A40DD /* VIPPrivilegesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151160929B0DBFE006A40DD /* VIPPrivilegesItem.swift */; };
 		7151160C29B0E411006A40DD /* VIPChargeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151160B29B0E411006A40DD /* VIPChargeItem.swift */; };
 		7151160E29B0E7C1006A40DD /* VIPChargePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151160D29B0E7C1006A40DD /* VIPChargePage.swift */; };
+		7173001129B31C7200714912 /* FlagDetailInfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7173001029B31C7200714912 /* FlagDetailInfoItem.swift */; };
+		7173001329B3218B00714912 /* FlagCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7173001229B3218B00714912 /* FlagCardItem.swift */; };
+		7173001529B329AA00714912 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7173001429B329AA00714912 /* SignInPage.swift */; };
 		71737176299F7ACA009DF509 /* PayForFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71737175299F7ACA009DF509 /* PayForFlag.swift */; };
 		7193433D298E4D6B007C8E6A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193433C298E4D6B007C8E6A /* Home.swift */; };
 		71934340298E4D98007C8E6A /* OldgeneralContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193433F298E4D98007C8E6A /* OldgeneralContentView.swift */; };
@@ -98,6 +101,9 @@
 		7151160929B0DBFE006A40DD /* VIPPrivilegesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPPrivilegesItem.swift; sourceTree = "<group>"; };
 		7151160B29B0E411006A40DD /* VIPChargeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPChargeItem.swift; sourceTree = "<group>"; };
 		7151160D29B0E7C1006A40DD /* VIPChargePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPChargePage.swift; sourceTree = "<group>"; };
+		7173001029B31C7200714912 /* FlagDetailInfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagDetailInfoItem.swift; sourceTree = "<group>"; };
+		7173001229B3218B00714912 /* FlagCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagCardItem.swift; sourceTree = "<group>"; };
+		7173001429B329AA00714912 /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
 		71737175299F7ACA009DF509 /* PayForFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayForFlag.swift; sourceTree = "<group>"; };
 		7193433C298E4D6B007C8E6A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		7193433F298E4D98007C8E6A /* OldgeneralContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldgeneralContentView.swift; sourceTree = "<group>"; };
@@ -259,6 +265,7 @@
 		71A5A00129B0F19A00A60D31 /* FlagSignIn */ = {
 			isa = PBXGroup;
 			children = (
+				7173001429B329AA00714912 /* SignInPage.swift */,
 			);
 			path = FlagSignIn;
 			sourceTree = "<group>";
@@ -402,6 +409,8 @@
 			isa = PBXGroup;
 			children = (
 				71BEA7D429ABB10200C8C3DE /* FlagInfoPage.swift */,
+				7173001029B31C7200714912 /* FlagDetailInfoItem.swift */,
+				7173001229B3218B00714912 /* FlagCardItem.swift */,
 			);
 			path = FlagInfo;
 			sourceTree = "<group>";
@@ -707,6 +716,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71BEA7BD29AA5E8B00C8C3DE /* WalletPage.swift in Sources */,
+				7173001129B31C7200714912 /* FlagDetailInfoItem.swift in Sources */,
 				7103952E298E52B80035400F /* FlagSquare.swift in Sources */,
 				71A5A00F29B0FFE100A60D31 /* SexItem.swift in Sources */,
 				71A5E50929A7AB7B0080124E /* LoginPage.swift in Sources */,
@@ -716,6 +726,7 @@
 				7150138129A65A7000FD155F /* FlagSquareItem.swift in Sources */,
 				71A5E50B29A7AB900080124E /* RegisterPage.swift in Sources */,
 				71A5A00B29B0F9C700A60D31 /* UploadSexPage.swift in Sources */,
+				7173001329B3218B00714912 /* FlagCardItem.swift in Sources */,
 				719A61C629444B1100E9E7AD /* OldGeneralApp.swift in Sources */,
 				71A5A00D29B0FA8900A60D31 /* UpdateSignaturePage.swift in Sources */,
 				71C8269729ACDB3A0084885B /* RechargePage.swift in Sources */,
@@ -736,6 +747,7 @@
 				71039534298E67230035400F /* SettingButton.swift in Sources */,
 				71BEA7CA29ABAA8E00C8C3DE /* SettingsPage.swift in Sources */,
 				71BEA7D129ABB07D00C8C3DE /* UserInfoEditPage.swift in Sources */,
+				7173001529B329AA00714912 /* SignInPage.swift in Sources */,
 				7193433D298E4D6B007C8E6A /* Home.swift in Sources */,
 				71BEA7CE29ABAF9600C8C3DE /* VIPPage.swift in Sources */,
 				71A5E50E29A7B40A0080124E /* Main.swift in Sources */,

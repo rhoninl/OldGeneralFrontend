@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct SettingsPage: View {
+    @Environment(\.presentationMode) var presentationMode
+
     @State private var loggedOut: Bool = false
     var body: some View {
         ScrollView {
             Button {
-                loggedOut = true
+                signout()
             } label: {
                 Text("退出登陆")
                     .frame(maxWidth: .infinity)
@@ -25,8 +27,14 @@ struct SettingsPage: View {
         .navigationDestination(isPresented: $loggedOut, destination: {
             LoginPage()
         })
-        .buttonStyle(.borderedProminent)
         .padding()
+    }
+    
+    func signout() {
+        RemoveToken()
+        loggedOut = true
+        UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: OldgeneralContentView())
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
 }
 

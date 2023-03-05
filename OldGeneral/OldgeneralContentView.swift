@@ -9,12 +9,14 @@ import SwiftUI
 
 struct OldgeneralContentView: View {
     var body: some View {
-        if CheckLoginStatus(){
-            Main()
-        }else {
-            LoginPage()
-                .ignoresSafeArea()
-                .edgesIgnoringSafeArea(.all)
+        NavigationStack{
+            if CheckLoginStatus(){
+                Main()
+            }else {
+                LoginPage()
+                    .ignoresSafeArea()
+                    .edgesIgnoringSafeArea(.all)
+            }
         }
     }
 }

@@ -13,6 +13,8 @@ struct HomeView: View {
     private var Flags: Int = 123
     private var Achieves: Int = 456
     private var Sieges: Int = 789
+    
+    @State private var jumptoSettingPage: Bool = false
     @State private var animationState: CGFloat = 1
     var body: some View {
         VStack {
@@ -76,11 +78,10 @@ struct HomeView: View {
                 } label: {
                     QAButton()
                 }
-                NavigationLink {
-                    SettingsPage()
-                } label: {
-                    SettingButton()
-                }
+               SettingButton()
+                    .onTapGesture {
+                        jumptoSettingPage = true
+                    }
                 
             }
             .padding([.top,.bottom],20)
@@ -89,6 +90,12 @@ struct HomeView: View {
         }
         .padding(.top, 40.0)
         .buttonStyle(.plain)
+        .navigationDestination(isPresented: $jumptoSettingPage) {
+            SettingsPage()
+        }
+        .refreshable {
+            jumptoSettingPage = false
+        }
     }
 }
 

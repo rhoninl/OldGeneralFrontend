@@ -1,19 +1,16 @@
 PODS:
   - KeychainAccess (4.2.2)
   - Spring (1.0.6)
-  - SwiftProtobuf (1.21.0)
   - WaterfallGrid (1.0.1)
 
 DEPENDENCIES:
   - KeychainAccess
   - Spring (from `https://github.com/MengTo/Spring.git`)
-  - SwiftProtobuf (~> 1.0)
   - WaterfallGrid (~> 1.0.0)
 
 SPEC REPOS:
   trunk:
     - KeychainAccess
-    - SwiftProtobuf
     - WaterfallGrid
 
 EXTERNAL SOURCES:
@@ -28,9 +25,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
-  SwiftProtobuf: afced68785854575756db965e9da52bbf3dc45e7
   WaterfallGrid: 0554a759d9a8aa136fc1769480ddb01bc6fb94b9
 
-PODFILE CHECKSUM: 7eebdcd211200ae5d7080d3bbf3b2b700406e8a7
+PODFILE CHECKSUM: 65e98dc95dc4b8dbddf4876e1e070e9f3fd8a323
 
 COCOAPODS: 1.11.3

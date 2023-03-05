@@ -15,6 +15,7 @@ struct RegisterPage: View {
     @State private var showPassword: Bool = false
     @Environment(\.presentationMode) var presentationMode
     @State private var errorMsg: String = " "
+    @State private var RegistSuccess: Bool = false
     var body: some View {
         VStack{
             Spacer()
@@ -79,17 +80,18 @@ struct RegisterPage: View {
                         Text(errorMsg)
                             .foregroundColor(.red)
                         Button {
-                            guard password == confirmpassword  else {
-                                errorMsg = "两次密码不相同"
-                                return
-                            }
-                            
-                            guard Register(username: username, password: password) else {
-                                errorMsg = "注册失败"
-                                return
-                            }
-                            
-                            self.presentationMode.wrappedValue.dismiss()
+                            Task {
+                                guard password == confirmpassword  else {
+                                    errorMsg = "两次密码不相同"
+                                    return
+                                }
+                                RegistSuccess = await SignUp(username: username, password: password)
+                                guard RegistSuccess else {
+                                    errorMsg = "注册失败"
+                                    return
+                                }
+                                self.presentationMode.wrappedValue.dismiss()
+                        }
                         } label: {
                             Text("注 册")
                                 .padding([.leading,.trailing],20)

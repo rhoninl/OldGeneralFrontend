@@ -1,5 +1,5 @@
 install-dependencies:
-	make -f Oldgeneral/OldgeneralProto/Makefile install-swift-dependencies
+	make -f OldGeneral/OldgeneralProto/Makefile install-swift-dependencies
 
 build-protos:
-	protoc --swift_out=. Oldgeneral/OldgeneralProto/*/*.proto
+	protoc --swift_out=. OldGeneral/OldgeneralProto/*/*.proto

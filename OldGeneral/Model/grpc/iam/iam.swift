@@ -21,6 +21,8 @@ func Login(username: String, password: String) -> Bool {
         let resp = try call.response.wait()
         print(resp.token)
         StoreToken(resp.token)
+        userId = resp.userID
+        print("userId \(userId)")
         return true
     }catch {
         print("user login failed\(error)")
@@ -64,11 +66,11 @@ func CheckLoginStatus() -> Bool {
     do {
         let call = getAPIClient().iAMCheckLoginStatus(request,callOptions: option)
         let response = try call.response.wait()
-        print(response)
+        userId = response.userID
+        print("userId \(userId)")
         return response.isValid
     } catch {
         print("check login status failed \(error)")
     }
-    print("???")
     return false
 }

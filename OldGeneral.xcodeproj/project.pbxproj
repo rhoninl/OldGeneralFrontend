@@ -21,19 +21,23 @@
 		7126105C29B37C8100CBC493 /* string.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7126105B29B37C8100CBC493 /* string.swift */; };
 		7126105E29B37C8800CBC493 /* date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7126105D29B37C8800CBC493 /* date.swift */; };
 		712968F129B4A81A00526A0C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712968F029B4A81A00526A0C /* Settings.swift */; };
-		7129692929B4B47900526A0C /* cdr.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 7129691629B4B47900526A0C /* cdr.pb.go */; };
-		7129692A29B4B47900526A0C /* cdr.proto in Sources */ = {isa = PBXBuildFile; fileRef = 7129691729B4B47900526A0C /* cdr.proto */; };
-		7129692B29B4B47900526A0C /* cdr.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129691829B4B47900526A0C /* cdr.pb.swift */; };
-		7129692C29B4B47900526A0C /* iam_grpc.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 7129691A29B4B47900526A0C /* iam_grpc.pb.go */; };
-		7129692D29B4B47900526A0C /* iam.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129691B29B4B47900526A0C /* iam.pb.swift */; };
-		7129692E29B4B47900526A0C /* iam.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129691C29B4B47900526A0C /* iam.grpc.swift */; };
-		7129692F29B4B47900526A0C /* iam.proto in Sources */ = {isa = PBXBuildFile; fileRef = 7129691D29B4B47900526A0C /* iam.proto */; };
-		7129693029B4B47900526A0C /* iam.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 7129691E29B4B47900526A0C /* iam.pb.go */; };
-		7129693129B4B47900526A0C /* api.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129692029B4B47900526A0C /* api.pb.swift */; };
-		7129693229B4B47900526A0C /* api.proto in Sources */ = {isa = PBXBuildFile; fileRef = 7129692129B4B47900526A0C /* api.proto */; };
-		7129693329B4B47900526A0C /* api.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 7129692229B4B47900526A0C /* api.pb.go */; };
-		7129693429B4B47900526A0C /* api.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129692329B4B47900526A0C /* api.grpc.swift */; };
-		7129693529B4B47900526A0C /* api_grpc.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 7129692429B4B47900526A0C /* api_grpc.pb.go */; };
+		7129698929B4DE9900526A0C /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129698829B4DE9900526A0C /* user.swift */; };
+		712969A329B4E17000526A0C /* cdr.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 7129698C29B4E16F00526A0C /* cdr.pb.go */; };
+		712969A429B4E17000526A0C /* cdr.proto in Sources */ = {isa = PBXBuildFile; fileRef = 7129698D29B4E16F00526A0C /* cdr.proto */; };
+		712969A529B4E17000526A0C /* cdr.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129698E29B4E16F00526A0C /* cdr.pb.swift */; };
+		712969A629B4E17000526A0C /* iam_grpc.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 7129699029B4E16F00526A0C /* iam_grpc.pb.go */; };
+		712969A729B4E17000526A0C /* iam.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129699129B4E16F00526A0C /* iam.pb.swift */; };
+		712969A829B4E17000526A0C /* iam.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129699229B4E16F00526A0C /* iam.grpc.swift */; };
+		712969A929B4E17000526A0C /* iam.proto in Sources */ = {isa = PBXBuildFile; fileRef = 7129699329B4E16F00526A0C /* iam.proto */; };
+		712969AA29B4E17000526A0C /* iam.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 7129699429B4E16F00526A0C /* iam.pb.go */; };
+		712969AB29B4E17000526A0C /* userinfo.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129699629B4E16F00526A0C /* userinfo.pb.swift */; };
+		712969AC29B4E17000526A0C /* userinfo.proto in Sources */ = {isa = PBXBuildFile; fileRef = 7129699729B4E16F00526A0C /* userinfo.proto */; };
+		712969AD29B4E17000526A0C /* userinfo.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 7129699829B4E16F00526A0C /* userinfo.pb.go */; };
+		712969AE29B4E17000526A0C /* api.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129699A29B4E16F00526A0C /* api.pb.swift */; };
+		712969AF29B4E17000526A0C /* api.proto in Sources */ = {isa = PBXBuildFile; fileRef = 7129699B29B4E16F00526A0C /* api.proto */; };
+		712969B029B4E17000526A0C /* api.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 7129699C29B4E16F00526A0C /* api.pb.go */; };
+		712969B129B4E17000526A0C /* api.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129699D29B4E16F00526A0C /* api.grpc.swift */; };
+		712969B229B4E17000526A0C /* api_grpc.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 7129699E29B4E16F00526A0C /* api_grpc.pb.go */; };
 		7150138129A65A7000FD155F /* FlagSquareItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150138029A65A7000FD155F /* FlagSquareItem.swift */; };
 		7151160729B0DB32006A40DD /* VIPDescriptionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151160629B0DB32006A40DD /* VIPDescriptionPage.swift */; };
 		7151160A29B0DBFE006A40DD /* VIPPrivilegesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151160929B0DBFE006A40DD /* VIPPrivilegesItem.swift */; };
@@ -68,9 +72,8 @@
 		71A5E52929A8FE670080124E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5E52829A8FE670080124E /* SearchBar.swift */; };
 		71A5E52C29A90F5E0080124E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5E52B29A90F5E0080124E /* Message.swift */; };
 		71BEA7B829AA2D9B00C8C3DE /* http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7B729AA2D9B00C8C3DE /* http.swift */; };
-		71BEA7BA29AA49FD00C8C3DE /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7B929AA49FD00C8C3DE /* Token.swift */; };
+		71BEA7BA29AA49FD00C8C3DE /* token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7B929AA49FD00C8C3DE /* token.swift */; };
 		71BEA7BD29AA5E8B00C8C3DE /* WalletPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7BC29AA5E8B00C8C3DE /* WalletPage.swift */; };
-		71BEA7C529ABA5DA00C8C3DE /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7C429ABA5DA00C8C3DE /* Register.swift */; };
 		71BEA7C729ABA73C00C8C3DE /* error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7C629ABA73C00C8C3DE /* error.swift */; };
 		71BEA7CA29ABAA8E00C8C3DE /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7C929ABAA8E00C8C3DE /* SettingsPage.swift */; };
 		71BEA7CC29ABAF7F00C8C3DE /* QAPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7CB29ABAF7F00C8C3DE /* QAPage.swift */; };
@@ -124,20 +127,24 @@
 		7126105B29B37C8100CBC493 /* string.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = string.swift; sourceTree = "<group>"; };
 		7126105D29B37C8800CBC493 /* date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = date.swift; sourceTree = "<group>"; };
 		712968F029B4A81A00526A0C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		7129691629B4B47900526A0C /* cdr.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cdr.pb.go; sourceTree = "<group>"; };
-		7129691729B4B47900526A0C /* cdr.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = cdr.proto; sourceTree = "<group>"; };
-		7129691829B4B47900526A0C /* cdr.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cdr.pb.swift; sourceTree = "<group>"; };
-		7129691A29B4B47900526A0C /* iam_grpc.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iam_grpc.pb.go; sourceTree = "<group>"; };
-		7129691B29B4B47900526A0C /* iam.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iam.pb.swift; sourceTree = "<group>"; };
-		7129691C29B4B47900526A0C /* iam.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iam.grpc.swift; sourceTree = "<group>"; };
-		7129691D29B4B47900526A0C /* iam.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = iam.proto; sourceTree = "<group>"; };
-		7129691E29B4B47900526A0C /* iam.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iam.pb.go; sourceTree = "<group>"; };
-		7129692029B4B47900526A0C /* api.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = api.pb.swift; sourceTree = "<group>"; };
-		7129692129B4B47900526A0C /* api.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = api.proto; sourceTree = "<group>"; };
-		7129692229B4B47900526A0C /* api.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = api.pb.go; sourceTree = "<group>"; };
-		7129692329B4B47900526A0C /* api.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = api.grpc.swift; sourceTree = "<group>"; };
-		7129692429B4B47900526A0C /* api_grpc.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = api_grpc.pb.go; sourceTree = "<group>"; };
-		7129692529B4B47900526A0C /* OldgeneralProto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = OldgeneralProto.xcodeproj; sourceTree = "<group>"; };
+		7129698829B4DE9900526A0C /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		7129698C29B4E16F00526A0C /* cdr.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cdr.pb.go; sourceTree = "<group>"; };
+		7129698D29B4E16F00526A0C /* cdr.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = cdr.proto; sourceTree = "<group>"; };
+		7129698E29B4E16F00526A0C /* cdr.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cdr.pb.swift; sourceTree = "<group>"; };
+		7129699029B4E16F00526A0C /* iam_grpc.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iam_grpc.pb.go; sourceTree = "<group>"; };
+		7129699129B4E16F00526A0C /* iam.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iam.pb.swift; sourceTree = "<group>"; };
+		7129699229B4E16F00526A0C /* iam.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iam.grpc.swift; sourceTree = "<group>"; };
+		7129699329B4E16F00526A0C /* iam.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = iam.proto; sourceTree = "<group>"; };
+		7129699429B4E16F00526A0C /* iam.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iam.pb.go; sourceTree = "<group>"; };
+		7129699629B4E16F00526A0C /* userinfo.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userinfo.pb.swift; sourceTree = "<group>"; };
+		7129699729B4E16F00526A0C /* userinfo.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = userinfo.proto; sourceTree = "<group>"; };
+		7129699829B4E16F00526A0C /* userinfo.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = userinfo.pb.go; sourceTree = "<group>"; };
+		7129699A29B4E16F00526A0C /* api.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = api.pb.swift; sourceTree = "<group>"; };
+		7129699B29B4E16F00526A0C /* api.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = api.proto; sourceTree = "<group>"; };
+		7129699C29B4E16F00526A0C /* api.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = api.pb.go; sourceTree = "<group>"; };
+		7129699D29B4E16F00526A0C /* api.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = api.grpc.swift; sourceTree = "<group>"; };
+		7129699E29B4E16F00526A0C /* api_grpc.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = api_grpc.pb.go; sourceTree = "<group>"; };
+		7129699F29B4E16F00526A0C /* OldgeneralProto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = OldgeneralProto.xcodeproj; sourceTree = "<group>"; };
 		7150138029A65A7000FD155F /* FlagSquareItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagSquareItem.swift; sourceTree = "<group>"; };
 		7151160629B0DB32006A40DD /* VIPDescriptionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPDescriptionPage.swift; sourceTree = "<group>"; };
 		7151160929B0DBFE006A40DD /* VIPPrivilegesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPPrivilegesItem.swift; sourceTree = "<group>"; };
@@ -172,9 +179,8 @@
 		71A5E52829A8FE670080124E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		71A5E52B29A90F5E0080124E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		71BEA7B729AA2D9B00C8C3DE /* http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = http.swift; sourceTree = "<group>"; };
-		71BEA7B929AA49FD00C8C3DE /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		71BEA7B929AA49FD00C8C3DE /* token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = token.swift; sourceTree = "<group>"; };
 		71BEA7BC29AA5E8B00C8C3DE /* WalletPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletPage.swift; sourceTree = "<group>"; };
-		71BEA7C429ABA5DA00C8C3DE /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		71BEA7C629ABA73C00C8C3DE /* error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = error.swift; sourceTree = "<group>"; };
 		71BEA7C929ABAA8E00C8C3DE /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
 		71BEA7CB29ABAF7F00C8C3DE /* QAPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAPage.swift; sourceTree = "<group>"; };
@@ -249,8 +255,9 @@
 		7126105729B3793D00CBC493 /* iam */ = {
 			isa = PBXGroup;
 			children = (
-				71BEA7B929AA49FD00C8C3DE /* Token.swift */,
+				71BEA7B929AA49FD00C8C3DE /* token.swift */,
 				7126105829B3794C00CBC493 /* iam.swift */,
+				7129698829B4DE9900526A0C /* user.swift */,
 			);
 			path = iam;
 			sourceTree = "<group>";
@@ -264,52 +271,64 @@
 			path = helper;
 			sourceTree = "<group>";
 		};
-		7129691429B4B47900526A0C /* Proto */ = {
+		7129698A29B4E16F00526A0C /* Proto */ = {
 			isa = PBXGroup;
 			children = (
-				7129691529B4B47900526A0C /* cdr */,
-				7129691929B4B47900526A0C /* iam */,
-				7129691F29B4B47900526A0C /* api */,
-				7129692529B4B47900526A0C /* OldgeneralProto.xcodeproj */,
+				7129698B29B4E16F00526A0C /* cdr */,
+				7129698F29B4E16F00526A0C /* iam */,
+				7129699529B4E16F00526A0C /* userinfo */,
+				7129699929B4E16F00526A0C /* api */,
+				7129699F29B4E16F00526A0C /* OldgeneralProto.xcodeproj */,
 			);
-			path = Proto;
+			name = Proto;
+			path = ../../Backend/Proto;
 			sourceTree = "<group>";
 		};
-		7129691529B4B47900526A0C /* cdr */ = {
+		7129698B29B4E16F00526A0C /* cdr */ = {
 			isa = PBXGroup;
 			children = (
-				7129691629B4B47900526A0C /* cdr.pb.go */,
-				7129691729B4B47900526A0C /* cdr.proto */,
-				7129691829B4B47900526A0C /* cdr.pb.swift */,
+				7129698C29B4E16F00526A0C /* cdr.pb.go */,
+				7129698D29B4E16F00526A0C /* cdr.proto */,
+				7129698E29B4E16F00526A0C /* cdr.pb.swift */,
 			);
 			path = cdr;
 			sourceTree = "<group>";
 		};
-		7129691929B4B47900526A0C /* iam */ = {
+		7129698F29B4E16F00526A0C /* iam */ = {
 			isa = PBXGroup;
 			children = (
-				7129691A29B4B47900526A0C /* iam_grpc.pb.go */,
-				7129691B29B4B47900526A0C /* iam.pb.swift */,
-				7129691C29B4B47900526A0C /* iam.grpc.swift */,
-				7129691D29B4B47900526A0C /* iam.proto */,
-				7129691E29B4B47900526A0C /* iam.pb.go */,
+				7129699029B4E16F00526A0C /* iam_grpc.pb.go */,
+				7129699129B4E16F00526A0C /* iam.pb.swift */,
+				7129699229B4E16F00526A0C /* iam.grpc.swift */,
+				7129699329B4E16F00526A0C /* iam.proto */,
+				7129699429B4E16F00526A0C /* iam.pb.go */,
 			);
 			path = iam;
 			sourceTree = "<group>";
 		};
-		7129691F29B4B47900526A0C /* api */ = {
+		7129699529B4E16F00526A0C /* userinfo */ = {
 			isa = PBXGroup;
 			children = (
-				7129692029B4B47900526A0C /* api.pb.swift */,
-				7129692129B4B47900526A0C /* api.proto */,
-				7129692229B4B47900526A0C /* api.pb.go */,
-				7129692329B4B47900526A0C /* api.grpc.swift */,
-				7129692429B4B47900526A0C /* api_grpc.pb.go */,
+				7129699629B4E16F00526A0C /* userinfo.pb.swift */,
+				7129699729B4E16F00526A0C /* userinfo.proto */,
+				7129699829B4E16F00526A0C /* userinfo.pb.go */,
+			);
+			path = userinfo;
+			sourceTree = "<group>";
+		};
+		7129699929B4E16F00526A0C /* api */ = {
+			isa = PBXGroup;
+			children = (
+				7129699A29B4E16F00526A0C /* api.pb.swift */,
+				7129699B29B4E16F00526A0C /* api.proto */,
+				7129699C29B4E16F00526A0C /* api.pb.go */,
+				7129699D29B4E16F00526A0C /* api.grpc.swift */,
+				7129699E29B4E16F00526A0C /* api_grpc.pb.go */,
 			);
 			path = api;
 			sourceTree = "<group>";
 		};
-		7129692629B4B47900526A0C /* Products */ = {
+		712969A029B4E16F00526A0C /* Products */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -331,7 +350,6 @@
 		719A61B929444B1100E9E7AD = {
 			isa = PBXGroup;
 			children = (
-				7129691429B4B47900526A0C /* Proto */,
 				719A61C429444B1100E9E7AD /* OldGeneral */,
 				719A61D529444B1300E9E7AD /* OldGeneralTests */,
 				719A61DF29444B1300E9E7AD /* OldGeneralUITests */,
@@ -354,6 +372,7 @@
 		719A61C429444B1100E9E7AD /* OldGeneral */ = {
 			isa = PBXGroup;
 			children = (
+				7129698A29B4E16F00526A0C /* Proto */,
 				71FB60422944B5B2004079E2 /* VIews */,
 				71FB60432944B5C0004079E2 /* Model */,
 				719A61C529444B1100E9E7AD /* OldGeneralApp.swift */,
@@ -487,19 +506,10 @@
 		71BEA7BE29AB810800C8C3DE /* HTTP */ = {
 			isa = PBXGroup;
 			children = (
-				71BEA7C329ABA5BA00C8C3DE /* Login */,
 				71BEA7B729AA2D9B00C8C3DE /* http.swift */,
 				71BEA7C629ABA73C00C8C3DE /* error.swift */,
 			);
 			path = HTTP;
-			sourceTree = "<group>";
-		};
-		71BEA7C329ABA5BA00C8C3DE /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				71BEA7C429ABA5DA00C8C3DE /* Register.swift */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		71BEA7C829ABAA6B00C8C3DE /* Components */ = {
@@ -714,8 +724,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 7129692629B4B47900526A0C /* Products */;
-					ProjectRef = 7129692529B4B47900526A0C /* OldgeneralProto.xcodeproj */;
+					ProductGroup = 712969A029B4E16F00526A0C /* Products */;
+					ProjectRef = 7129699F29B4E16F00526A0C /* OldgeneralProto.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -732,13 +742,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7129693029B4B47900526A0C /* iam.pb.go in Resources */,
-				7129693329B4B47900526A0C /* api.pb.go in Resources */,
-				7129692C29B4B47900526A0C /* iam_grpc.pb.go in Resources */,
-				7129692929B4B47900526A0C /* cdr.pb.go in Resources */,
+				712969AA29B4E17000526A0C /* iam.pb.go in Resources */,
+				712969AD29B4E17000526A0C /* userinfo.pb.go in Resources */,
+				712969A629B4E17000526A0C /* iam_grpc.pb.go in Resources */,
+				712969A329B4E17000526A0C /* cdr.pb.go in Resources */,
 				719A61CD29444B1200E9E7AD /* Preview Assets.xcassets in Resources */,
-				7129693529B4B47900526A0C /* api_grpc.pb.go in Resources */,
 				719A61CA29444B1200E9E7AD /* Assets.xcassets in Resources */,
+				712969B029B4E17000526A0C /* api.pb.go in Resources */,
+				712969B229B4E17000526A0C /* api_grpc.pb.go in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -866,28 +877,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				712969A429B4E17000526A0C /* cdr.proto in Sources */,
 				71BEA7BD29AA5E8B00C8C3DE /* WalletPage.swift in Sources */,
 				7173001129B31C7200714912 /* FlagDetailInfoItem.swift in Sources */,
 				7103952E298E52B80035400F /* FlagSquare.swift in Sources */,
 				71A5A00F29B0FFE100A60D31 /* SexItem.swift in Sources */,
+				712969AF29B4E17000526A0C /* api.proto in Sources */,
 				71A5E50929A7AB7B0080124E /* LoginPage.swift in Sources */,
+				712969A729B4E17000526A0C /* iam.pb.swift in Sources */,
 				71F16DA129A797C6009F602F /* MyFlagItem.swift in Sources */,
-				71BEA7C529ABA5DA00C8C3DE /* Register.swift in Sources */,
+				712969B129B4E17000526A0C /* api.grpc.swift in Sources */,
 				71BEA7B829AA2D9B00C8C3DE /* http.swift in Sources */,
 				7150138129A65A7000FD155F /* FlagSquareItem.swift in Sources */,
-				7129693429B4B47900526A0C /* api.grpc.swift in Sources */,
 				71A5E50B29A7AB900080124E /* RegisterPage.swift in Sources */,
+				712969AE29B4E17000526A0C /* api.pb.swift in Sources */,
 				71A5A00B29B0F9C700A60D31 /* UploadSexPage.swift in Sources */,
 				712968F129B4A81A00526A0C /* Settings.swift in Sources */,
 				7173001329B3218B00714912 /* FlagCardItem.swift in Sources */,
 				719A61C629444B1100E9E7AD /* OldGeneralApp.swift in Sources */,
-				7129692A29B4B47900526A0C /* cdr.proto in Sources */,
 				71A5A00D29B0FA8900A60D31 /* UpdateSignaturePage.swift in Sources */,
 				71C8269729ACDB3A0084885B /* RechargePage.swift in Sources */,
 				7151160A29B0DBFE006A40DD /* VIPPrivilegesItem.swift in Sources */,
-				7129692E29B4B47900526A0C /* iam.grpc.swift in Sources */,
 				71A5E52C29A90F5E0080124E /* Message.swift in Sources */,
 				71737176299F7ACA009DF509 /* PayForFlag.swift in Sources */,
+				712969A829B4E17000526A0C /* iam.grpc.swift in Sources */,
 				71C8269529ACD90D0084885B /* FlowDetailsPage.swift in Sources */,
 				71A5E50429A7A2830080124E /* MyFlags.swift in Sources */,
 				71934340298E4D98007C8E6A /* OldgeneralContentView.swift in Sources */,
@@ -897,25 +910,25 @@
 				71A5A00729B0F6B600A60D31 /* UploadAvatarvPage.swift in Sources */,
 				71039532298E626A0035400F /* AccountButton.swift in Sources */,
 				7103953C298F585F0035400F /* CreateFlag.swift in Sources */,
+				712969AC29B4E17000526A0C /* userinfo.proto in Sources */,
 				71BEA7D529ABB10200C8C3DE /* FlagInfoPage.swift in Sources */,
+				712969A929B4E17000526A0C /* iam.proto in Sources */,
 				71039539298E68410035400F /* VIPButton.swift in Sources */,
-				7129692F29B4B47900526A0C /* iam.proto in Sources */,
+				7129698929B4DE9900526A0C /* user.swift in Sources */,
 				7151160729B0DB32006A40DD /* VIPDescriptionPage.swift in Sources */,
 				7126105E29B37C8800CBC493 /* date.swift in Sources */,
 				71039534298E67230035400F /* SettingButton.swift in Sources */,
 				71BEA7CA29ABAA8E00C8C3DE /* SettingsPage.swift in Sources */,
-				7129692D29B4B47900526A0C /* iam.pb.swift in Sources */,
 				71BEA7D129ABB07D00C8C3DE /* UserInfoEditPage.swift in Sources */,
-				7129693229B4B47900526A0C /* api.proto in Sources */,
+				712969AB29B4E17000526A0C /* userinfo.pb.swift in Sources */,
 				7173001529B329AA00714912 /* SignInPage.swift in Sources */,
 				7193433D298E4D6B007C8E6A /* Home.swift in Sources */,
-				7129692B29B4B47900526A0C /* cdr.pb.swift in Sources */,
 				71BEA7CE29ABAF9600C8C3DE /* VIPPage.swift in Sources */,
 				71A5E50E29A7B40A0080124E /* Main.swift in Sources */,
 				71A5E50229A7A1480080124E /* time.swift in Sources */,
-				7129693129B4B47900526A0C /* api.pb.swift in Sources */,
+				712969A529B4E17000526A0C /* cdr.pb.swift in Sources */,
 				71BEA7CC29ABAF7F00C8C3DE /* QAPage.swift in Sources */,
-				71BEA7BA29AA49FD00C8C3DE /* Token.swift in Sources */,
+				71BEA7BA29AA49FD00C8C3DE /* token.swift in Sources */,
 				71C8269A29ACDDC80084885B /* FlowDetailsItem.swift in Sources */,
 				7151160C29B0E411006A40DD /* VIPChargeItem.swift in Sources */,
 				71A5E52929A8FE670080124E /* SearchBar.swift in Sources */,

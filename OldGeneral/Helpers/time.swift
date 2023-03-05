@@ -26,3 +26,16 @@ func tomorrow() -> String {
     
     return dateString
 }
+
+func diffDateNow(_ date: Int64) -> Int {
+//    let startDate = dateFormatter.date(from: "2022-01-01")! // replace with your start date
+    let startDate = Date()
+    let endDate = Date(timeIntervalSince1970: TimeInterval(date / 1000000))
+
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([.day], from: startDate, to: endDate)
+    let days = components.day
+
+    print("Number of days between start and end date: \(days!)")
+    return days! + 1
+}

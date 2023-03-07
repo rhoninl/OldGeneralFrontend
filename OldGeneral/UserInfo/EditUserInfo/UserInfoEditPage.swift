@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct UserInfoEditPage: View {
-    var username: String = "This is username"
-    var sex: String = "女"
-    var Signature: String = "这个是 个性签名"
+    @EnvironmentObject var userInfo :userInfoShared
     var body: some View {
         VStack{
             Text("编辑信息")
@@ -21,11 +19,23 @@ struct UserInfoEditPage: View {
                     HStack{
                         Text("头像")
                         Spacer()
-                        Image("turtlerock")
-                            .resizable()
-                            .frame(width: 50,height: 50)
-                            .clipShape(Circle())
-                            .padding(.trailing,10)
+                        AsyncImage(url: URL(string: userInfo.data.userAvatar)) { phase in
+                            switch phase {
+                            case .success(let image):
+                                image.resizable()
+                                     .aspectRatio(contentMode: .fit)
+                                     .frame(width: 50,height: 50)
+                                     .clipShape(Circle())
+                                     .padding(.trailing,10)
+                            default :
+                                Image("avatar")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 50,height: 50)
+                                    .clipShape(Circle())
+                                    .padding(.trailing,10)
+                            }
+                        }
                     }
                 }
                 
@@ -33,7 +43,7 @@ struct UserInfoEditPage: View {
                     HStack{
                         Text("昵称")
                         Spacer()
-                        Text(username)
+                        Text(userInfo.data.userName)
                             .padding(.trailing,10)
                             .lineLimit(1)
                     }
@@ -43,7 +53,7 @@ struct UserInfoEditPage: View {
                     HStack{
                         Text("性别")
                         Spacer()
-                        Text(sex)
+                        Text(userInfo.data.userGender)
                             .padding(.trailing,10)
                     }
                 }
@@ -52,7 +62,7 @@ struct UserInfoEditPage: View {
                     HStack{
                         Text("个性签名")
                         Spacer()
-                        Text(Signature)
+                        Text(userInfo.data.userSignature)
                             .padding(.trailing,10)
                             .lineLimit(1)
                     }
@@ -64,7 +74,9 @@ struct UserInfoEditPage: View {
 }
 
 struct UserInfoEditPage_Previews: PreviewProvider {
+    @Binding var userInfo:Userinfo_UserBasicInfo
     static var previews: some View {
         UserInfoEditPage()
+            .environmentObject(userInfoShared())
     }
 }

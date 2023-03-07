@@ -33,6 +33,7 @@ struct SettingsPage: View {
     func signout() {
         RemoveToken()
         loggedOut = true
+        isLogined = false
         UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: OldgeneralContentView())
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }

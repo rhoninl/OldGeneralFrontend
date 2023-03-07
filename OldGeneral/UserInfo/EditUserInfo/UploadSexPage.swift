@@ -8,21 +8,22 @@
 import SwiftUI
 
 struct UploadSexPage: View {
-    @State var currentSex: String = "男"
+    @EnvironmentObject var userInfo: userInfoShared
     @Environment(\.presentationMode) var presentationMode
-    
+    @State var currentSex = "男"
+
     var body: some View {
         VStack{
             Text("选择性别")
                 .padding()
             HStack(spacing: 50){
-                SexItem(str: "♂",ischoose: currentSex == "男")
+                SexItem(str: "♂",ischoose: userInfo.data.userGender == "男")
                     .onTapGesture {
-                        currentSex = "男"
+                        userInfo.data.userGender = "男"
                     }
-                SexItem(str: "♀",ischoose: currentSex == "女")
+                SexItem(str: "♀",ischoose: userInfo.data.userGender == "女")
                     .onTapGesture {
-                        currentSex = "女"
+                        userInfo.data.userGender = "女"
                     }
             }
             Button {
@@ -42,5 +43,6 @@ struct UploadSexPage: View {
 struct UploadSexPage_Previews: PreviewProvider {
     static var previews: some View {
         UploadSexPage()
+            .environmentObject(userInfoShared())
     }
 }

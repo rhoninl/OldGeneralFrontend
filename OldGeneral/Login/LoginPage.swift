@@ -12,6 +12,7 @@ let passwordError: String = "账号或者密码错误"
 let inputFilter: String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
 
 struct LoginPage: View {
+    @EnvironmentObject var userInfo: userInfoShared
     @State private var UserName: String = ""
     @State private var Password: String = ""
     @State private var loggedIn = false
@@ -94,9 +95,22 @@ struct LoginPage: View {
                             Spacer()
                             
                             Button {
-                                loggedIn = Login(username: UserName, password: Password)
-                                loginError = !loggedIn
-                                print(loggedIn)
+                                guard UserName != "" && Password != "" else {
+                                    print("empty username or possword")
+                                    loginError = false
+                                    return
+                                }
+                                let loginSuccess = Login(username: UserName, password: Password)
+                                loginError = !loginSuccess
+                                if loginSuccess {
+                                    let info = getUserBasicInfo(userId)
+                                    guard info != nil else {
+                                        loginError = true
+                                        return
+                                    }
+                                    
+                                    userInfo.data = info!
+                                }
                             } label: {
                                 Text("登陆")
                                     .padding([.leading,.trailing],15)
@@ -130,5 +144,6 @@ struct LoginPage: View {
 struct LoginPage_Previews: PreviewProvider {
     static var previews: some View {
         LoginPage()
+            .environmentObject(userInfoShared())
     }
 }

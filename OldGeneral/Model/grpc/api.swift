@@ -13,7 +13,7 @@ import GRPC
 private var ApiClient: Api_apiNIOClient?
 
 func NewApiClient() throws -> Api_apiNIOClient {
-    let group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
+    let group = MultiThreadedEventLoopGroup(numberOfThreads: 3)
     
     // Configure the channel, we're not using TLS so the connection is `insecure`.
     let channel = try GRPCChannelPool.with(

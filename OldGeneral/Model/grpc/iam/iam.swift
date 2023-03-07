@@ -8,6 +8,8 @@
 import Foundation
 import GRPC
 
+var isLogined = false
+
 func Login(username: String, password: String) -> Bool {
     let request = Iam_IamLoginRequest.with { my in
         my.requestID = generateUUID()
@@ -55,6 +57,9 @@ func CheckLoginStatus() -> Bool {
         return false
     }
 
+    guard !isLogined else {
+        return true
+    }
     
     let request = Iam_IamCheckStatusRequest.with { my in
         my.requestID = generateUUID()

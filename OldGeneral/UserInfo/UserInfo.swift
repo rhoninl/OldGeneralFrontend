@@ -8,36 +8,18 @@
 import SwiftUI
 import UIKit
 
+
 struct UserInfo: View {
-    init(preview: Bool = false) {
-        if preview {
-            return
-        }
-        let data = getUserBasicInfo(userId)
-        guard data != nil else {
-            return
-        }
-        userInfo = data!
-    }
-
-    private var userInfo: Userinfo_UserBasicInfo = Userinfo_UserBasicInfo.with { my in
-        my.userID = "TestUserId"
-        my.userName = "TestUserName"
-        my.userGender = "男"
-        my.userBirthday = 1649439999000
-        my.userSignature = "没有签名"
-    }
-
+    @EnvironmentObject var userInfo: userInfoShared
     var body: some View {
         HStack{
-//            present(myViewController, animated: true, completion: nil)
-            AsyncImage(url: URL(string: userInfo.userAvatar)) { phase in
+            AsyncImage(url: URL(string: userInfo.data.userAvatar)) { phase in
                 switch phase {
                 case .success(let image):
                     image.resizable()
-                         .aspectRatio(contentMode: .fit)
-                         .frame(width: 100, height: 100)
-                         .clipShape(Circle())
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 100, height: 100)
+                        .clipShape(Circle())
                 default :
                     Image("avatar")
                         .resizable()
@@ -46,31 +28,31 @@ struct UserInfo: View {
                         .clipShape(Circle())
                 }
             }
-
-            
-
             Spacer()
                 .frame(width: 30.0)
             VStack(alignment: .leading){
-                Text(userInfo.userName)
+                Text(userInfo.data.userName)
                     .font(.title2)
                     .multilineTextAlignment(.leading)
-                Text("id: \(userInfo.userID)")
+                Text("id: \(userInfo.data.userID)")
                     .font(.caption)
                     .fontWeight(.light)
                     .multilineTextAlignment(.leading)
                 HStack{
-                    Text("性别：\(userInfo.userGender)")
+                    Text("性别：\(userInfo.data.userGender)")
                     Divider()
                         .fixedSize()
-                    Text("加入 \(diffDateNow(userInfo.userBirthday)) 天")
+                    Text("加入 \(diffDateNow(userInfo.data.userBirthday)) 天")
                 }
                 .font(.footnote)
-                Text(userInfo.userSignature)
+                Text(userInfo.data.userSignature)
                     .font(.caption)
                     .foregroundColor(.primary.opacity(0.6))
-                    .lineLimit(1)
             }
+            .lineLimit(1)
+        }
+        .onAppear {
+            userInfo.fetchUserInfo(userId)
         }
     }
 }
@@ -78,6 +60,7 @@ struct UserInfo: View {
 
 struct UserInfo_Previews: PreviewProvider {
     static var previews: some View {
-        UserInfo(preview: true)
+        UserInfo()
+            .environmentObject(userInfoShared())
     }
 }

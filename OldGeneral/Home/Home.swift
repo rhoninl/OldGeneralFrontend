@@ -16,10 +16,11 @@ struct HomeView: View {
     
     @State private var jumptoSettingPage: Bool = false
     @State private var animationState: CGFloat = 1
+    
     var body: some View {
         VStack {
             NavigationLink {
-                UserInfoEditPage(username: username)
+                UserInfoEditPage()
             } label: {
                 UserInfo()
                     .padding(.trailing, 70.0)
@@ -69,7 +70,7 @@ struct HomeView: View {
                     AccountButton()
                 }
                 NavigationLink {
-                    VIPPage(username: "nil")
+                    VIPPage(username: username)
                 } label: {
                     VIPButton()
                 }
@@ -102,6 +103,5 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-
     }
 }

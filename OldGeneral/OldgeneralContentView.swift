@@ -7,7 +7,37 @@
 
 import SwiftUI
 
+@MainActor class userInfoShared: ObservableObject {
+    @Published var data = defaultUserInfo
+    
+    func fetchUserInfo(_ userId: String, cache: Bool = true) {
+        guard data == defaultUserInfo || cache == false else {
+            return 
+        }
+        let data = getUserBasicInfo(userId)
+        guard data != nil else {
+            return
+        }
+        
+        self.data = data == nil ? defaultUserInfo : data!
+    }
+}
+
 struct OldgeneralContentView: View {
+    init() {
+        guard userId != "" else {
+            return
+        }
+
+        let data = getUserBasicInfo(userId)
+        guard data != nil else {
+            return
+        }
+        
+        userInfo.data = data!
+    }
+    @StateObject var userInfo = userInfoShared()
+
     var body: some View {
         NavigationStack{
             if CheckLoginStatus(){
@@ -18,6 +48,7 @@ struct OldgeneralContentView: View {
                     .edgesIgnoringSafeArea(.all)
             }
         }
+        .environmentObject(userInfo)
     }
 }
 

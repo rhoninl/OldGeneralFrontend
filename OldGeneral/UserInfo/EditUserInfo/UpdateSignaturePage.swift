@@ -8,30 +8,44 @@
 import SwiftUI
 
 struct UpdateSignaturePage: View {
-    @State var signature: String = "this is signature"
+    @EnvironmentObject var userInfo: userInfoShared
+    @State var signature: String = ""
     @State var noticeMessage: String = " "
     @Environment(\.presentationMode) var presentationMode
-    
+
     var body: some View {
         VStack(){
             Text("编辑签名")
-            TextField("请输入您的个性签名", text: $signature)
-                .onChange(of: signature, perform: { newValue in
-                    noticeMessage = " "
-                })
-                .textFieldStyle(.roundedBorder)
-                .overlay {
-                    HStack{
-                        Spacer()
-                        if !signature.isEmpty {
-                            Image(systemName: "x.circle")
-                                .onTapGesture {
-                                    signature = ""
-                                }
-                        }
-                    }
-                    .padding()
+                .padding()
+            VStack(alignment: .leading){
+                VStack(alignment: .leading){
+                    Text("原签名:")
+                    Text(userInfo.data.userSignature)
                 }
+                .font(.footnote)
+                .onTapGesture {
+                    signature  = userInfo.data.userSignature
+                }
+                TextField("请输入您的个性签名", text: $signature)
+                    .onChange(of: signature, perform: { newValue in
+                        noticeMessage = " "
+                    })
+                    .autocorrectionDisabled()
+                    .textInputAutocapitalization(.never)
+                    .textFieldStyle(.roundedBorder)
+                    .overlay {
+                        HStack{
+                            Spacer()
+                            if !signature.isEmpty {
+                                Image(systemName: "x.circle")
+                                    .onTapGesture {
+                                        signature = ""
+                                    }
+                            }
+                        }
+                        .padding()
+                    }
+            }
             HStack{
                 VStack(alignment: .leading){
                     Text("")
@@ -45,6 +59,12 @@ struct UpdateSignaturePage: View {
                     noticeMessage = "签名为空"
                     return
                 }
+                
+                if  userInfo.data.userSignature != signature  {
+                    userInfo.data.userSignature = signature
+                }
+
+                
                 self.presentationMode.wrappedValue.dismiss()
             } label: {
                 Text("确认修改")
@@ -56,11 +76,13 @@ struct UpdateSignaturePage: View {
             Spacer()
         }
         .padding()
+        .lineLimit(1)
     }
 }
 
 struct UpdateSignaturePage_Previews: PreviewProvider {
     static var previews: some View {
         UpdateSignaturePage()
+            .environmentObject(userInfoShared())
     }
 }

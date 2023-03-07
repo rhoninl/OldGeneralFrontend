@@ -85,7 +85,7 @@ struct RegisterPage: View {
                                     errorMsg = "两次密码不相同"
                                     return
                                 }
-                                RegistSuccess = await SignUp(username: username, password: password)
+                                RegistSuccess = SignUp(username: username, password: password)
                                 guard RegistSuccess else {
                                     errorMsg = "注册失败"
                                     return

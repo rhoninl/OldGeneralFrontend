@@ -16,6 +16,8 @@
 		71039537298E67BB0035400F /* QAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71039536298E67BB0035400F /* QAButton.swift */; };
 		71039539298E68410035400F /* VIPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71039538298E68410035400F /* VIPButton.swift */; };
 		7103953C298F585F0035400F /* CreateFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7103953B298F585F0035400F /* CreateFlag.swift */; };
+		7116F29429B8C18B0080DAE5 /* systemMessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116F29329B8C18B0080DAE5 /* systemMessageItem.swift */; };
+		7116F29729B8C8210080DAE5 /* frendMessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116F29629B8C8210080DAE5 /* frendMessageItem.swift */; };
 		7126105629B377DF00CBC493 /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7126105529B377DF00CBC493 /* api.swift */; };
 		7126105929B3794C00CBC493 /* iam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7126105829B3794C00CBC493 /* iam.swift */; };
 		7126105C29B37C8100CBC493 /* string.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7126105B29B37C8100CBC493 /* string.swift */; };
@@ -122,6 +124,8 @@
 		71039536298E67BB0035400F /* QAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAButton.swift; sourceTree = "<group>"; };
 		71039538298E68410035400F /* VIPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPButton.swift; sourceTree = "<group>"; };
 		7103953B298F585F0035400F /* CreateFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlag.swift; sourceTree = "<group>"; };
+		7116F29329B8C18B0080DAE5 /* systemMessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = systemMessageItem.swift; sourceTree = "<group>"; };
+		7116F29629B8C8210080DAE5 /* frendMessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frendMessageItem.swift; sourceTree = "<group>"; };
 		7126105529B377DF00CBC493 /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
 		7126105829B3794C00CBC493 /* iam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iam.swift; sourceTree = "<group>"; };
 		7126105B29B37C8100CBC493 /* string.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = string.swift; sourceTree = "<group>"; };
@@ -499,6 +503,8 @@
 			isa = PBXGroup;
 			children = (
 				71A5E52B29A90F5E0080124E /* Message.swift */,
+				7116F29329B8C18B0080DAE5 /* systemMessageItem.swift */,
+				7116F29629B8C8210080DAE5 /* frendMessageItem.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -897,6 +903,7 @@
 				719A61C629444B1100E9E7AD /* OldGeneralApp.swift in Sources */,
 				71A5A00D29B0FA8900A60D31 /* UpdateSignaturePage.swift in Sources */,
 				71C8269729ACDB3A0084885B /* RechargePage.swift in Sources */,
+				7116F29729B8C8210080DAE5 /* frendMessageItem.swift in Sources */,
 				7151160A29B0DBFE006A40DD /* VIPPrivilegesItem.swift in Sources */,
 				71A5E52C29A90F5E0080124E /* Message.swift in Sources */,
 				71737176299F7ACA009DF509 /* PayForFlag.swift in Sources */,
@@ -936,6 +943,7 @@
 				7151160E29B0E7C1006A40DD /* VIPChargePage.swift in Sources */,
 				71C8269C29ACE18A0084885B /* RechargeItem.swift in Sources */,
 				7126105929B3794C00CBC493 /* iam.swift in Sources */,
+				7116F29429B8C18B0080DAE5 /* systemMessageItem.swift in Sources */,
 				71BEA7C729ABA73C00C8C3DE /* error.swift in Sources */,
 				7126105C29B37C8100CBC493 /* string.swift in Sources */,
 				71A5E50629A7A2E90080124E /* Flag.swift in Sources */,

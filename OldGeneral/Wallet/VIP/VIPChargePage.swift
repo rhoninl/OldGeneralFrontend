@@ -20,6 +20,7 @@ struct VIPChargePage: View {
                     Text("开通VIP专享超值特权 \(expiryTime)")
                         .font(.caption2)
                 }
+                .foregroundColor(.white)
                 Spacer()
             }
             .padding()
@@ -43,8 +44,11 @@ struct VIPChargePage: View {
             } label: {
                 Text("立即开通会员")
                     .frame(maxWidth: .infinity)
+                    .foregroundColor(.black.opacity(0.8))
+                    .padding(.all,5)
             }
             .buttonStyle(.borderedProminent)
+            .tint(Color("ChargeCard"))
             .cornerRadius(20)
             .alert(Text("充值\(getCurrentTime())成功"), isPresented: $chargeAlert) {
                 
@@ -54,7 +58,7 @@ struct VIPChargePage: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .background(.yellow.opacity(0.4))
+        .background(.gray.opacity(0.5))
         .cornerRadius(20)
         
     }

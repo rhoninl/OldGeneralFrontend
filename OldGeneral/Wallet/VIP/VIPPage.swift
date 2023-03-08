@@ -15,8 +15,10 @@ struct VIPPage: View {
                 VIPChargePage(username: username)
                     .padding()
             }
-            .background(.gray.opacity(0.6))
+                .background(.black)
             VIPDescriptionPage()
+                .foregroundColor(.white)
+                .background(.gray.opacity(0.9))
         }
     }
 }

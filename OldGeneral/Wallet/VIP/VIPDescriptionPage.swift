@@ -27,7 +27,7 @@ struct VIPDescriptionPage: View {
             Spacer()
         }
         .frame(maxWidth: .infinity,maxHeight: .infinity)
-        .background(.gray.opacity(0.4))
+        .background(.black.opacity(0.6))
     }
 }
 

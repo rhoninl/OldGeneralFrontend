@@ -27,8 +27,9 @@ struct VIPChargeItem: View {
             }
         }
         .padding()
-        .background(isChoose ?  Color.yellow : Color.primary.opacity(0.2))
+        .background(isChoose ?  Color.primary.opacity(0.2) : Color("ChargeCard"))
         .cornerRadius(5)
+        .foregroundColor(isChoose ? Color("ChargeCard") : Color.black.opacity(0.8))
     }
 }
 

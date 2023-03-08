@@ -37,6 +37,7 @@ struct CreateFlag: View {
                             }
                             .foregroundColor(wordCount < wordMax ? .primary : Color.red)
                             .scrollContentBackground(.hidden)
+                            .autocorrectionDisabled()
                             .frame(height: 100)
                             .padding(.all,5)
                             .focused($flagNameIsFocus)

@@ -30,12 +30,9 @@ func getUserBasicInfo(_ userId: String) -> Userinfo_UserBasicInfo? {
         my.requestTime = getTimeStamp()
         my.userID = userId
     }
-        
-    var option = CallOptions()
-    option.customMetadata.add(name: "Authorization", value: token!)
     
     do {
-        let call = getAPIClient().userInfoGet(request,callOptions: option)
+        let call = try getAPIClient().getUserInfo(request,callOptions: getOption())
         let response = try call.response.wait()
         return response.userInfo
     } catch {

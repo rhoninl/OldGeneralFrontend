@@ -9,11 +9,11 @@ import SwiftUI
 
 struct PayForFlag: View {
     var flagName: String = ""
-    var daysNum: Int = 0
-    var startDate: String = today()
-    var totalDays: Int = 0
-    var goldNum: Int = 6
-    @State private var money: Int = 6
+    var startDate: Int64 = today()
+    var totalTime: Int64 = 0
+    var goldNum: Int64 = 6
+    @State private var money: Int64 = 6
+    @State private var flagInfo = Cdr_FlagBasicInfo()
     let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
 
     var body: some View {
@@ -23,7 +23,7 @@ struct PayForFlag: View {
                     VStack(alignment: .leading,spacing: 7){
                         Text("Flag 名称: \(flagName)")
                             .lineLimit(1)
-                        Text("从 \(startDate) 开始，坚持 \(totalDays) 天")
+                        Text("从 \(timestampToDate(startDate)) 开始，坚持 \(totalTime) 天")
                     }
                     .font(.footnote)
                     .padding(.all,1)
@@ -99,7 +99,7 @@ struct PayForFlag: View {
                             .keyboardType(.numberPad)
                             .onChange(of: money) { newValue in
                                 if newValue > 9999 {
-                                    money = Int(String(money).prefix(4)) ?? 0
+                                    money = Int64(String(money).prefix(4)) ?? 0
                                     CheckMoney()
                                 } else if newValue <= 6 {
                                     money = 6
@@ -129,6 +129,14 @@ struct PayForFlag: View {
                 .tint(.orange)
                 HStack{
                     Button {
+                        flagInfo.flagName = flagName
+                        flagInfo.totalTime = totalTime
+                        flagInfo.startTime = startDate
+                        flagInfo.payMoney = goldNum
+                        if  CreateFlag(data: flagInfo) {
+                            UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: OldgeneralContentView())
+                            UIApplication.shared.windows.first?.makeKeyAndVisible()
+                        }
                     } label: {
                         Text("支付")
                             .frame(maxWidth: .infinity)

@@ -8,5 +8,34 @@
 import Foundation
 
 func getTimeStamp() -> Int64 {
-    return Int64(Date().timeIntervalSince1970 * 1000)
+    return Int64(Date().timeIntervalSince1970 * 1000000)
+}
+
+func today() -> Int64 {
+    return Int64(Date().timeIntervalSince1970 * 1000000)
+}
+
+func tomorrow() -> Int64 {
+    return Int64(Date().addingTimeInterval(86400).timeIntervalSince1970 * 1000000)
+}
+
+func diffDateNow(_ date: Int64) -> Int {
+//    let startDate = dateFormatter.date(from: "2022-01-01")! // replace with your start date
+    let startDate = Date()
+    let endDate = Date(timeIntervalSince1970: TimeInterval(date / 1000000))
+
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([.day], from: startDate, to: endDate)
+    let days = components.day
+
+    print("Number of days between start and end date: \(days!)")
+    return days! + 1
+}
+
+
+func timestampToDate(_ date: Int64) -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd"
+    
+    return formatter.string(from: Date(timeIntervalSince1970: TimeInterval(date/1000000)))
 }

@@ -24,15 +24,17 @@ func NewApiClient() throws -> Api_apiNIOClient {
    return Api_apiNIOClient(channel: channel)
 }
 
-func getAPIClient() -> Api_apiNIOClient {
+func getAPIClient() throws -> Api_apiNIOClient {
     if ApiClient == nil {
-        do {
-            ApiClient = try NewApiClient()
-            print("get APi Client")
-        } catch {
-            print("Cannot to Connect Server")
-            exit(1)
-        }
+        ApiClient = try NewApiClient()
+        print("get APi Client")
     }
+    
     return ApiClient!
+}
+
+func getOption() -> CallOptions {
+    var option = CallOptions()
+    option.customMetadata.add(name: "Authorization", value: GetToken()!)
+    return option
 }

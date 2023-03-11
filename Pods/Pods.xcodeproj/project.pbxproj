@@ -170,7 +170,7 @@
 		9344CF861401265FF081829BE09D8D42 /* TransitionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionManager.swift; path = Spring/TransitionManager.swift; sourceTree = "<group>"; };
 		98D6A176F8675646FAD23BC007A6EC6F /* Pods-OldGeneralTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-OldGeneralTests"; path = Pods_OldGeneralTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2509F4E581B3F7CBF6B1EE55F58A96 /* Pods-OldGeneral-OldGeneralUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-OldGeneral-OldGeneralUITests"; path = Pods_OldGeneral_OldGeneralUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F8AE2B84A39608D969AEC530621CE71 /* SpringLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringLabel.swift; path = Spring/SpringLabel.swift; sourceTree = "<group>"; };
 		A1E48B7FF70509EAB6D2754C3DE48690 /* KeychainAccess-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainAccess-dummy.m"; sourceTree = "<group>"; };
 		A490FB9AFAB5C596F54164F56BA23CD6 /* DesignableTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextView.swift; path = Spring/DesignableTextView.swift; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 		E3A0609525C5B681751F703B88451CB1 /* WaterfallGrid */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WaterfallGrid; path = WaterfallGrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51CB6FD46E3A289561BB8532A8C0F81 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardLayoutConstraint.swift; path = Spring/KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
 		E6C21DBD68AF4CF88036778B931FB623 /* WaterfallGrid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WaterfallGrid.swift; path = Sources/WaterfallGrid/WaterfallGrid.swift; sourceTree = "<group>"; };
-		E8EE7F078656FABB8F6821D10FF994BB /* KeychainAccess */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainAccess; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8EE7F078656FABB8F6821D10FF994BB /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5EFC7E74A89F1A981356268A4467BD /* WaterfallGrid-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WaterfallGrid-Info.plist"; sourceTree = "<group>"; };
 		EC3CC8164592AA0D269454B3408D2491 /* Pods-OldGeneralTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OldGeneralTests.release.xcconfig"; sourceTree = "<group>"; };
 		F237F209710ACF5AE631C7745052952E /* Spring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Spring.release.xcconfig; sourceTree = "<group>"; };
@@ -281,7 +281,6 @@
 				E6C21DBD68AF4CF88036778B931FB623 /* WaterfallGrid.swift */,
 				B8A41BBAB9C1733E2D27E268A5DBE405 /* Support Files */,
 			);
-			name = WaterfallGrid;
 			path = WaterfallGrid;
 			sourceTree = "<group>";
 		};
@@ -321,7 +320,7 @@
 		36F2736D1537A0A4F673ED38D5D64CC5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E8EE7F078656FABB8F6821D10FF994BB /* KeychainAccess */,
+				E8EE7F078656FABB8F6821D10FF994BB /* KeychainAccess.framework */,
 				161C2D53A5FDDA57D32795753F7B8E96 /* Pods-OldGeneral */,
 				9B2509F4E581B3F7CBF6B1EE55F58A96 /* Pods-OldGeneral-OldGeneralUITests */,
 				98D6A176F8675646FAD23BC007A6EC6F /* Pods-OldGeneralTests */,
@@ -352,7 +351,6 @@
 				5644FF84C30D0EC0A37F7BEA7521E4E4 /* Keychain.swift */,
 				AD6BC4E5BDD5D1BEAFF6C0BBA69F1982 /* Support Files */,
 			);
-			name = KeychainAccess;
 			path = KeychainAccess;
 			sourceTree = "<group>";
 		};
@@ -399,7 +397,6 @@
 				D67F42833DE93CC23F84DE6267713721 /* Resources */,
 				3D8AC9E3166321FF229468754ACDF450 /* Support Files */,
 			);
-			name = Spring;
 			path = Spring;
 			sourceTree = "<group>";
 		};
@@ -624,7 +621,7 @@
 			);
 			name = KeychainAccess;
 			productName = KeychainAccess;
-			productReference = E8EE7F078656FABB8F6821D10FF994BB /* KeychainAccess */;
+			productReference = E8EE7F078656FABB8F6821D10FF994BB /* KeychainAccess.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A062DD8462AB228A88272FF6B09535E9 /* Spring */ = {
@@ -928,7 +925,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/KeychainAccess/KeychainAccess-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/KeychainAccess/KeychainAccess-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1322,7 +1319,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/KeychainAccess/KeychainAccess-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/KeychainAccess/KeychainAccess-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CreateFlag: View {
+struct CreateFlagView: View {
     @State private var flagName: String = ""
     @State private var wordCount: Int = 0
     @State private var test: String = ""
@@ -17,7 +17,7 @@ struct CreateFlag: View {
     @State private var maskAlert = false
     @State private var messageAlert = false
     @State private var flagNameIllegal = false
-    @State private var days: Int = 7
+    @State private var days: Int64 = 7
     private var wordMax: Int = 40
     
     var body: some View {
@@ -80,7 +80,7 @@ struct CreateFlag: View {
                             .frame(width: 60.0)
                             .onChange(of: days) { newValue in
                                 if newValue > 9999 {
-                                    days = Int(String(days).prefix(4)) ?? 0
+                                    days = Int64(String(days).prefix(4)) ?? 0
                                 }else if newValue <= 7 {
                                     days = 7
                                 }
@@ -129,7 +129,7 @@ struct CreateFlag: View {
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
             }
             NavigationLink {
-                PayForFlag(flagName: flagName,startDate: startToday ? today() : tomorrow(),totalDays: days)
+                PayForFlag(flagName: flagName,startDate: startToday ? today() : tomorrow(),totalTime: days)
             } label: {
                 Text("开干!")
                     .frame(maxWidth: .infinity,minHeight: 40)
@@ -150,8 +150,8 @@ struct CreateFlag: View {
     }
 }
 
-struct CreateFlag_Previews: PreviewProvider {
+struct CreateFlagView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateFlag()
+        CreateFlagView()
     }
 }

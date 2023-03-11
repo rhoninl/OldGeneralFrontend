@@ -14,6 +14,7 @@ struct HomeView: View {
     private var Achieves: Int = 456
     private var Sieges: Int = 789
     
+    @State private var flagInfo: [Cdr_FlagBasicInfo] = []
     @State private var jumptoSettingPage: Bool = false
     @State private var animationState: CGFloat = 1
     
@@ -86,7 +87,7 @@ struct HomeView: View {
                 
             }
             .padding([.top,.bottom],20)
-            MyFlags()
+            MyFlags(data: flagInfo)
             Spacer()
         }
         .padding(.top, 40.0)
@@ -94,14 +95,20 @@ struct HomeView: View {
         .navigationDestination(isPresented: $jumptoSettingPage) {
             SettingsPage()
         }
-        .refreshable {
-            jumptoSettingPage = false
+        .onAppear{
+            guard !ispreview else {
+                return
+            }
+            flagInfo = fetchMyFlagList()
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        if preview() {
+            HomeView()
+                .environmentObject(userInfoShared())
+        }
     }
 }

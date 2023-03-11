@@ -19,7 +19,7 @@ func Login(username: String, password: String) -> Bool {
     }
     
     do {
-        let call = getAPIClient().iAMLogin(request)
+        let call = try getAPIClient().iAMLogin(request)
         let resp = try call.response.wait()
         print(resp.token)
         StoreToken(resp.token)
@@ -41,7 +41,7 @@ func SignUp(username: String, password: String) -> Bool {
     }
     
     do {
-        let call = getAPIClient().iAMRegister(request)
+        let call = try getAPIClient().iAMRegister(request)
         let response = try call.response.wait()
         return response.isSuccess
     }catch {
@@ -66,10 +66,8 @@ func CheckLoginStatus() -> Bool {
         my.requestTime = getTimeStamp()
     }
     
-    var option = CallOptions()
-    option.customMetadata.add(name: "Authorization", value: token!)
     do {
-        let call = getAPIClient().iAMCheckLoginStatus(request,callOptions: option)
+        let call = try getAPIClient().iAMCheckLoginStatus(request,callOptions: getOption())
         let response = try call.response.wait()
         userId = response.userID
         print("userId \(userId)")

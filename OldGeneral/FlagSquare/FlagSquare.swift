@@ -29,7 +29,7 @@ struct FlagSquare: View {
                 }
                 
                 NavigationLink {
-                    CreateFlag()
+                    CreateFlagView()
                 } label: {
                     Image(systemName: "plus.circle.fill")
                         .resizable()

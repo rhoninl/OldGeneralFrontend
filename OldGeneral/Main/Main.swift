@@ -15,16 +15,6 @@ struct Main: View {
                     Image(systemName: "theatermask.and.paintbrush")
                     Text("戏台")
                 }
-            Message()
-                .tabItem{
-                    Image(systemName: "message.fill")
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .overlay {
-                            
-                        }
-                    Text("消息")
-                }
             HomeView()
                 .tabItem {
                     Image(systemName: "person")

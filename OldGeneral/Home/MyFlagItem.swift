@@ -8,29 +8,24 @@
 import SwiftUI
 
 struct MyFlagItem: View {
-    var info: FlagInfo
-//    var CreatedAt: String = today()
-//    var FlagStatus: String = "default"
-//    var FlagName: String = "I have no name"
-//    var currentNum: Int = 0
-//    var totalNum: Int = 0
+    var info: Cdr_FlagBasicInfo
     
     var body: some View {
         HStack{
             VStack(alignment: .leading) {
                 HStack{
-                    Text(info.FlagName)
+                    Text(info.flagName)
                         .font(.title3)
                         .lineLimit(1)
                     Spacer()
-                    Text("\(info.FlagCurrentCount)/\(info.FlagTotalCount)")
+                    Text("\(info.currentTime)/\(info.totalTime)")
                 }
                 HStack{
-                    Text("创建时间: \(info.CreatedAt) ")
+                    Text("创建时间: \(timestampToDate(info.startTime)) ")
                     HStack{
                         Text("状态: ")
-                        Text(info.FlagStatus)
-                            .foregroundColor(getColorByStatus(info.FlagStatus))
+                        Text(info.flagStatus)
+                            .foregroundColor(getColorByStatus(info.flagStatus))
 
                     }
                 }
@@ -44,7 +39,15 @@ struct MyFlagItem: View {
 
 struct MyFlagItem_Previews: PreviewProvider {
     static var previews: some View {
-        MyFlagItem(info: FlagInfo(id: "This is userId", FlagName: "This is FlagName1", CreatedAt: today(), FlagCurrentCount: 10, FlagTotalCount: 10, FlagStatus: "running"))
+        let info = Cdr_FlagBasicInfo.with{ my in
+            my.flagName = "This is test flag"
+            my.flagStatus = "running"
+            my.startTime = 0
+            my.flagID = generateUUID()
+            my.currentTime = 10
+            my.totalTime = 20
+        }
+        MyFlagItem(info: info)
     }
 }
 

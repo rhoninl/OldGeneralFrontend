@@ -10,6 +10,6 @@ import Foundation
 let serverAddress = "oldgeneral.top"
 let grpcServerPort = 1314
 
-//let serverAddress = "192.168.0.2"
-//let grpcServerPort = 30001
+// let serverAddress = "192.168.0.2"
+// let grpcServerPort = 30001
 let keyChainName = "com.oldgeneral"

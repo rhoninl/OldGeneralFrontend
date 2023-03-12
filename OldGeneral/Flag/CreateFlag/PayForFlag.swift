@@ -12,6 +12,7 @@ struct PayForFlag: View {
     var startDate: Int64 = today()
     var totalTime: Int64 = 0
     var goldNum: Int64 = 6
+    @State private var alert: Bool = false
     @State private var money: Int64 = 6
     @State private var flagInfo = Cdr_FlagBasicInfo()
     let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
@@ -133,10 +134,7 @@ struct PayForFlag: View {
                         flagInfo.totalTime = totalTime
                         flagInfo.startTime = startDate
                         flagInfo.payMoney = goldNum
-                        if  CreateFlag(data: flagInfo) {
-                            UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: OldgeneralContentView())
-                            UIApplication.shared.windows.first?.makeKeyAndVisible()
-                        }
+                        alert = true
                     } label: {
                         Text("支付")
                             .frame(maxWidth: .infinity)
@@ -145,6 +143,15 @@ struct PayForFlag: View {
                     .buttonStyle(.borderedProminent)
                     .tint(.yellow)
                     .disabled(goldNum < 6)
+                    .alert(isPresented: $alert) {
+                        Alert(title: Text("支付提醒"), message: Text("请确认您的flag信息，并确认支付该flag")
+                              , primaryButton: .default(Text("确认支付")){
+                            if  CreateFlag(data: flagInfo) {
+                                UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: OldgeneralContentView())
+                                UIApplication.shared.windows.first?.makeKeyAndVisible()
+                            }
+                        },secondaryButton: .destructive(Text("我再想想")))
+                    }
                 }
             }
         }

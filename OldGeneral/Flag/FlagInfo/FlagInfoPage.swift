@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct FlagInfoPage: View {
-    let columns = [GridItem(.flexible()), GridItem(.flexible()) ]
-    
+    init (_ info: Cdr_FlagDetailInfo) {
+        flagInfo = info
+    }
+    var flagInfo: Cdr_FlagDetailInfo
+
+    let columns = [GridItem(.flexible()), GridItem(.flexible())]
     private var usericon: Image = Image(systemName: "square.and.arrow.up.fill")
     private var username: String = "this is user Name"
     private var flagName: String = "this is flag Name"
@@ -18,8 +22,9 @@ struct FlagInfoPage: View {
     private var coinOperate: String = "100"
     private var challengeGold: String = "100"
     private var flagStatus: String = "进行中"
-    private var isOwner: Bool = false
+    private var isOwner: Bool = true
     @State private var jumpToSignPage: Bool = false
+    
     var body: some View {
         VStack{
             HStack{
@@ -59,7 +64,6 @@ struct FlagInfoPage: View {
                     FlagCardItem()
                 }
                 .padding(.all,30)
-                .background(.white)
                 .frame(maxHeight: .infinity)
             }
             Button {
@@ -71,7 +75,6 @@ struct FlagInfoPage: View {
             }
             .buttonStyle(.borderedProminent)
             .padding()
-            .background(.white)
             .tint(.yellow.opacity(0.8))
         }
         .navigationDestination(isPresented: $jumpToSignPage) {
@@ -82,6 +85,10 @@ struct FlagInfoPage: View {
 
 struct FlagInfoPage_Previews: PreviewProvider {
     static var previews: some View {
-        FlagInfoPage()
+        let info = Cdr_FlagDetailInfo.with{ my in
+            my.flagID = "flagId"
+            my.flagName = "flagName"
+        }
+        FlagInfoPage(info)
     }
 }

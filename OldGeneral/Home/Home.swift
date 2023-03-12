@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Spring
 
 struct HomeView: View {
     private var username: String = "TestUserName"
@@ -97,9 +96,15 @@ struct HomeView: View {
         }
         .onAppear{
             guard !ispreview else {
+                print(ispreview)
+                return
+            }
+            guard needRefreshMyFlag else {
+                print("no need to refresh myFlag")
                 return
             }
             flagInfo = fetchMyFlagList()
+            needRefreshMyFlag = false
         }
     }
 }

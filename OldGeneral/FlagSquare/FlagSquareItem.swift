@@ -8,19 +8,28 @@
 import SwiftUI
 
 struct FlagSquareItem: View {
-    var userName: String = "default"
-    var imageName: String
+    var info: Cdr_FlagSquareItemInfo = Cdr_FlagSquareItemInfo()
     var body: some View {
         GroupBox{
             VStack(alignment: .leading){
-                Image(imageName)
-                    .resizable()
-                    .scaledToFit()
-                Text("This is the flag Name")
+                AsyncImage(url: URL(string: info.signinPicture)){ phase in
+                    switch phase {
+                    case .empty:
+                        ProgressView("Loading...")
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .scaledToFit()
+                    default :
+                        Image("avatar")
+                            .resizable()
+                    }
+                }
+                Text(info.flagName)
                     .font(.subheadline)
                     .lineLimit(1)
                 HStack{
-                    Text(userName)
+                    Text(info.userName)
                         .lineLimit(1)
                     Spacer()
                     Text("100金")
@@ -29,13 +38,13 @@ struct FlagSquareItem: View {
                 }
                 .font(.caption2)
             }
+            .frame(maxWidth: 150,maxHeight: 150)
         }
-//        .frame(width: UIScreen.main.bounds.width * 0.4)
     }
 }
 
 struct FlagSquareItem_Previews: PreviewProvider {
     static var previews: some View {
-        FlagSquareItem(imageName: "image1")
+        FlagSquareItem()
     }
 }

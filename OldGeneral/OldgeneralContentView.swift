@@ -35,6 +35,7 @@ struct OldgeneralContentView: View {
         }
         
         userInfo.data = data!
+        needRefreshMyFlag = true
     }
     @StateObject var userInfo = userInfoShared()
 

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MyFlagItem: View {
     var info: Cdr_FlagBasicInfo
-    
     var body: some View {
         HStack{
             VStack(alignment: .leading) {
@@ -18,7 +17,7 @@ struct MyFlagItem: View {
                         .font(.title3)
                         .lineLimit(1)
                     Spacer()
-                    Text("\(info.currentTime)/\(info.totalTime)")
+                    Text("\(info.currentTime)/\(info.totalTime)  >")
                 }
                 HStack{
                     Text("创建时间: \(timestampToDate(info.startTime)) ")
@@ -33,7 +32,6 @@ struct MyFlagItem: View {
             }
             Spacer()
         }
-//        .padding()
     }
 }
 

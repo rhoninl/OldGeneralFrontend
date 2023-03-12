@@ -9,21 +9,29 @@ import SwiftUI
 
 struct MyFlags: View {
     var data: [Cdr_FlagBasicInfo]
+
+    @State private var jumpToFlagInfo: Bool = false
+    @State private var flagInfo: Cdr_FlagDetailInfo? = nil
     var body: some View {
         VStack(alignment: .leading){
             Text("我的Flag")
                 .padding(.leading,15)
             Divider()
-            List(data, id: \.self) { flagInfo in
-                NavigationLink{
-                    FlagInfoPage()
-                }label: {
-                    MyFlagItem(info: flagInfo)
+            List(data, id: \.self) { index in
+                Button {
+                    flagInfo = getFlagInfo(index.flagID)
+                    jumpToFlagInfo = true
+                } label: {
+                    MyFlagItem(info: index)
                 }
-                .buttonStyle(.plain)
             }
         }
         .listStyle(.plain)
+        .navigationDestination(isPresented: $jumpToFlagInfo) {
+            if flagInfo != nil {
+                FlagInfoPage(flagInfo!)
+            }
+        }
     }
 }
 

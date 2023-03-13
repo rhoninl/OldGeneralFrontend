@@ -53,6 +53,9 @@
 		7126105E29B37C8800CBC493 /* date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7126105D29B37C8800CBC493 /* date.swift */; };
 		712968F129B4A81A00526A0C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712968F029B4A81A00526A0C /* Settings.swift */; };
 		7129698929B4DE9900526A0C /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129698829B4DE9900526A0C /* user.swift */; };
+		713808BA29BF594B00947E81 /* circleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713808B929BF594B00947E81 /* circleImage.swift */; };
+		713808BD29BF68A500947E81 /* commentitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713808BC29BF68A500947E81 /* commentitem.swift */; };
+		713808BF29BF68EC00947E81 /* flagInfoBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713808BE29BF68EC00947E81 /* flagInfoBarItem.swift */; };
 		7150138129A65A7000FD155F /* FlagSquareItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150138029A65A7000FD155F /* FlagSquareItem.swift */; };
 		7151160729B0DB32006A40DD /* VIPDescriptionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151160629B0DB32006A40DD /* VIPDescriptionPage.swift */; };
 		7151160A29B0DBFE006A40DD /* VIPPrivilegesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151160929B0DBFE006A40DD /* VIPPrivilegesItem.swift */; };
@@ -173,6 +176,9 @@
 		7126105D29B37C8800CBC493 /* date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = date.swift; sourceTree = "<group>"; };
 		712968F029B4A81A00526A0C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		7129698829B4DE9900526A0C /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		713808B929BF594B00947E81 /* circleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleImage.swift; sourceTree = "<group>"; };
+		713808BC29BF68A500947E81 /* commentitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commentitem.swift; sourceTree = "<group>"; };
+		713808BE29BF68EC00947E81 /* flagInfoBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flagInfoBarItem.swift; sourceTree = "<group>"; };
 		7150138029A65A7000FD155F /* FlagSquareItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagSquareItem.swift; sourceTree = "<group>"; };
 		7151160629B0DB32006A40DD /* VIPDescriptionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPDescriptionPage.swift; sourceTree = "<group>"; };
 		7151160929B0DBFE006A40DD /* VIPPrivilegesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPPrivilegesItem.swift; sourceTree = "<group>"; };
@@ -407,6 +413,15 @@
 			path = helper;
 			sourceTree = "<group>";
 		};
+		713808BB29BF67FD00947E81 /* SignInitem */ = {
+			isa = PBXGroup;
+			children = (
+				713808BC29BF68A500947E81 /* commentitem.swift */,
+				713808BE29BF68EC00947E81 /* flagInfoBarItem.swift */,
+			);
+			path = SignInitem;
+			sourceTree = "<group>";
+		};
 		7151160529B0DB21006A40DD /* VIP */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +498,7 @@
 		71A5A00129B0F19A00A60D31 /* FlagSignIn */ = {
 			isa = PBXGroup;
 			children = (
+				713808BB29BF67FD00947E81 /* SignInitem */,
 				7173001429B329AA00714912 /* SignInPage.swift */,
 			);
 			path = FlagSignIn;
@@ -542,6 +558,7 @@
 			isa = PBXGroup;
 			children = (
 				71A5E52829A8FE670080124E /* SearchBar.swift */,
+				713808B929BF594B00947E81 /* circleImage.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -966,6 +983,7 @@
 				71A5A00B29B0F9C700A60D31 /* UploadSexPage.swift in Sources */,
 				712968F129B4A81A00526A0C /* Settings.swift in Sources */,
 				7173001329B3218B00714912 /* FlagCardItem.swift in Sources */,
+				713808BA29BF594B00947E81 /* circleImage.swift in Sources */,
 				719A61C629444B1100E9E7AD /* OldGeneralApp.swift in Sources */,
 				71A5A00D29B0FA8900A60D31 /* UpdateSignaturePage.swift in Sources */,
 				71C8269729ACDB3A0084885B /* RechargePage.swift in Sources */,
@@ -1009,6 +1027,7 @@
 				7102FF5529BC70FA00B9DA35 /* message.pb.swift in Sources */,
 				7102FF6129BC70FA00B9DA35 /* userinfo.pb.swift in Sources */,
 				71C8269A29ACDDC80084885B /* FlowDetailsItem.swift in Sources */,
+				713808BD29BF68A500947E81 /* commentitem.swift in Sources */,
 				7151160C29B0E411006A40DD /* VIPChargeItem.swift in Sources */,
 				71A5E52929A8FE670080124E /* SearchBar.swift in Sources */,
 				71039537298E67BB0035400F /* QAButton.swift in Sources */,
@@ -1017,6 +1036,7 @@
 				7102FF5B29BC70FA00B9DA35 /* iam.grpc.swift in Sources */,
 				7126105929B3794C00CBC493 /* iam.swift in Sources */,
 				7116F29429B8C18B0080DAE5 /* systemMessageItem.swift in Sources */,
+				713808BF29BF68EC00947E81 /* flagInfoBarItem.swift in Sources */,
 				716C7F4A29BCC1A00066B9CF /* createFlag.swift in Sources */,
 				71BEA7C729ABA73C00C8C3DE /* error.swift in Sources */,
 				7126105C29B37C8100CBC493 /* string.swift in Sources */,

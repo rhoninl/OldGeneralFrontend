@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SignInPage: View {
+    @State private var jumpToFlagPage:Bool = false
+    @State private var flagInfo: Cdr_FlagDetailInfo? = nil
     var body: some View {
         ScrollView {
             HStack{
@@ -21,6 +23,10 @@ struct SignInPage: View {
                         .font(.caption2)
                         .fontWeight(.ultraLight)
                     flagInfoBarItem()
+                        .onTapGesture {
+                            jumpToFlagPage = true
+                            flagInfo = getFlagInfo("this")
+                        }
                 }
                 .padding()
                 Spacer()
@@ -28,6 +34,11 @@ struct SignInPage: View {
             Divider()
             LazyVGrid(columns: [GridItem(.flexible())],alignment: .leading) {
                 commentitem()
+            }
+        }
+        .navigationDestination(isPresented: $jumpToFlagPage) {
+            if  flagInfo != nil  {
+                FlagInfoPage(flagInfo!)
             }
         }
     }

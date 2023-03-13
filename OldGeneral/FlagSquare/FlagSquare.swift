@@ -58,6 +58,10 @@ struct FlagSquare: View {
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
         .onAppear {
+            guard signInSquareStore.isEmpty else {
+                    return
+            }
+            
             Task{
                 await initSquare()
             }

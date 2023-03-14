@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct FlagInfoPage: View {
-    init (_ info: Cdr_FlagDetailInfo) {
+    init (_ info: Cdr_FlagDetailInfo, parentPage: String = "default") {
         flagInfo = info
         isOwner = userId == info.userID
+        self.parentPage = parentPage
     }
     var flagInfo: Cdr_FlagDetailInfo
+    var parentPage: String
+    @Environment(\.presentationMode) var presentationMode
+    @State private var jumpToSignInFlagPage:Bool = false
     
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     private var usericon: Image = Image(systemName: "square.and.arrow.up.fill")
@@ -52,22 +56,20 @@ struct FlagInfoPage: View {
                 LazyVGrid(columns: columns) {
                     FlagCardItem()
                         .onTapGesture {
+                            guard parentPage != "signInPage" else {
+                                self.presentationMode.wrappedValue.dismiss()
+                                return
+                            }
                             jumpToSignPage = true
                         }
                     FlagCardItem()
-                        .onTapGesture {
-                            jumpToSignPage = true
-                        }
                     FlagCardItem()
-                        .onTapGesture {
-                            jumpToSignPage = true
-                        }
                 }
                 .padding(.all,30)
                 .frame(maxHeight: .infinity)
             }
             Button {
-                
+               jumpToSignInFlagPage = true
             } label: {
                 Text(isOwner ? "打卡" : "围观分钱")
                     .frame(maxWidth: .infinity)
@@ -78,7 +80,10 @@ struct FlagInfoPage: View {
             .tint(.yellow.opacity(0.8))
         }
         .navigationDestination(isPresented: $jumpToSignPage) {
-            SignInPage()
+            SignInPage(parentPage: "flagInfo")
+        }
+        .navigationDestination(isPresented: $jumpToSignInFlagPage) {
+            SubmitSignInPage()
         }
     }
 }

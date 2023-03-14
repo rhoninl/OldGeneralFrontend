@@ -18,14 +18,19 @@ struct UploadAvatarvPage: View {
                     .resizable()
                     .scaledToFit()
             } else {
-                Text("Tap to select an image")
+                Text("")
+                    .frame(width: .infinity, height: .infinity)
             }
-        }
-        .onTapGesture {
-            isShowingImagePicker = true
-        }
-        .sheet(isPresented: $isShowingImagePicker, onDismiss: loadImage) {
-            ImagePicker(image: $selectedImage)
+            Spacer()
+            Button{
+                isShowingImagePicker = true
+            } label: {
+                Text("点击上传")
+            }
+            .tint(.primary)
+            .sheet(isPresented: $isShowingImagePicker, onDismiss: loadImage) {
+                ImagePicker(image: $selectedImage)
+            }
         }
     }
 
@@ -35,39 +40,7 @@ struct UploadAvatarvPage: View {
     }
 }
 
-struct ImagePicker: UIViewControllerRepresentable {
-    @Environment(\.presentationMode) var presentationMode
-    @Binding var image: UIImage?
 
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = context.coordinator
-        return imagePicker
-    }
-
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
-
-    }
-
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self)
-    }
-
-    class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-        let parent: ImagePicker
-
-        init(_ parent: ImagePicker) {
-            self.parent = parent
-        }
-
-        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                parent.image = image
-            }
-            parent.presentationMode.wrappedValue.dismiss()
-        }
-    }
-}
 
 
 struct UploadAvatarvPage_Previews: PreviewProvider {

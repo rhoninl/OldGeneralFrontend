@@ -10,6 +10,9 @@ import SwiftUI
 struct SignInPage: View {
     @State private var jumpToFlagPage:Bool = false
     @State private var flagInfo: Cdr_FlagDetailInfo? = nil
+    @Environment(\.presentationMode) var presentationMode
+
+    var parentPage: String = "default"
     var body: some View {
         ScrollView {
             HStack{
@@ -24,6 +27,10 @@ struct SignInPage: View {
                         .fontWeight(.ultraLight)
                     flagInfoBarItem()
                         .onTapGesture {
+                            guard parentPage != "flagInfo" else {
+                                self.presentationMode.wrappedValue.dismiss()
+                                return
+                            }
                             jumpToFlagPage = true
                             flagInfo = getFlagInfo("this")
                         }
@@ -37,8 +44,8 @@ struct SignInPage: View {
             }
         }
         .navigationDestination(isPresented: $jumpToFlagPage) {
-            if  flagInfo != nil  {
-                FlagInfoPage(flagInfo!)
+            if flagInfo != nil  {
+                FlagInfoPage(flagInfo!,parentPage: "signInPage")
             }
         }
     }

@@ -56,6 +56,9 @@
 		713808BA29BF594B00947E81 /* circleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713808B929BF594B00947E81 /* circleImage.swift */; };
 		713808BD29BF68A500947E81 /* commentitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713808BC29BF68A500947E81 /* commentitem.swift */; };
 		713808BF29BF68EC00947E81 /* flagInfoBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713808BE29BF68EC00947E81 /* flagInfoBarItem.swift */; };
+		714D408529C0A32500324586 /* SubmitSignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D408429C0A32500324586 /* SubmitSignInPage.swift */; };
+		714D408729C0AEDD00324586 /* imagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D408629C0AEDD00324586 /* imagePicker.swift */; };
+		714D408929C0C1D800324586 /* fullScreenPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D408829C0C1D800324586 /* fullScreenPage.swift */; };
 		7150138129A65A7000FD155F /* FlagSquareItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150138029A65A7000FD155F /* FlagSquareItem.swift */; };
 		7151160729B0DB32006A40DD /* VIPDescriptionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151160629B0DB32006A40DD /* VIPDescriptionPage.swift */; };
 		7151160A29B0DBFE006A40DD /* VIPPrivilegesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151160929B0DBFE006A40DD /* VIPPrivilegesItem.swift */; };
@@ -179,6 +182,9 @@
 		713808B929BF594B00947E81 /* circleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleImage.swift; sourceTree = "<group>"; };
 		713808BC29BF68A500947E81 /* commentitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commentitem.swift; sourceTree = "<group>"; };
 		713808BE29BF68EC00947E81 /* flagInfoBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flagInfoBarItem.swift; sourceTree = "<group>"; };
+		714D408429C0A32500324586 /* SubmitSignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitSignInPage.swift; sourceTree = "<group>"; };
+		714D408629C0AEDD00324586 /* imagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagePicker.swift; sourceTree = "<group>"; };
+		714D408829C0C1D800324586 /* fullScreenPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fullScreenPage.swift; sourceTree = "<group>"; };
 		7150138029A65A7000FD155F /* FlagSquareItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagSquareItem.swift; sourceTree = "<group>"; };
 		7151160629B0DB32006A40DD /* VIPDescriptionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPDescriptionPage.swift; sourceTree = "<group>"; };
 		7151160929B0DBFE006A40DD /* VIPPrivilegesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPPrivilegesItem.swift; sourceTree = "<group>"; };
@@ -422,6 +428,14 @@
 			path = SignInitem;
 			sourceTree = "<group>";
 		};
+		714D408329C0A30D00324586 /* SubmitSignInPage */ = {
+			isa = PBXGroup;
+			children = (
+				714D408429C0A32500324586 /* SubmitSignInPage.swift */,
+			);
+			path = SubmitSignInPage;
+			sourceTree = "<group>";
+		};
 		7151160529B0DB21006A40DD /* VIP */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +512,7 @@
 		71A5A00129B0F19A00A60D31 /* FlagSignIn */ = {
 			isa = PBXGroup;
 			children = (
+				714D408329C0A30D00324586 /* SubmitSignInPage */,
 				713808BB29BF67FD00947E81 /* SignInitem */,
 				7173001429B329AA00714912 /* SignInPage.swift */,
 			);
@@ -559,6 +574,8 @@
 			children = (
 				71A5E52829A8FE670080124E /* SearchBar.swift */,
 				713808B929BF594B00947E81 /* circleImage.swift */,
+				714D408629C0AEDD00324586 /* imagePicker.swift */,
+				714D408829C0C1D800324586 /* fullScreenPage.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -968,6 +985,7 @@
 				71BEA7BD29AA5E8B00C8C3DE /* WalletPage.swift in Sources */,
 				7173001129B31C7200714912 /* FlagDetailInfoItem.swift in Sources */,
 				7102FF4F29BC70FA00B9DA35 /* vip.proto in Sources */,
+				714D408929C0C1D800324586 /* fullScreenPage.swift in Sources */,
 				7103952E298E52B80035400F /* FlagSquare.swift in Sources */,
 				71A5A00F29B0FFE100A60D31 /* SexItem.swift in Sources */,
 				71A5E50929A7AB7B0080124E /* LoginPage.swift in Sources */,
@@ -1011,6 +1029,7 @@
 				71039539298E68410035400F /* VIPButton.swift in Sources */,
 				7129698929B4DE9900526A0C /* user.swift in Sources */,
 				7151160729B0DB32006A40DD /* VIPDescriptionPage.swift in Sources */,
+				714D408529C0A32500324586 /* SubmitSignInPage.swift in Sources */,
 				7126105E29B37C8800CBC493 /* date.swift in Sources */,
 				7102FF6729BC70FA00B9DA35 /* api.grpc.swift in Sources */,
 				71039534298E67230035400F /* SettingButton.swift in Sources */,
@@ -1025,6 +1044,7 @@
 				71BEA7CC29ABAF7F00C8C3DE /* QAPage.swift in Sources */,
 				71BEA7BA29AA49FD00C8C3DE /* token.swift in Sources */,
 				7102FF5529BC70FA00B9DA35 /* message.pb.swift in Sources */,
+				714D408729C0AEDD00324586 /* imagePicker.swift in Sources */,
 				7102FF6129BC70FA00B9DA35 /* userinfo.pb.swift in Sources */,
 				71C8269A29ACDDC80084885B /* FlowDetailsItem.swift in Sources */,
 				713808BD29BF68A500947E81 /* commentitem.swift in Sources */,

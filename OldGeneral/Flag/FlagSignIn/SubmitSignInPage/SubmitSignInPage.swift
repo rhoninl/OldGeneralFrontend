@@ -23,17 +23,31 @@ struct SubmitSignInPage: View {
                     .padding(.all,5)
                     .lineLimit(4)
                     .frame(maxHeight: 100)
-                    .border(.blendMode(.destinationOut))
-                    .autocorrectionDisabled()
+                    .border(.primary)
                     .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
                 HStack{
                     if selectedImage != nil {
+                        VStack{
                         Image(uiImage: selectedImage!)
                             .resizable()
                             .scaledToFit()
                             .onTapGesture {
                                 self.isShowingFullSizeImage = true
                             }
+                        }
+//                        .frame(width: 200,height: 200)
+//                        .background(.gray.opacity(0.2))
+//                        .cornerRadius(10)
+                        .overlay(alignment: .topTrailing) {
+                            Text(" × ")
+                                .font(.title2)
+                                .background(.white)
+                                .onTapGesture {
+                                    selectedImage = nil
+                                }
+                                .frame(height: 20)
+                        }
                     } else {
                         Text("+")
                             .foregroundColor(.primary.opacity(0.8))
@@ -42,16 +56,15 @@ struct SubmitSignInPage: View {
                             .background(.gray.opacity(0.3))
                             .overlay{
                                 Rectangle()
-                                    .stroke(Color.black, style: StrokeStyle(lineWidth: 1, dash: [4]))
+                                    .stroke(Color.primary, style: StrokeStyle(lineWidth: 1, dash: [4]))
+                            }
+                            .onTapGesture {
+                                isShowingImagePicker = true
                             }
                     }
                     Spacer()
                 }
                 .frame(width: 200,height: 200)
-                Button("点击上传照片") {
-                    isShowingImagePicker = true
-                }
-                .foregroundColor(.primary)
                 Spacer()
                 Button{
                     self.presentationMode.wrappedValue.dismiss()
@@ -64,6 +77,7 @@ struct SubmitSignInPage: View {
                 .buttonStyle(.borderedProminent)
                 .tint(.yellow.opacity(0.8))
             }
+            .padding()
             
             if isShowingFullSizeImage {
                 FullScreenImageOverlay(image: selectedImage ?? UIImage(systemName: "person.crop.circle.fill")!)
@@ -74,7 +88,6 @@ struct SubmitSignInPage: View {
                     .transition(.opacity)
             }
         }
-        .padding()
         .sheet(isPresented: $isShowingImagePicker) {
             ImagePicker(image: $selectedImage)
         }

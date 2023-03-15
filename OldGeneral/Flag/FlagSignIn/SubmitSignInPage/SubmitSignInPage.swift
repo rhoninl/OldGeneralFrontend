@@ -13,6 +13,10 @@ struct SubmitSignInPage: View {
     @State private var showFullScreenImage = false
     @State private var isShowingFullSizeImage = false
     @State private var signInMessag:String = ""
+    @State private var errorMessage: String?
+    @State private var alert: Bool = false
+    private var flagId: String = "123"
+    private var signInId: String = "456"
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
@@ -36,9 +40,6 @@ struct SubmitSignInPage: View {
                                 self.isShowingFullSizeImage = true
                             }
                         }
-//                        .frame(width: 200,height: 200)
-//                        .background(.gray.opacity(0.2))
-//                        .cornerRadius(10)
                         .overlay(alignment: .topTrailing) {
                             Text(" × ")
                                 .font(.title2)
@@ -67,7 +68,8 @@ struct SubmitSignInPage: View {
                 .frame(width: 200,height: 200)
                 Spacer()
                 Button{
-                    self.presentationMode.wrappedValue.dismiss()
+                    errorMessage = uploadImage()
+                    alert = true
                 } label: {
                     Text("打卡")
                         .padding(.all,1)
@@ -91,6 +93,36 @@ struct SubmitSignInPage: View {
         .sheet(isPresented: $isShowingImagePicker) {
             ImagePicker(image: $selectedImage)
         }
+        .alert(isPresented: $alert) {
+            Alert(title: Text("打卡\(errorMessage == nil ? "成功" : "失败" )"), message:  Text("\(errorMessage == nil ? "恭喜您打卡成功" : errorMessage!)")
+                  , dismissButton: .default(Text("知道了"),action: {
+                if errorMessage == nil {
+                    self.presentationMode.wrappedValue.dismiss()
+                }
+            }))
+        }
+    }
+    func uploadImage() -> String? {
+        guard selectedImage != nil else {
+            return "请先选择上传图片"
+        }
+        
+        guard signInMessag != "" else {
+            return "请先填写今日打卡信息"
+        }
+        
+        guard let imageData = selectedImage?.jpegData(compressionQuality: 0.1) else {
+            print("Error converting image to data")
+            return "图片信息错误，请重试"
+        }
+        
+        let pictureName = "\(userId)/\(flagId)/\(signInId)"
+        
+        guard sendPutRequest(fileName: pictureName, data: imageData) else {
+            return "图片上传失败，请重试"
+        }
+        
+        return nil
     }
 }
 

@@ -55,6 +55,7 @@ struct VIPChargePage: View {
             } message: {
                 Text("会员将在24小时之内到账，请注意查收")
             }
+            
         }
         .padding()
         .frame(maxWidth: .infinity)

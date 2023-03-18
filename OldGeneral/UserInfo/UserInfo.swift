@@ -11,41 +11,42 @@ import UIKit
 
 struct UserInfo: View {
     @EnvironmentObject var userInfo: userInfoShared
+    @State private var refreshImage = false
+    
     var body: some View {
         HStack{
-            AsyncImage(url: URL(string: userInfo.data.userAvatar)) { phase in
+            AsyncImage(url: URL(string: userInfo.data.avatar)) { phase in
                 switch phase {
                 case .success(let image):
-                    image.resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 100, height: 100)
+                    image
+                        .resizable()
                         .clipShape(Circle())
+                        .frame(width: 100, height: 100)
                 default :
                     Image("avatar")
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 100, height: 100)
                         .clipShape(Circle())
+                        .frame(width: 100, height: 100)
                 }
             }
             Spacer()
                 .frame(width: 30.0)
-            VStack(alignment: .leading){
-                Text(userInfo.data.userName)
+            VStack(alignment: .leading,spacing: 5){
+                Text(userInfo.data.name)
                     .font(.title2)
                     .multilineTextAlignment(.leading)
-                Text("id: \(userInfo.data.userID)")
-                    .font(.caption)
+                Text("id: \(userInfo.data.id)")
+                    .font(.custom("", size: 10))
                     .fontWeight(.light)
                     .multilineTextAlignment(.leading)
                 HStack{
-                    Text("性别：\(userInfo.data.userGender)")
+                    Text("性别：\(userInfo.data.gender)")
                     Divider()
                         .fixedSize()
-                    Text("加入 \(diffDateNow(userInfo.data.userBirthday)) 天")
+                    Text("加入 \(diffDateNow(userInfo.data.createdAt)) 天")
                 }
                 .font(.footnote)
-                Text(userInfo.data.userSignature)
+                Text(userInfo.data.signature)
                     .font(.caption)
                     .foregroundColor(.primary.opacity(0.6))
             }
@@ -53,6 +54,7 @@ struct UserInfo: View {
         }
         .onAppear {
             userInfo.fetchUserInfo(userId)
+            refreshImage.toggle()
         }
     }
 }

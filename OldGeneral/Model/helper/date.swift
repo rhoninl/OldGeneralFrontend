@@ -37,3 +37,12 @@ func timestampToDate(_ date: Int64) -> String {
     
     return formatter.string(from: Date(timeIntervalSince1970: TimeInterval(date/1000000)))
 }
+
+func getTimestampRFC1123 () -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEE, dd MMM yyyy HH:mm:ss z"
+    dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+    dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+
+   return dateFormatter.string(from: Date())
+}

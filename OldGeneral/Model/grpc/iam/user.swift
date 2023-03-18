@@ -10,22 +10,22 @@ import GRPC
 
 var userId: String = ""
 
-let defaultUserInfo: Userinfo_UserBasicInfo = Userinfo_UserBasicInfo.with { my in
-    my.userID = "defaultUserId"
-    my.userName = "defaultUserName"
-    my.userGender = "男"
-    my.userBirthday = 1649439999000
-    my.userSignature = "without any signautre"
+let defaultUserInfo: Cdr_UserBasicInfo = Cdr_UserBasicInfo.with { my in
+    my.id = "defaultUserId"
+    my.name = "defaultUserName"
+    my.gender = "男"
+    my.createdAt = 1649439999000
+    my.signature = "without any signautre"
 }
 
-var userInfo: Userinfo_UserBasicInfo = defaultUserInfo
+var userInfo: Cdr_UserBasicInfo = defaultUserInfo
 
-func getUserBasicInfo(_ userId: String) -> Userinfo_UserBasicInfo? {
+func getUserBasicInfo(_ userId: String) -> Cdr_UserBasicInfo? {
     let token = GetToken()
     guard token != nil else {
         return nil
     }
-    let request = Userinfo_GetUserInfoRequest.with { my in
+    let request = User_GetUserInfoRequest.with { my in
         my.requestID = generateUUID()
         my.requestTime = getTimeStamp()
         my.userID = userId
@@ -40,4 +40,30 @@ func getUserBasicInfo(_ userId: String) -> Userinfo_UserBasicInfo? {
     }
     
     return nil
+}
+
+func UpdateUserInfo(userInfo: Cdr_UserBasicInfo) -> Bool {
+    let token = GetToken()
+    guard token != nil else {
+        return false
+    }
+    
+    let request = User_UpdateUserInfoRequest.with { my in
+        my.requestID = generateUUID()
+        my.requestTime = getTimeStamp()
+        my.userAvatar =  userInfo.avatar
+        my.userName = userInfo.name
+        my.userGender = userInfo.gender
+        my.userSignature = userInfo.signature
+    }
+    
+    do {
+        let call = try getAPIClient().updateUserInfo(request,callOptions: getOption())
+        _ = try call.response.wait()
+    }catch {
+        print("error when update user Info")
+        return false
+    }
+    
+    return true
 }

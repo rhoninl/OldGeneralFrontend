@@ -96,4 +96,6 @@ iOSInjectionProject/
 .DS_Store
 
 # symbolic link
-Proto
+Protoœ
+
+*.xcconfig

@@ -20,10 +20,10 @@ struct UpdateUserNamePage: View {
             VStack(alignment: .leading){
                 VStack(alignment: .leading){
                     Text("原昵称:")
-                    Text(userInfo.data.userName)
+                    Text(userInfo.data.name)
                 }
                     .onTapGesture {
-                        username = userInfo.data.userName
+                        username = userInfo.data.name
                     }
                     .font(.footnote)
                     
@@ -58,8 +58,12 @@ struct UpdateUserNamePage: View {
                     return
                 }
                 
-                if username != userInfo.data.userName {
-                    userInfo.data.userName = username
+                if username != userInfo.data.name {
+                    userInfo.data.name = username
+                }
+                
+                guard UpdateUserInfo(userInfo: userInfo.data) else {
+                    return
                 }
                 
                 self.presentationMode.wrappedValue.dismiss()

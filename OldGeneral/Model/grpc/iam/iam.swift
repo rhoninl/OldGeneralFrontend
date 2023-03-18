@@ -45,7 +45,7 @@ func SignUp(username: String, password: String) -> Bool {
         let response = try call.response.wait()
         return response.isSuccess
     }catch {
-        print("user register failed")
+        print("user register failed\(error)")
     }
     return false
 }

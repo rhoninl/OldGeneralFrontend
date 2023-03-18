@@ -9,6 +9,7 @@ import SwiftUI
 
 @MainActor class userInfoShared: ObservableObject {
     @Published var data = defaultUserInfo
+    @Published var needRefresh = false
     
     func fetchUserInfo(_ userId: String, cache: Bool = true) {
         guard data == defaultUserInfo || cache == false else {

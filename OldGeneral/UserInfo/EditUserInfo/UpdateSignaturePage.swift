@@ -20,11 +20,11 @@ struct UpdateSignaturePage: View {
             VStack(alignment: .leading){
                 VStack(alignment: .leading){
                     Text("原签名:")
-                    Text(userInfo.data.userSignature)
+                    Text(userInfo.data.signature)
                 }
                 .font(.footnote)
                 .onTapGesture {
-                    signature  = userInfo.data.userSignature
+                    signature  = userInfo.data.signature
                 }
                 TextField("请输入您的个性签名", text: $signature)
                     .onChange(of: signature, perform: { newValue in
@@ -60,10 +60,13 @@ struct UpdateSignaturePage: View {
                     return
                 }
                 
-                if  userInfo.data.userSignature != signature  {
-                    userInfo.data.userSignature = signature
+                if  userInfo.data.signature != signature  {
+                    userInfo.data.signature = signature
                 }
 
+                guard UpdateUserInfo(userInfo: userInfo.data) else {
+                    return
+                }
                 
                 self.presentationMode.wrappedValue.dismiss()
             } label: {

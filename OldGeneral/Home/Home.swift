@@ -23,7 +23,7 @@ struct HomeView: View {
                 UserInfoEditPage()
             } label: {
                 UserInfo()
-                    .padding(.trailing, 70.0)
+                    .padding([.leading,.trailing,.bottom],20)
             }
 
                 

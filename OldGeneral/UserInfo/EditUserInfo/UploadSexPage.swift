@@ -17,16 +17,19 @@ struct UploadSexPage: View {
             Text("选择性别")
                 .padding()
             HStack(spacing: 50){
-                SexItem(str: "♂",ischoose: userInfo.data.userGender == "男")
+                SexItem(str: "♂",ischoose: userInfo.data.gender == "男")
                     .onTapGesture {
-                        userInfo.data.userGender = "男"
+                        userInfo.data.gender = "男"
                     }
-                SexItem(str: "♀",ischoose: userInfo.data.userGender == "女")
+                SexItem(str: "♀",ischoose: userInfo.data.gender == "女")
                     .onTapGesture {
-                        userInfo.data.userGender = "女"
+                        userInfo.data.gender = "女"
                     }
             }
             Button {
+                guard UpdateUserInfo(userInfo: userInfo.data) else {
+                    return
+                }
                 self.presentationMode.wrappedValue.dismiss()
             } label: {
                 Text("确认")

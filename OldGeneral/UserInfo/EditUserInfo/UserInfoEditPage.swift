@@ -15,24 +15,22 @@ struct UserInfoEditPage: View {
                 .padding()
                 .font(.title2)
             List{
-                NavigationLink(destination: UploadAvatarvPage()) {
+                NavigationLink(destination: UploadAvatarPage()) {
                     HStack{
                         Text("头像")
                         Spacer()
-                        AsyncImage(url: URL(string: userInfo.data.userAvatar)) { phase in
+                        AsyncImage(url: URL(string: userInfo.data.avatar)) { phase in
                             switch phase {
                             case .success(let image):
                                 image.resizable()
-                                     .aspectRatio(contentMode: .fit)
-                                     .frame(width: 50,height: 50)
                                      .clipShape(Circle())
+                                     .frame(width: 50,height: 50)
                                      .padding(.trailing,10)
                             default :
                                 Image("avatar")
                                     .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 50,height: 50)
                                     .clipShape(Circle())
+                                    .frame(width: 50,height: 50)
                                     .padding(.trailing,10)
                             }
                         }
@@ -43,7 +41,7 @@ struct UserInfoEditPage: View {
                     HStack{
                         Text("昵称")
                         Spacer()
-                        Text(userInfo.data.userName)
+                        Text(userInfo.data.name)
                             .padding(.trailing,10)
                             .lineLimit(1)
                     }
@@ -53,7 +51,7 @@ struct UserInfoEditPage: View {
                     HStack{
                         Text("性别")
                         Spacer()
-                        Text(userInfo.data.userGender)
+                        Text(userInfo.data.gender)
                             .padding(.trailing,10)
                     }
                 }
@@ -62,7 +60,7 @@ struct UserInfoEditPage: View {
                     HStack{
                         Text("个性签名")
                         Spacer()
-                        Text(userInfo.data.userSignature)
+                        Text(userInfo.data.signature)
                             .padding(.trailing,10)
                             .lineLimit(1)
                     }
@@ -74,7 +72,7 @@ struct UserInfoEditPage: View {
 }
 
 struct UserInfoEditPage_Previews: PreviewProvider {
-    @Binding var userInfo:Userinfo_UserBasicInfo
+    @Binding var userInfo:Cdr_UserBasicInfo
     static var previews: some View {
         UserInfoEditPage()
             .environmentObject(userInfoShared())

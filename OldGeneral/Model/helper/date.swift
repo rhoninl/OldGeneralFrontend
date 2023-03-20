@@ -24,7 +24,7 @@ func diffDateNow(_ date: Int64) -> Int {
     let endDate = Date(timeIntervalSince1970: TimeInterval(date / 1000000))
 
     let calendar = Calendar.current
-    let components = calendar.dateComponents([.day], from: startDate, to: endDate)
+    let components = calendar.dateComponents([.day], from: endDate, to: startDate)
     let days = components.day
 
     return days! + 1

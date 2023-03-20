@@ -130,10 +130,11 @@ struct PayForFlag: View {
                 .tint(.orange)
                 HStack{
                     Button {
-                        flagInfo.flagName = flagName
+                        flagInfo.name = flagName
                         flagInfo.totalTime = totalTime
                         flagInfo.startTime = startDate
-                        flagInfo.payMoney = goldNum
+                        flagInfo.challengeNum = goldNum
+                        flagInfo.userID = userId
                         alert = true
                     } label: {
                         Text("支付")
@@ -147,8 +148,9 @@ struct PayForFlag: View {
                         Alert(title: Text("支付提醒"), message: Text("请确认您的flag信息，并确认支付该flag")
                               , primaryButton: .default(Text("确认支付")){
                             if  CreateFlag(data: flagInfo) {
-                                UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: OldgeneralContentView())
-                                UIApplication.shared.windows.first?.makeKeyAndVisible()
+                                let windowsScene =  UIApplication.shared.connectedScenes.first as? UIWindowScene
+                                windowsScene?.keyWindow?.rootViewController = UIHostingController(rootView: OldgeneralContentView())
+                                windowsScene?.keyWindow?.makeKeyAndVisible()
                             }
                         },secondaryButton: .destructive(Text("我再想想")))
                     }

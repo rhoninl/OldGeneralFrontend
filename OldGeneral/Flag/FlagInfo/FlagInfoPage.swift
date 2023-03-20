@@ -34,7 +34,7 @@ struct FlagInfoPage: View {
                 VStack{
                     HStack{
                         VStack(alignment: .leading,spacing: 10){
-                            Text(flagInfo.flagName)
+                            Text(flagInfo.name)
                             Text("\(flagInfo.starNum)点赞 \(flagInfo.siegeNum)围观")
                                 .foregroundColor(.gray.opacity(0.7))
                                 .font(.caption2)
@@ -45,7 +45,7 @@ struct FlagInfoPage: View {
                     HStack(spacing: 60){
                         FlagDetailInfoItem(description: "投币助力", data: String(flagInfo.siegeNum))
                         FlagDetailInfoItem(description: "挑战金币", data: String(flagInfo.challengeNum))
-                        FlagDetailInfoItem(description: "挑战状态", data: flagInfo.flagStatus)
+                        FlagDetailInfoItem(description: "挑战状态", data: flagInfo.status)
                     }
                     .padding()
                     .background(.gray.opacity(0.2))
@@ -91,11 +91,11 @@ struct FlagInfoPage: View {
 struct FlagInfoPage_Previews: PreviewProvider {
     static var previews: some View {
         let info = Cdr_FlagDetailInfo.with{ my in
-            my.flagID = "flagId"
-            my.flagName = "flagName"
+            my.id = "flagId"
+            my.name = "flagName"
             my.challengeNum = 100
             my.siegeNum = 100
-            my.flagStatus = "进行中"
+            my.status = "进行中"
             my.starNum = 33
             my.userName = "username"
             my.userAvatar = "https://as1.ftcdn.net/v2/jpg/03/03/97/00/1000_F_303970065_Yi0UpuVdTb4uJiEtRdF8blJLwcT4Qd4p.jpg"

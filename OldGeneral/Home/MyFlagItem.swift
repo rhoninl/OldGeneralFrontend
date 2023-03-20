@@ -13,7 +13,7 @@ struct MyFlagItem: View {
         HStack{
             VStack(alignment: .leading) {
                 HStack{
-                    Text(info.flagName)
+                    Text(info.name)
                         .font(.title3)
                         .lineLimit(1)
                     Spacer()
@@ -23,8 +23,8 @@ struct MyFlagItem: View {
                     Text("创建时间: \(timestampToDate(info.startTime)) ")
                     HStack{
                         Text("状态: ")
-                        Text(info.flagStatus)
-                            .foregroundColor(getColorByStatus(info.flagStatus))
+                        Text(info.status)
+                            .foregroundColor(getColorByStatus(info.status))
 
                     }
                 }
@@ -38,10 +38,10 @@ struct MyFlagItem: View {
 struct MyFlagItem_Previews: PreviewProvider {
     static var previews: some View {
         let info = Cdr_FlagBasicInfo.with{ my in
-            my.flagName = "This is test flag"
-            my.flagStatus = "running"
+            my.name = "This is test flag"
+            my.status = "running"
             my.startTime = 0
-            my.flagID = generateUUID()
+            my.id = generateUUID()
             my.currentTime = 10
             my.totalTime = 20
         }

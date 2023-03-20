@@ -19,7 +19,7 @@ struct MyFlags: View {
             Divider()
             List(data, id: \.self) { index in
                 Button {
-                    flagInfo = getFlagInfo(index.flagID)
+                    flagInfo = getFlagInfo(index.id)
                     jumpToFlagInfo = true
                 } label: {
                     MyFlagItem(info: index)
@@ -38,10 +38,10 @@ struct MyFlags: View {
 struct MyFlags_Previews: PreviewProvider {
     static var previews: some View {
         let info = Cdr_FlagBasicInfo.with{ my in
-            my.flagName = "This is test flag"
-            my.flagStatus = "running"
+            my.name = "This is test flag"
+            my.status = "running"
             my.startTime = 0
-            my.flagID = generateUUID()
+            my.id = generateUUID()
             my.currentTime = 10
             my.totalTime = 20
         }

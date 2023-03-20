@@ -27,7 +27,7 @@ struct FlagSquare: View {
                                 }
                                 .buttonStyle(.plain)
                                 .onAppear{
-                                    if !isFetching && index == signInSquareStore.last {
+                                    if !isFetching && index == signInSquareStore[signInSquareStore.count - 4] {
                                         print("fetch")
                                         Task{
                                             await fetchSquare()
@@ -74,7 +74,7 @@ struct FlagSquare: View {
     func fetchSquare() async {
         isFetching = true
         defer {isFetching = false}
-        sleep(1)
+        usleep(500000)
         let fetchedData = fetchFlagSquareList(currentPage)
         guard fetchedData.count != 0 else {
             return

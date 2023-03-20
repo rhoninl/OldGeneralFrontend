@@ -36,38 +36,6 @@
 		7151160A29B0DBFE006A40DD /* VIPPrivilegesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151160929B0DBFE006A40DD /* VIPPrivilegesItem.swift */; };
 		7151160C29B0E411006A40DD /* VIPChargeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151160B29B0E411006A40DD /* VIPChargeItem.swift */; };
 		7151160E29B0E7C1006A40DD /* VIPChargePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151160D29B0E7C1006A40DD /* VIPChargePage.swift */; };
-		71599BA729C5EFA1006386B5 /* vip.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71599B7F29C5EFA1006386B5 /* vip.pb.swift */; };
-		71599BA829C5EFA1006386B5 /* vip.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71599B8029C5EFA1006386B5 /* vip.pb.go */; };
-		71599BA929C5EFA1006386B5 /* vip.proto in Sources */ = {isa = PBXBuildFile; fileRef = 71599B8129C5EFA1006386B5 /* vip.proto */; };
-		71599BAA29C5EFA1006386B5 /* flags.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71599B8329C5EFA1006386B5 /* flags.pb.swift */; };
-		71599BAB29C5EFA1006386B5 /* flags.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71599B8429C5EFA1006386B5 /* flags.pb.go */; };
-		71599BAC29C5EFA1006386B5 /* flags.proto in Sources */ = {isa = PBXBuildFile; fileRef = 71599B8529C5EFA1006386B5 /* flags.proto */; };
-		71599BAD29C5EFA1006386B5 /* message.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71599B8729C5EFA1006386B5 /* message.pb.go */; };
-		71599BAE29C5EFA1006386B5 /* message.proto in Sources */ = {isa = PBXBuildFile; fileRef = 71599B8829C5EFA1006386B5 /* message.proto */; };
-		71599BAF29C5EFA1006386B5 /* message.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71599B8929C5EFA1006386B5 /* message.pb.swift */; };
-		71599BB029C5EFA1006386B5 /* user.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71599B8B29C5EFA1006386B5 /* user.grpc.swift */; };
-		71599BB129C5EFA1006386B5 /* user_grpc.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71599B8C29C5EFA1006386B5 /* user_grpc.pb.go */; };
-		71599BB229C5EFA1006386B5 /* user.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71599B8D29C5EFA1006386B5 /* user.pb.swift */; };
-		71599BB329C5EFA1006386B5 /* user.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71599B8E29C5EFA1006386B5 /* user.pb.go */; };
-		71599BB429C5EFA1006386B5 /* user.proto in Sources */ = {isa = PBXBuildFile; fileRef = 71599B8F29C5EFA1006386B5 /* user.proto */; };
-		71599BB529C5EFA1006386B5 /* cdr.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71599B9129C5EFA1006386B5 /* cdr.pb.go */; };
-		71599BB629C5EFA1006386B5 /* cdr.proto in Sources */ = {isa = PBXBuildFile; fileRef = 71599B9229C5EFA1006386B5 /* cdr.proto */; };
-		71599BB729C5EFA1006386B5 /* cdr.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71599B9329C5EFA1006386B5 /* cdr.pb.swift */; };
-		71599BB829C5EFA1006386B5 /* iam_grpc.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71599B9529C5EFA1006386B5 /* iam_grpc.pb.go */; };
-		71599BB929C5EFA1006386B5 /* iam.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71599B9629C5EFA1006386B5 /* iam.pb.swift */; };
-		71599BBA29C5EFA1006386B5 /* iam.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71599B9729C5EFA1006386B5 /* iam.grpc.swift */; };
-		71599BBB29C5EFA1006386B5 /* iam.proto in Sources */ = {isa = PBXBuildFile; fileRef = 71599B9829C5EFA1006386B5 /* iam.proto */; };
-		71599BBC29C5EFA1006386B5 /* iam.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71599B9929C5EFA1006386B5 /* iam.pb.go */; };
-		71599BBD29C5EFA1006386B5 /* wallet.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71599B9B29C5EFA1006386B5 /* wallet.pb.go */; };
-		71599BBE29C5EFA1006386B5 /* wallet.proto in Sources */ = {isa = PBXBuildFile; fileRef = 71599B9C29C5EFA1006386B5 /* wallet.proto */; };
-		71599BBF29C5EFA1006386B5 /* wallet.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71599B9D29C5EFA1006386B5 /* wallet.pb.swift */; };
-		71599BC029C5EFA1006386B5 /* userinfo.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71599B9F29C5EFA1006386B5 /* userinfo.pb.swift */; };
-		71599BC129C5EFA1006386B5 /* userinfo.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71599BA029C5EFA1006386B5 /* userinfo.pb.go */; };
-		71599BC229C5EFA1006386B5 /* api.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71599BA229C5EFA1006386B5 /* api.pb.swift */; };
-		71599BC329C5EFA1006386B5 /* api.proto in Sources */ = {isa = PBXBuildFile; fileRef = 71599BA329C5EFA1006386B5 /* api.proto */; };
-		71599BC429C5EFA1006386B5 /* api.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71599BA429C5EFA1006386B5 /* api.pb.go */; };
-		71599BC529C5EFA1006386B5 /* api.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71599BA529C5EFA1006386B5 /* api.grpc.swift */; };
-		71599BC629C5EFA1006386B5 /* api_grpc.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71599BA629C5EFA1006386B5 /* api_grpc.pb.go */; };
 		715A51DD29C2C9B200C3A2E9 /* secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 715A51DC29C2C9B200C3A2E9 /* secret.xcconfig */; };
 		716C7F4A29BCC1A00066B9CF /* createFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C7F4929BCC1A00066B9CF /* createFlag.swift */; };
 		7173001129B31C7200714912 /* FlagDetailInfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7173001029B31C7200714912 /* FlagDetailInfoItem.swift */; };
@@ -105,6 +73,40 @@
 		71BEA7CE29ABAF9600C8C3DE /* VIPPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7CD29ABAF9600C8C3DE /* VIPPage.swift */; };
 		71BEA7D129ABB07D00C8C3DE /* UserInfoEditPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7D029ABB07D00C8C3DE /* UserInfoEditPage.swift */; };
 		71BEA7D529ABB10200C8C3DE /* FlagInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7D429ABB10200C8C3DE /* FlagInfoPage.swift */; };
+		71C24AB029C7273D003A4057 /* vip.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C24A8629C7273D003A4057 /* vip.pb.swift */; };
+		71C24AB129C7273D003A4057 /* vip.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71C24A8729C7273D003A4057 /* vip.pb.go */; };
+		71C24AB229C7273D003A4057 /* vip.proto in Sources */ = {isa = PBXBuildFile; fileRef = 71C24A8829C7273D003A4057 /* vip.proto */; };
+		71C24AB329C7273D003A4057 /* flags.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C24A8A29C7273D003A4057 /* flags.pb.swift */; };
+		71C24AB429C7273D003A4057 /* flags_grpc.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71C24A8B29C7273D003A4057 /* flags_grpc.pb.go */; };
+		71C24AB529C7273D003A4057 /* flags.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71C24A8C29C7273D003A4057 /* flags.pb.go */; };
+		71C24AB629C7273D003A4057 /* flags.proto in Sources */ = {isa = PBXBuildFile; fileRef = 71C24A8D29C7273D003A4057 /* flags.proto */; };
+		71C24AB729C7273D003A4057 /* flags.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C24A8E29C7273D003A4057 /* flags.grpc.swift */; };
+		71C24AB829C7273D003A4057 /* message.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71C24A9029C7273D003A4057 /* message.pb.go */; };
+		71C24AB929C7273D003A4057 /* message.proto in Sources */ = {isa = PBXBuildFile; fileRef = 71C24A9129C7273D003A4057 /* message.proto */; };
+		71C24ABA29C7273D003A4057 /* message.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C24A9229C7273D003A4057 /* message.pb.swift */; };
+		71C24ABB29C7273D003A4057 /* user.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C24A9429C7273D003A4057 /* user.grpc.swift */; };
+		71C24ABC29C7273D003A4057 /* user_grpc.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71C24A9529C7273D003A4057 /* user_grpc.pb.go */; };
+		71C24ABD29C7273D003A4057 /* user.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C24A9629C7273D003A4057 /* user.pb.swift */; };
+		71C24ABE29C7273D003A4057 /* user.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71C24A9729C7273D003A4057 /* user.pb.go */; };
+		71C24ABF29C7273D003A4057 /* user.proto in Sources */ = {isa = PBXBuildFile; fileRef = 71C24A9829C7273D003A4057 /* user.proto */; };
+		71C24AC029C7273D003A4057 /* cdr.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71C24A9A29C7273D003A4057 /* cdr.pb.go */; };
+		71C24AC129C7273D003A4057 /* cdr.proto in Sources */ = {isa = PBXBuildFile; fileRef = 71C24A9B29C7273D003A4057 /* cdr.proto */; };
+		71C24AC229C7273D003A4057 /* cdr.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C24A9C29C7273D003A4057 /* cdr.pb.swift */; };
+		71C24AC329C7273D003A4057 /* iam_grpc.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71C24A9E29C7273D003A4057 /* iam_grpc.pb.go */; };
+		71C24AC429C7273D003A4057 /* iam.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C24A9F29C7273D003A4057 /* iam.pb.swift */; };
+		71C24AC529C7273D003A4057 /* iam.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C24AA029C7273D003A4057 /* iam.grpc.swift */; };
+		71C24AC629C7273D003A4057 /* iam.proto in Sources */ = {isa = PBXBuildFile; fileRef = 71C24AA129C7273D003A4057 /* iam.proto */; };
+		71C24AC729C7273D003A4057 /* iam.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71C24AA229C7273D003A4057 /* iam.pb.go */; };
+		71C24AC829C7273D003A4057 /* wallet.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71C24AA429C7273D003A4057 /* wallet.pb.go */; };
+		71C24AC929C7273D003A4057 /* wallet.proto in Sources */ = {isa = PBXBuildFile; fileRef = 71C24AA529C7273D003A4057 /* wallet.proto */; };
+		71C24ACA29C7273D003A4057 /* wallet.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C24AA629C7273D003A4057 /* wallet.pb.swift */; };
+		71C24ACB29C7273D003A4057 /* userinfo.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C24AA829C7273D003A4057 /* userinfo.pb.swift */; };
+		71C24ACC29C7273D003A4057 /* userinfo.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71C24AA929C7273D003A4057 /* userinfo.pb.go */; };
+		71C24ACD29C7273D003A4057 /* api.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C24AAB29C7273D003A4057 /* api.pb.swift */; };
+		71C24ACE29C7273D003A4057 /* api.proto in Sources */ = {isa = PBXBuildFile; fileRef = 71C24AAC29C7273D003A4057 /* api.proto */; };
+		71C24ACF29C7273D003A4057 /* api.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71C24AAD29C7273D003A4057 /* api.pb.go */; };
+		71C24AD029C7273D003A4057 /* api.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C24AAE29C7273D003A4057 /* api.grpc.swift */; };
+		71C24AD129C7273D003A4057 /* api_grpc.pb.go in Resources */ = {isa = PBXBuildFile; fileRef = 71C24AAF29C7273D003A4057 /* api_grpc.pb.go */; };
 		71C8269529ACD90D0084885B /* FlowDetailsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8269429ACD90D0084885B /* FlowDetailsPage.swift */; };
 		71C8269729ACDB3A0084885B /* RechargePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8269629ACDB3A0084885B /* RechargePage.swift */; };
 		71C8269A29ACDDC80084885B /* FlowDetailsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8269929ACDDC80084885B /* FlowDetailsItem.swift */; };
@@ -167,38 +169,6 @@
 		7151160929B0DBFE006A40DD /* VIPPrivilegesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPPrivilegesItem.swift; sourceTree = "<group>"; };
 		7151160B29B0E411006A40DD /* VIPChargeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPChargeItem.swift; sourceTree = "<group>"; };
 		7151160D29B0E7C1006A40DD /* VIPChargePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPChargePage.swift; sourceTree = "<group>"; };
-		71599B7F29C5EFA1006386B5 /* vip.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vip.pb.swift; sourceTree = "<group>"; };
-		71599B8029C5EFA1006386B5 /* vip.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vip.pb.go; sourceTree = "<group>"; };
-		71599B8129C5EFA1006386B5 /* vip.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = vip.proto; sourceTree = "<group>"; };
-		71599B8329C5EFA1006386B5 /* flags.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flags.pb.swift; sourceTree = "<group>"; };
-		71599B8429C5EFA1006386B5 /* flags.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flags.pb.go; sourceTree = "<group>"; };
-		71599B8529C5EFA1006386B5 /* flags.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = flags.proto; sourceTree = "<group>"; };
-		71599B8729C5EFA1006386B5 /* message.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = message.pb.go; sourceTree = "<group>"; };
-		71599B8829C5EFA1006386B5 /* message.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = message.proto; sourceTree = "<group>"; };
-		71599B8929C5EFA1006386B5 /* message.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = message.pb.swift; sourceTree = "<group>"; };
-		71599B8B29C5EFA1006386B5 /* user.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.grpc.swift; sourceTree = "<group>"; };
-		71599B8C29C5EFA1006386B5 /* user_grpc.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = user_grpc.pb.go; sourceTree = "<group>"; };
-		71599B8D29C5EFA1006386B5 /* user.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.pb.swift; sourceTree = "<group>"; };
-		71599B8E29C5EFA1006386B5 /* user.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = user.pb.go; sourceTree = "<group>"; };
-		71599B8F29C5EFA1006386B5 /* user.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = user.proto; sourceTree = "<group>"; };
-		71599B9129C5EFA1006386B5 /* cdr.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cdr.pb.go; sourceTree = "<group>"; };
-		71599B9229C5EFA1006386B5 /* cdr.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = cdr.proto; sourceTree = "<group>"; };
-		71599B9329C5EFA1006386B5 /* cdr.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cdr.pb.swift; sourceTree = "<group>"; };
-		71599B9529C5EFA1006386B5 /* iam_grpc.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iam_grpc.pb.go; sourceTree = "<group>"; };
-		71599B9629C5EFA1006386B5 /* iam.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iam.pb.swift; sourceTree = "<group>"; };
-		71599B9729C5EFA1006386B5 /* iam.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iam.grpc.swift; sourceTree = "<group>"; };
-		71599B9829C5EFA1006386B5 /* iam.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = iam.proto; sourceTree = "<group>"; };
-		71599B9929C5EFA1006386B5 /* iam.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iam.pb.go; sourceTree = "<group>"; };
-		71599B9B29C5EFA1006386B5 /* wallet.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wallet.pb.go; sourceTree = "<group>"; };
-		71599B9C29C5EFA1006386B5 /* wallet.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = wallet.proto; sourceTree = "<group>"; };
-		71599B9D29C5EFA1006386B5 /* wallet.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wallet.pb.swift; sourceTree = "<group>"; };
-		71599B9F29C5EFA1006386B5 /* userinfo.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userinfo.pb.swift; sourceTree = "<group>"; };
-		71599BA029C5EFA1006386B5 /* userinfo.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = userinfo.pb.go; sourceTree = "<group>"; };
-		71599BA229C5EFA1006386B5 /* api.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = api.pb.swift; sourceTree = "<group>"; };
-		71599BA329C5EFA1006386B5 /* api.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = api.proto; sourceTree = "<group>"; };
-		71599BA429C5EFA1006386B5 /* api.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = api.pb.go; sourceTree = "<group>"; };
-		71599BA529C5EFA1006386B5 /* api.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = api.grpc.swift; sourceTree = "<group>"; };
-		71599BA629C5EFA1006386B5 /* api_grpc.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = api_grpc.pb.go; sourceTree = "<group>"; };
 		715A51DC29C2C9B200C3A2E9 /* secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = secret.xcconfig; sourceTree = "<group>"; };
 		716C7F4929BCC1A00066B9CF /* createFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createFlag.swift; sourceTree = "<group>"; };
 		7173001029B31C7200714912 /* FlagDetailInfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagDetailInfoItem.swift; sourceTree = "<group>"; };
@@ -236,6 +206,74 @@
 		71BEA7CD29ABAF9600C8C3DE /* VIPPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPPage.swift; sourceTree = "<group>"; };
 		71BEA7D029ABB07D00C8C3DE /* UserInfoEditPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoEditPage.swift; sourceTree = "<group>"; };
 		71BEA7D429ABB10200C8C3DE /* FlagInfoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagInfoPage.swift; sourceTree = "<group>"; };
+		71C24A8629C7273D003A4057 /* vip.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vip.pb.swift; sourceTree = "<group>"; };
+		71C24A8729C7273D003A4057 /* vip.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vip.pb.go; sourceTree = "<group>"; };
+		71C24A8829C7273D003A4057 /* vip.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = vip.proto; sourceTree = "<group>"; };
+		71C24A8A29C7273D003A4057 /* flags.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flags.pb.swift; sourceTree = "<group>"; };
+		71C24A8B29C7273D003A4057 /* flags_grpc.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flags_grpc.pb.go; sourceTree = "<group>"; };
+		71C24A8C29C7273D003A4057 /* flags.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flags.pb.go; sourceTree = "<group>"; };
+		71C24A8D29C7273D003A4057 /* flags.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = flags.proto; sourceTree = "<group>"; };
+		71C24A8E29C7273D003A4057 /* flags.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flags.grpc.swift; sourceTree = "<group>"; };
+		71C24A9029C7273D003A4057 /* message.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = message.pb.go; sourceTree = "<group>"; };
+		71C24A9129C7273D003A4057 /* message.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = message.proto; sourceTree = "<group>"; };
+		71C24A9229C7273D003A4057 /* message.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = message.pb.swift; sourceTree = "<group>"; };
+		71C24A9429C7273D003A4057 /* user.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.grpc.swift; sourceTree = "<group>"; };
+		71C24A9529C7273D003A4057 /* user_grpc.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = user_grpc.pb.go; sourceTree = "<group>"; };
+		71C24A9629C7273D003A4057 /* user.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.pb.swift; sourceTree = "<group>"; };
+		71C24A9729C7273D003A4057 /* user.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = user.pb.go; sourceTree = "<group>"; };
+		71C24A9829C7273D003A4057 /* user.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = user.proto; sourceTree = "<group>"; };
+		71C24A9A29C7273D003A4057 /* cdr.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cdr.pb.go; sourceTree = "<group>"; };
+		71C24A9B29C7273D003A4057 /* cdr.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = cdr.proto; sourceTree = "<group>"; };
+		71C24A9C29C7273D003A4057 /* cdr.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cdr.pb.swift; sourceTree = "<group>"; };
+		71C24A9E29C7273D003A4057 /* iam_grpc.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iam_grpc.pb.go; sourceTree = "<group>"; };
+		71C24A9F29C7273D003A4057 /* iam.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iam.pb.swift; sourceTree = "<group>"; };
+		71C24AA029C7273D003A4057 /* iam.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iam.grpc.swift; sourceTree = "<group>"; };
+		71C24AA129C7273D003A4057 /* iam.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = iam.proto; sourceTree = "<group>"; };
+		71C24AA229C7273D003A4057 /* iam.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iam.pb.go; sourceTree = "<group>"; };
+		71C24AA429C7273D003A4057 /* wallet.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wallet.pb.go; sourceTree = "<group>"; };
+		71C24AA529C7273D003A4057 /* wallet.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = wallet.proto; sourceTree = "<group>"; };
+		71C24AA629C7273D003A4057 /* wallet.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wallet.pb.swift; sourceTree = "<group>"; };
+		71C24AA829C7273D003A4057 /* userinfo.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userinfo.pb.swift; sourceTree = "<group>"; };
+		71C24AA929C7273D003A4057 /* userinfo.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = userinfo.pb.go; sourceTree = "<group>"; };
+		71C24AAB29C7273D003A4057 /* api.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = api.pb.swift; sourceTree = "<group>"; };
+		71C24AAC29C7273D003A4057 /* api.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = api.proto; sourceTree = "<group>"; };
+		71C24AAD29C7273D003A4057 /* api.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = api.pb.go; sourceTree = "<group>"; };
+		71C24AAE29C7273D003A4057 /* api.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = api.grpc.swift; sourceTree = "<group>"; };
+		71C24AAF29C7273D003A4057 /* api_grpc.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = api_grpc.pb.go; sourceTree = "<group>"; };
+		71C24AD429C72742003A4057 /* flags_grpc.pb.go */ = {isa = PBXFileReference; lastKnownFileType = text; path = flags_grpc.pb.go; sourceTree = "<group>"; };
+		71C24AD529C72742003A4057 /* flags.grpc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flags.grpc.swift; sourceTree = "<group>"; };
+		71C24AD629C72742003A4057 /* flags.pb.go */ = {isa = PBXFileReference; lastKnownFileType = text; path = flags.pb.go; sourceTree = "<group>"; };
+		71C24AD729C72742003A4057 /* flags.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flags.pb.swift; sourceTree = "<group>"; };
+		71C24AD829C72742003A4057 /* flags.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = flags.proto; sourceTree = "<group>"; };
+		71C24ADA29C72742003A4057 /* wallet.pb.go */ = {isa = PBXFileReference; lastKnownFileType = text; path = wallet.pb.go; sourceTree = "<group>"; };
+		71C24ADB29C72742003A4057 /* wallet.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wallet.pb.swift; sourceTree = "<group>"; };
+		71C24ADC29C72742003A4057 /* wallet.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = wallet.proto; sourceTree = "<group>"; };
+		71C24ADE29C72742003A4057 /* api.grpc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.grpc.swift; sourceTree = "<group>"; };
+		71C24ADF29C72743003A4057 /* api_grpc.pb.go */ = {isa = PBXFileReference; lastKnownFileType = text; path = api_grpc.pb.go; sourceTree = "<group>"; };
+		71C24AE029C72743003A4057 /* api.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = api.proto; sourceTree = "<group>"; };
+		71C24AE129C72743003A4057 /* api.pb.go */ = {isa = PBXFileReference; lastKnownFileType = text; path = api.pb.go; sourceTree = "<group>"; };
+		71C24AE229C72743003A4057 /* api.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.pb.swift; sourceTree = "<group>"; };
+		71C24AE429C72743003A4057 /* cdr.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cdr.pb.swift; sourceTree = "<group>"; };
+		71C24AE529C72743003A4057 /* cdr.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = cdr.proto; sourceTree = "<group>"; };
+		71C24AE629C72743003A4057 /* cdr.pb.go */ = {isa = PBXFileReference; lastKnownFileType = text; path = cdr.pb.go; sourceTree = "<group>"; };
+		71C24AE829C72743003A4057 /* message.pb.go */ = {isa = PBXFileReference; lastKnownFileType = text; path = message.pb.go; sourceTree = "<group>"; };
+		71C24AE929C72743003A4057 /* message.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = message.pb.swift; sourceTree = "<group>"; };
+		71C24AEA29C72743003A4057 /* message.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = message.proto; sourceTree = "<group>"; };
+		71C24AEC29C72743003A4057 /* iam.pb.go */ = {isa = PBXFileReference; lastKnownFileType = text; path = iam.pb.go; sourceTree = "<group>"; };
+		71C24AED29C72743003A4057 /* iam_grpc.pb.go */ = {isa = PBXFileReference; lastKnownFileType = text; path = iam_grpc.pb.go; sourceTree = "<group>"; };
+		71C24AEE29C72743003A4057 /* iam.grpc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iam.grpc.swift; sourceTree = "<group>"; };
+		71C24AEF29C72743003A4057 /* iam.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iam.pb.swift; sourceTree = "<group>"; };
+		71C24AF029C72743003A4057 /* iam.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = iam.proto; sourceTree = "<group>"; };
+		71C24AF229C72743003A4057 /* vip.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = vip.proto; sourceTree = "<group>"; };
+		71C24AF329C72743003A4057 /* vip.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vip.pb.swift; sourceTree = "<group>"; };
+		71C24AF429C72744003A4057 /* vip.pb.go */ = {isa = PBXFileReference; lastKnownFileType = text; path = vip.pb.go; sourceTree = "<group>"; };
+		71C24AF629C72744003A4057 /* userinfo.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userinfo.pb.swift; sourceTree = "<group>"; };
+		71C24AF729C72744003A4057 /* userinfo.pb.go */ = {isa = PBXFileReference; lastKnownFileType = text; path = userinfo.pb.go; sourceTree = "<group>"; };
+		71C24AF929C72744003A4057 /* user.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = user.proto; sourceTree = "<group>"; };
+		71C24AFA29C72744003A4057 /* user.pb.go */ = {isa = PBXFileReference; lastKnownFileType = text; path = user.pb.go; sourceTree = "<group>"; };
+		71C24AFB29C72744003A4057 /* user.grpc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.grpc.swift; sourceTree = "<group>"; };
+		71C24AFC29C72744003A4057 /* user_grpc.pb.go */ = {isa = PBXFileReference; lastKnownFileType = text; path = user_grpc.pb.go; sourceTree = "<group>"; };
+		71C24AFD29C72744003A4057 /* user.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.pb.swift; sourceTree = "<group>"; };
 		71C8269429ACD90D0084885B /* FlowDetailsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowDetailsPage.swift; sourceTree = "<group>"; };
 		71C8269629ACDB3A0084885B /* RechargePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargePage.swift; sourceTree = "<group>"; };
 		71C8269929ACDDC80084885B /* FlowDetailsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowDetailsItem.swift; sourceTree = "<group>"; };
@@ -285,6 +323,7 @@
 		0A33161E84538A49EA7B6B02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71C24A8429C7273D003A4057 /* Proto */,
 				DDC7EF21CBD8F9881D746038 /* Pods_OldGeneral.framework */,
 				DFFF5CB5BFF17400C1768C00 /* Pods_OldGeneral_OldGeneralUITests.framework */,
 				3555A7502E210E979461EB8E /* Pods_OldGeneralTests.framework */,
@@ -358,122 +397,10 @@
 			path = VIP;
 			sourceTree = "<group>";
 		};
-		71599B7D29C5EFA1006386B5 /* Proto */ = {
-			isa = PBXGroup;
-			children = (
-				71599B7E29C5EFA1006386B5 /* vip */,
-				71599B8229C5EFA1006386B5 /* flags */,
-				71599B8629C5EFA1006386B5 /* message */,
-				71599B8A29C5EFA1006386B5 /* user */,
-				71599B9029C5EFA1006386B5 /* cdr */,
-				71599B9429C5EFA1006386B5 /* iam */,
-				71599B9A29C5EFA1006386B5 /* wallet */,
-				71599B9E29C5EFA1006386B5 /* userinfo */,
-				71599BA129C5EFA1006386B5 /* api */,
-			);
-			name = Proto;
-			path = ../OldGeneralBackend/Proto;
-			sourceTree = "<group>";
-		};
-		71599B7E29C5EFA1006386B5 /* vip */ = {
-			isa = PBXGroup;
-			children = (
-				71599B7F29C5EFA1006386B5 /* vip.pb.swift */,
-				71599B8029C5EFA1006386B5 /* vip.pb.go */,
-				71599B8129C5EFA1006386B5 /* vip.proto */,
-			);
-			path = vip;
-			sourceTree = "<group>";
-		};
-		71599B8229C5EFA1006386B5 /* flags */ = {
-			isa = PBXGroup;
-			children = (
-				71599B8329C5EFA1006386B5 /* flags.pb.swift */,
-				71599B8429C5EFA1006386B5 /* flags.pb.go */,
-				71599B8529C5EFA1006386B5 /* flags.proto */,
-			);
-			path = flags;
-			sourceTree = "<group>";
-		};
-		71599B8629C5EFA1006386B5 /* message */ = {
-			isa = PBXGroup;
-			children = (
-				71599B8729C5EFA1006386B5 /* message.pb.go */,
-				71599B8829C5EFA1006386B5 /* message.proto */,
-				71599B8929C5EFA1006386B5 /* message.pb.swift */,
-			);
-			path = message;
-			sourceTree = "<group>";
-		};
-		71599B8A29C5EFA1006386B5 /* user */ = {
-			isa = PBXGroup;
-			children = (
-				71599B8B29C5EFA1006386B5 /* user.grpc.swift */,
-				71599B8C29C5EFA1006386B5 /* user_grpc.pb.go */,
-				71599B8D29C5EFA1006386B5 /* user.pb.swift */,
-				71599B8E29C5EFA1006386B5 /* user.pb.go */,
-				71599B8F29C5EFA1006386B5 /* user.proto */,
-			);
-			path = user;
-			sourceTree = "<group>";
-		};
-		71599B9029C5EFA1006386B5 /* cdr */ = {
-			isa = PBXGroup;
-			children = (
-				71599B9129C5EFA1006386B5 /* cdr.pb.go */,
-				71599B9229C5EFA1006386B5 /* cdr.proto */,
-				71599B9329C5EFA1006386B5 /* cdr.pb.swift */,
-			);
-			path = cdr;
-			sourceTree = "<group>";
-		};
-		71599B9429C5EFA1006386B5 /* iam */ = {
-			isa = PBXGroup;
-			children = (
-				71599B9529C5EFA1006386B5 /* iam_grpc.pb.go */,
-				71599B9629C5EFA1006386B5 /* iam.pb.swift */,
-				71599B9729C5EFA1006386B5 /* iam.grpc.swift */,
-				71599B9829C5EFA1006386B5 /* iam.proto */,
-				71599B9929C5EFA1006386B5 /* iam.pb.go */,
-			);
-			path = iam;
-			sourceTree = "<group>";
-		};
-		71599B9A29C5EFA1006386B5 /* wallet */ = {
-			isa = PBXGroup;
-			children = (
-				71599B9B29C5EFA1006386B5 /* wallet.pb.go */,
-				71599B9C29C5EFA1006386B5 /* wallet.proto */,
-				71599B9D29C5EFA1006386B5 /* wallet.pb.swift */,
-			);
-			path = wallet;
-			sourceTree = "<group>";
-		};
-		71599B9E29C5EFA1006386B5 /* userinfo */ = {
-			isa = PBXGroup;
-			children = (
-				71599B9F29C5EFA1006386B5 /* userinfo.pb.swift */,
-				71599BA029C5EFA1006386B5 /* userinfo.pb.go */,
-			);
-			path = userinfo;
-			sourceTree = "<group>";
-		};
-		71599BA129C5EFA1006386B5 /* api */ = {
-			isa = PBXGroup;
-			children = (
-				71599BA229C5EFA1006386B5 /* api.pb.swift */,
-				71599BA329C5EFA1006386B5 /* api.proto */,
-				71599BA429C5EFA1006386B5 /* api.pb.go */,
-				71599BA529C5EFA1006386B5 /* api.grpc.swift */,
-				71599BA629C5EFA1006386B5 /* api_grpc.pb.go */,
-			);
-			path = api;
-			sourceTree = "<group>";
-		};
 		719A61B929444B1100E9E7AD = {
 			isa = PBXGroup;
 			children = (
-				71599B7D29C5EFA1006386B5 /* Proto */,
+				71C24AD229C72742003A4057 /* Proto */,
 				719A61C429444B1100E9E7AD /* OldGeneral */,
 				719A61D529444B1300E9E7AD /* OldGeneralTests */,
 				719A61DF29444B1300E9E7AD /* OldGeneralUITests */,
@@ -680,6 +607,233 @@
 			path = FlagInfo;
 			sourceTree = "<group>";
 		};
+		71C24A8429C7273D003A4057 /* Proto */ = {
+			isa = PBXGroup;
+			children = (
+				71C24A8529C7273D003A4057 /* vip */,
+				71C24A8929C7273D003A4057 /* flags */,
+				71C24A8F29C7273D003A4057 /* message */,
+				71C24A9329C7273D003A4057 /* user */,
+				71C24A9929C7273D003A4057 /* cdr */,
+				71C24A9D29C7273D003A4057 /* iam */,
+				71C24AA329C7273D003A4057 /* wallet */,
+				71C24AA729C7273D003A4057 /* userinfo */,
+				71C24AAA29C7273D003A4057 /* api */,
+			);
+			name = Proto;
+			path = ../OldGeneralBackend/Proto;
+			sourceTree = "<group>";
+		};
+		71C24A8529C7273D003A4057 /* vip */ = {
+			isa = PBXGroup;
+			children = (
+				71C24A8629C7273D003A4057 /* vip.pb.swift */,
+				71C24A8729C7273D003A4057 /* vip.pb.go */,
+				71C24A8829C7273D003A4057 /* vip.proto */,
+			);
+			path = vip;
+			sourceTree = "<group>";
+		};
+		71C24A8929C7273D003A4057 /* flags */ = {
+			isa = PBXGroup;
+			children = (
+				71C24A8A29C7273D003A4057 /* flags.pb.swift */,
+				71C24A8B29C7273D003A4057 /* flags_grpc.pb.go */,
+				71C24A8C29C7273D003A4057 /* flags.pb.go */,
+				71C24A8D29C7273D003A4057 /* flags.proto */,
+				71C24A8E29C7273D003A4057 /* flags.grpc.swift */,
+			);
+			path = flags;
+			sourceTree = "<group>";
+		};
+		71C24A8F29C7273D003A4057 /* message */ = {
+			isa = PBXGroup;
+			children = (
+				71C24A9029C7273D003A4057 /* message.pb.go */,
+				71C24A9129C7273D003A4057 /* message.proto */,
+				71C24A9229C7273D003A4057 /* message.pb.swift */,
+			);
+			path = message;
+			sourceTree = "<group>";
+		};
+		71C24A9329C7273D003A4057 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				71C24A9429C7273D003A4057 /* user.grpc.swift */,
+				71C24A9529C7273D003A4057 /* user_grpc.pb.go */,
+				71C24A9629C7273D003A4057 /* user.pb.swift */,
+				71C24A9729C7273D003A4057 /* user.pb.go */,
+				71C24A9829C7273D003A4057 /* user.proto */,
+			);
+			path = user;
+			sourceTree = "<group>";
+		};
+		71C24A9929C7273D003A4057 /* cdr */ = {
+			isa = PBXGroup;
+			children = (
+				71C24A9A29C7273D003A4057 /* cdr.pb.go */,
+				71C24A9B29C7273D003A4057 /* cdr.proto */,
+				71C24A9C29C7273D003A4057 /* cdr.pb.swift */,
+			);
+			path = cdr;
+			sourceTree = "<group>";
+		};
+		71C24A9D29C7273D003A4057 /* iam */ = {
+			isa = PBXGroup;
+			children = (
+				71C24A9E29C7273D003A4057 /* iam_grpc.pb.go */,
+				71C24A9F29C7273D003A4057 /* iam.pb.swift */,
+				71C24AA029C7273D003A4057 /* iam.grpc.swift */,
+				71C24AA129C7273D003A4057 /* iam.proto */,
+				71C24AA229C7273D003A4057 /* iam.pb.go */,
+			);
+			path = iam;
+			sourceTree = "<group>";
+		};
+		71C24AA329C7273D003A4057 /* wallet */ = {
+			isa = PBXGroup;
+			children = (
+				71C24AA429C7273D003A4057 /* wallet.pb.go */,
+				71C24AA529C7273D003A4057 /* wallet.proto */,
+				71C24AA629C7273D003A4057 /* wallet.pb.swift */,
+			);
+			path = wallet;
+			sourceTree = "<group>";
+		};
+		71C24AA729C7273D003A4057 /* userinfo */ = {
+			isa = PBXGroup;
+			children = (
+				71C24AA829C7273D003A4057 /* userinfo.pb.swift */,
+				71C24AA929C7273D003A4057 /* userinfo.pb.go */,
+			);
+			path = userinfo;
+			sourceTree = "<group>";
+		};
+		71C24AAA29C7273D003A4057 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				71C24AAB29C7273D003A4057 /* api.pb.swift */,
+				71C24AAC29C7273D003A4057 /* api.proto */,
+				71C24AAD29C7273D003A4057 /* api.pb.go */,
+				71C24AAE29C7273D003A4057 /* api.grpc.swift */,
+				71C24AAF29C7273D003A4057 /* api_grpc.pb.go */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		71C24AD229C72742003A4057 /* Proto */ = {
+			isa = PBXGroup;
+			children = (
+				71C24AF129C72743003A4057 /* vip */,
+				71C24AD329C72742003A4057 /* flags */,
+				71C24AE729C72743003A4057 /* message */,
+				71C24AF829C72744003A4057 /* user */,
+				71C24AE329C72743003A4057 /* cdr */,
+				71C24AEB29C72743003A4057 /* iam */,
+				71C24AD929C72742003A4057 /* wallet */,
+				71C24AF529C72744003A4057 /* userinfo */,
+				71C24ADD29C72742003A4057 /* api */,
+			);
+			path = Proto;
+			sourceTree = "<group>";
+		};
+		71C24AD329C72742003A4057 /* flags */ = {
+			isa = PBXGroup;
+			children = (
+				71C24AD729C72742003A4057 /* flags.pb.swift */,
+				71C24AD429C72742003A4057 /* flags_grpc.pb.go */,
+				71C24AD629C72742003A4057 /* flags.pb.go */,
+				71C24AD829C72742003A4057 /* flags.proto */,
+				71C24AD529C72742003A4057 /* flags.grpc.swift */,
+			);
+			path = flags;
+			sourceTree = "<group>";
+		};
+		71C24AD929C72742003A4057 /* wallet */ = {
+			isa = PBXGroup;
+			children = (
+				71C24ADA29C72742003A4057 /* wallet.pb.go */,
+				71C24ADC29C72742003A4057 /* wallet.proto */,
+				71C24ADB29C72742003A4057 /* wallet.pb.swift */,
+			);
+			path = wallet;
+			sourceTree = "<group>";
+		};
+		71C24ADD29C72742003A4057 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				71C24AE229C72743003A4057 /* api.pb.swift */,
+				71C24AE029C72743003A4057 /* api.proto */,
+				71C24AE129C72743003A4057 /* api.pb.go */,
+				71C24ADE29C72742003A4057 /* api.grpc.swift */,
+				71C24ADF29C72743003A4057 /* api_grpc.pb.go */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		71C24AE329C72743003A4057 /* cdr */ = {
+			isa = PBXGroup;
+			children = (
+				71C24AE629C72743003A4057 /* cdr.pb.go */,
+				71C24AE529C72743003A4057 /* cdr.proto */,
+				71C24AE429C72743003A4057 /* cdr.pb.swift */,
+			);
+			path = cdr;
+			sourceTree = "<group>";
+		};
+		71C24AE729C72743003A4057 /* message */ = {
+			isa = PBXGroup;
+			children = (
+				71C24AE829C72743003A4057 /* message.pb.go */,
+				71C24AEA29C72743003A4057 /* message.proto */,
+				71C24AE929C72743003A4057 /* message.pb.swift */,
+			);
+			path = message;
+			sourceTree = "<group>";
+		};
+		71C24AEB29C72743003A4057 /* iam */ = {
+			isa = PBXGroup;
+			children = (
+				71C24AED29C72743003A4057 /* iam_grpc.pb.go */,
+				71C24AEF29C72743003A4057 /* iam.pb.swift */,
+				71C24AEE29C72743003A4057 /* iam.grpc.swift */,
+				71C24AF029C72743003A4057 /* iam.proto */,
+				71C24AEC29C72743003A4057 /* iam.pb.go */,
+			);
+			path = iam;
+			sourceTree = "<group>";
+		};
+		71C24AF129C72743003A4057 /* vip */ = {
+			isa = PBXGroup;
+			children = (
+				71C24AF329C72743003A4057 /* vip.pb.swift */,
+				71C24AF429C72744003A4057 /* vip.pb.go */,
+				71C24AF229C72743003A4057 /* vip.proto */,
+			);
+			path = vip;
+			sourceTree = "<group>";
+		};
+		71C24AF529C72744003A4057 /* userinfo */ = {
+			isa = PBXGroup;
+			children = (
+				71C24AF629C72744003A4057 /* userinfo.pb.swift */,
+				71C24AF729C72744003A4057 /* userinfo.pb.go */,
+			);
+			path = userinfo;
+			sourceTree = "<group>";
+		};
+		71C24AF829C72744003A4057 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				71C24AFB29C72744003A4057 /* user.grpc.swift */,
+				71C24AFC29C72744003A4057 /* user_grpc.pb.go */,
+				71C24AFD29C72744003A4057 /* user.pb.swift */,
+				71C24AFA29C72744003A4057 /* user.pb.go */,
+				71C24AF929C72744003A4057 /* user.proto */,
+			);
+			path = user;
+			sourceTree = "<group>";
+		};
 		71C8269829ACDDAE0084885B /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
@@ -866,21 +1020,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71599BB829C5EFA1006386B5 /* iam_grpc.pb.go in Resources */,
-				71599BB529C5EFA1006386B5 /* cdr.pb.go in Resources */,
-				71599BA829C5EFA1006386B5 /* vip.pb.go in Resources */,
-				71599BAB29C5EFA1006386B5 /* flags.pb.go in Resources */,
-				71599BAD29C5EFA1006386B5 /* message.pb.go in Resources */,
-				71599BB129C5EFA1006386B5 /* user_grpc.pb.go in Resources */,
+				71C24AB529C7273D003A4057 /* flags.pb.go in Resources */,
+				71C24ACC29C7273D003A4057 /* userinfo.pb.go in Resources */,
+				71C24AC829C7273D003A4057 /* wallet.pb.go in Resources */,
+				71C24AB129C7273D003A4057 /* vip.pb.go in Resources */,
+				71C24AB829C7273D003A4057 /* message.pb.go in Resources */,
 				715A51DD29C2C9B200C3A2E9 /* secret.xcconfig in Resources */,
-				71599BC629C5EFA1006386B5 /* api_grpc.pb.go in Resources */,
-				71599BB329C5EFA1006386B5 /* user.pb.go in Resources */,
+				71C24AC029C7273D003A4057 /* cdr.pb.go in Resources */,
+				71C24AD129C7273D003A4057 /* api_grpc.pb.go in Resources */,
+				71C24ABE29C7273D003A4057 /* user.pb.go in Resources */,
 				719A61CD29444B1200E9E7AD /* Preview Assets.xcassets in Resources */,
-				71599BC129C5EFA1006386B5 /* userinfo.pb.go in Resources */,
-				71599BBD29C5EFA1006386B5 /* wallet.pb.go in Resources */,
-				71599BBC29C5EFA1006386B5 /* iam.pb.go in Resources */,
+				71C24ABC29C7273D003A4057 /* user_grpc.pb.go in Resources */,
+				71C24ACF29C7273D003A4057 /* api.pb.go in Resources */,
+				71C24AC729C7273D003A4057 /* iam.pb.go in Resources */,
+				71C24AB429C7273D003A4057 /* flags_grpc.pb.go in Resources */,
+				71C24AC329C7273D003A4057 /* iam_grpc.pb.go in Resources */,
 				719A61CA29444B1200E9E7AD /* Assets.xcassets in Resources */,
-				71599BC429C5EFA1006386B5 /* api.pb.go in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1010,21 +1165,17 @@
 			files = (
 				71BEA7BD29AA5E8B00C8C3DE /* WalletPage.swift in Sources */,
 				7173001129B31C7200714912 /* FlagDetailInfoItem.swift in Sources */,
+				71C24AC629C7273D003A4057 /* iam.proto in Sources */,
+				71C24ACD29C7273D003A4057 /* api.pb.swift in Sources */,
 				714D408929C0C1D800324586 /* fullScreenPage.swift in Sources */,
-				71599BB229C5EFA1006386B5 /* user.pb.swift in Sources */,
 				7103952E298E52B80035400F /* FlagSquare.swift in Sources */,
 				71A5A00F29B0FFE100A60D31 /* SexItem.swift in Sources */,
-				71599BB929C5EFA1006386B5 /* iam.pb.swift in Sources */,
-				71599BB629C5EFA1006386B5 /* cdr.proto in Sources */,
-				71599BB729C5EFA1006386B5 /* cdr.pb.swift in Sources */,
 				71A5E50929A7AB7B0080124E /* LoginPage.swift in Sources */,
 				71F16DA129A797C6009F602F /* MyFlagItem.swift in Sources */,
 				71BEA7B829AA2D9B00C8C3DE /* http.swift in Sources */,
 				7150138129A65A7000FD155F /* FlagSquareItem.swift in Sources */,
 				71A5E50B29A7AB900080124E /* RegisterPage.swift in Sources */,
-				71599BB029C5EFA1006386B5 /* user.grpc.swift in Sources */,
-				71599BA929C5EFA1006386B5 /* vip.proto in Sources */,
-				71599BAE29C5EFA1006386B5 /* message.proto in Sources */,
+				71C24AB229C7273D003A4057 /* vip.proto in Sources */,
 				71A5A00B29B0F9C700A60D31 /* UploadSexPage.swift in Sources */,
 				712968F129B4A81A00526A0C /* Settings.swift in Sources */,
 				7173001329B3218B00714912 /* FlagCardItem.swift in Sources */,
@@ -1034,47 +1185,48 @@
 				71C8269729ACDB3A0084885B /* RechargePage.swift in Sources */,
 				7116F29729B8C8210080DAE5 /* frendMessageItem.swift in Sources */,
 				7151160A29B0DBFE006A40DD /* VIPPrivilegesItem.swift in Sources */,
-				71599BBB29C5EFA1006386B5 /* iam.proto in Sources */,
+				71C24AB929C7273D003A4057 /* message.proto in Sources */,
 				71A5E52C29A90F5E0080124E /* Message.swift in Sources */,
 				71737176299F7ACA009DF509 /* PayForFlag.swift in Sources */,
-				71599BC529C5EFA1006386B5 /* api.grpc.swift in Sources */,
 				71C8269529ACD90D0084885B /* FlowDetailsPage.swift in Sources */,
-				71599BC329C5EFA1006386B5 /* api.proto in Sources */,
+				71C24AC529C7273D003A4057 /* iam.grpc.swift in Sources */,
 				71A5E50429A7A2830080124E /* MyFlags.swift in Sources */,
+				71C24ABA29C7273D003A4057 /* message.pb.swift in Sources */,
 				71934340298E4D98007C8E6A /* OldgeneralContentView.swift in Sources */,
 				7126105629B377DF00CBC493 /* api.swift in Sources */,
-				71599BBA29C5EFA1006386B5 /* iam.grpc.swift in Sources */,
 				71039530298E56DC0035400F /* UserInfo.swift in Sources */,
+				71C24AC429C7273D003A4057 /* iam.pb.swift in Sources */,
 				71A5A00929B0F90900A60D31 /* UpdateUserNamePage.swift in Sources */,
 				71A5A00729B0F6B600A60D31 /* UploadAvatarPage.swift in Sources */,
 				71039532298E626A0035400F /* AccountButton.swift in Sources */,
 				7102FF6B29BC872200B9DA35 /* flaglist.swift in Sources */,
+				71C24ACE29C7273D003A4057 /* api.proto in Sources */,
 				7103953C298F585F0035400F /* CreateFlag.swift in Sources */,
 				71BEA7D529ABB10200C8C3DE /* FlagInfoPage.swift in Sources */,
+				71C24ABB29C7273D003A4057 /* user.grpc.swift in Sources */,
 				71039539298E68410035400F /* VIPButton.swift in Sources */,
 				7129698929B4DE9900526A0C /* user.swift in Sources */,
-				71599BAF29C5EFA1006386B5 /* message.pb.swift in Sources */,
 				7151160729B0DB32006A40DD /* VIPDescriptionPage.swift in Sources */,
+				71C24AC129C7273D003A4057 /* cdr.proto in Sources */,
+				71C24AD029C7273D003A4057 /* api.grpc.swift in Sources */,
+				71C24ABD29C7273D003A4057 /* user.pb.swift in Sources */,
 				714D408529C0A32500324586 /* SubmitSignInPage.swift in Sources */,
 				7126105E29B37C8800CBC493 /* date.swift in Sources */,
 				71039534298E67230035400F /* SettingButton.swift in Sources */,
 				71BEA7CA29ABAA8E00C8C3DE /* SettingsPage.swift in Sources */,
 				71BEA7D129ABB07D00C8C3DE /* UserInfoEditPage.swift in Sources */,
-				71599BA729C5EFA1006386B5 /* vip.pb.swift in Sources */,
-				71599BB429C5EFA1006386B5 /* user.proto in Sources */,
+				71C24AB029C7273D003A4057 /* vip.pb.swift in Sources */,
 				7173001529B329AA00714912 /* SignInPage.swift in Sources */,
 				7193433D298E4D6B007C8E6A /* Home.swift in Sources */,
 				71BEA7CE29ABAF9600C8C3DE /* VIPPage.swift in Sources */,
-				71599BBF29C5EFA1006386B5 /* wallet.pb.swift in Sources */,
 				71A5E50E29A7B40A0080124E /* Main.swift in Sources */,
 				71BEA7CC29ABAF7F00C8C3DE /* QAPage.swift in Sources */,
 				71BEA7BA29AA49FD00C8C3DE /* token.swift in Sources */,
-				71599BAA29C5EFA1006386B5 /* flags.pb.swift in Sources */,
+				71C24AB329C7273D003A4057 /* flags.pb.swift in Sources */,
 				714D408729C0AEDD00324586 /* imagePicker.swift in Sources */,
-				71599BC229C5EFA1006386B5 /* api.pb.swift in Sources */,
-				71599BBE29C5EFA1006386B5 /* wallet.proto in Sources */,
-				71599BC029C5EFA1006386B5 /* userinfo.pb.swift in Sources */,
 				71C8269A29ACDDC80084885B /* FlowDetailsItem.swift in Sources */,
+				71C24ACA29C7273D003A4057 /* wallet.pb.swift in Sources */,
+				71C24AC229C7273D003A4057 /* cdr.pb.swift in Sources */,
 				713808BD29BF68A500947E81 /* commentitem.swift in Sources */,
 				7151160C29B0E411006A40DD /* VIPChargeItem.swift in Sources */,
 				71A5E52929A8FE670080124E /* SearchBar.swift in Sources */,
@@ -1082,10 +1234,14 @@
 				7151160E29B0E7C1006A40DD /* VIPChargePage.swift in Sources */,
 				71C8269C29ACE18A0084885B /* RechargeItem.swift in Sources */,
 				7126105929B3794C00CBC493 /* iam.swift in Sources */,
-				71599BAC29C5EFA1006386B5 /* flags.proto in Sources */,
+				71C24AC929C7273D003A4057 /* wallet.proto in Sources */,
+				71C24AB629C7273D003A4057 /* flags.proto in Sources */,
 				7116F29429B8C18B0080DAE5 /* systemMessageItem.swift in Sources */,
 				713808BF29BF68EC00947E81 /* flagInfoBarItem.swift in Sources */,
+				71C24ABF29C7273D003A4057 /* user.proto in Sources */,
+				71C24ACB29C7273D003A4057 /* userinfo.pb.swift in Sources */,
 				716C7F4A29BCC1A00066B9CF /* createFlag.swift in Sources */,
+				71C24AB729C7273D003A4057 /* flags.grpc.swift in Sources */,
 				71BEA7C729ABA73C00C8C3DE /* error.swift in Sources */,
 				7126105C29B37C8100CBC493 /* string.swift in Sources */,
 			);

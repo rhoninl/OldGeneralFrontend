@@ -80,7 +80,7 @@ struct FlagInfoPage: View {
             .tint(.yellow.opacity(0.8))
         }
         .navigationDestination(isPresented: $jumpToSignPage) {
-            SignInPage(parentPage: "flagInfo")
+            SignInPage(info: Cdr_SignInInfo(),parentPage: "flagInfo")
         }
         .navigationDestination(isPresented: $jumpToSignInFlagPage) {
             SubmitSignInPage()

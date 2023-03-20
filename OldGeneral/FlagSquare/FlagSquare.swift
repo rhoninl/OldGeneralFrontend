@@ -21,7 +21,7 @@ struct FlagSquare: View {
                         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
                             ForEach(signInSquareStore, id: \.self) { index in
                                 NavigationLink{
-                                    SignInPage()
+                                    SignInPage(info: Cdr_SignInInfo())
                                 } label: {
                                     FlagSquareItem(info: index)
                                 }

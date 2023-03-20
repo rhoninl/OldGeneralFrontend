@@ -46,3 +46,10 @@ func getTimestampRFC1123 () -> String {
 
    return dateFormatter.string(from: Date())
 }
+
+func timestampToTime (_ date: Int64) -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "HH:mm"
+    
+    return formatter.string(from: Date(timeIntervalSince1970: TimeInterval(date/1000000)))
+}

@@ -7,7 +7,7 @@
 
 import Foundation
 import CryptoKit
-
+import UIKit
 
 func sendPutRequest(fileName:String ,data: Data) -> Bool{
     let semaphore = DispatchSemaphore(value: 0)
@@ -34,6 +34,24 @@ func sendPutRequest(fileName:String ,data: Data) -> Bool{
     semaphore.wait()
     
     return isSuccess
+}
+
+func getImageFromURL(_ url: String) -> UIImage? {
+    let semaphore = DispatchSemaphore(value: 0)
+    var image: UIImage = UIImage()
+    
+    var request = URLRequest(url: URL(string: url)!)
+    URLSession.shared.dataTask(with: request) { data, response, error in
+        guard let data = data, error == nil else {
+            print("Error loading image: \(error?.localizedDescription ?? "Unknown error")")
+            return
+        }
+        image = UIImage(data: data)!
+        semaphore.signal()
+    }.resume()
+    semaphore.wait()
+    
+    return image
 }
 
 //func generateAuth( fileName: String,data: Data) -> String {

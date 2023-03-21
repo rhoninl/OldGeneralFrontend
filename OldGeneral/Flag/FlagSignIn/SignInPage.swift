@@ -14,7 +14,7 @@ struct SignInPage: View {
     @State var flagInfo: Cdr_FlagDetailInfo = Cdr_FlagDetailInfo()
     @State private var isShowingFullSizeImage: Bool = false
     var parentPage: String = "default"
-    @State private var image: UIImage = UIImage(named: "turtlerock") ?? UIImage(systemName: "arrow.triangle.2.circlepath")!
+    @State private var image: UIImage = UIImage(named: "turtlerock")!
     
     @Environment(\.presentationMode) var presentationMode
 
@@ -64,7 +64,7 @@ struct SignInPage: View {
                     }
                     self.flagInfo = getFlagInfo(info.flagID) ?? Cdr_FlagDetailInfo()
                 }
-                getImageFromURL()
+                image = getImageFromURL(info.pictureURL) ?? UIImage(named: "turtlerock")! 
             }
             if isShowingFullSizeImage {
                 FullScreenImageOverlay(image: image)
@@ -73,26 +73,6 @@ struct SignInPage: View {
                     }
                     .frame(maxWidth: .infinity,maxHeight: .infinity)
                     .transition(.opacity)
-            }
-        }
-    }
-    func getImageFromURL() {
-        guard let url = URL(string: info.pictureURL) else {
-            print("cannot get image from url")
-            return
-        }
-        
-        _ = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data, error == nil else {
-                print("Error loading image: \(error?.localizedDescription ?? "Unknown error")")
-                return
-            }
-            if let uiImage = UIImage(data: data) {
-                DispatchQueue.main.async {
-                    image = uiImage
-                }
-            } else {
-                print("Error converting image data to UIImage")
             }
         }
     }

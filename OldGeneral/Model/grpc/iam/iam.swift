@@ -21,7 +21,6 @@ func Login(username: String, password: String) -> Bool {
     do {
         let call = try getAPIClient().iAMLogin(request)
         let resp = try call.response.wait()
-        print(resp.token)
         StoreToken(resp.token)
         userId = resp.userID
         print("userId \(userId)")

@@ -22,6 +22,7 @@ struct FlagInfoPage: View {
     private var usericon: Image = Image(systemName: "square.and.arrow.up.fill")
     private var isOwner: Bool = false
     @State private var jumpToSignPage: Bool = false
+    @State private var signInId: String = ""
     
     var body: some View {
         VStack{
@@ -53,6 +54,7 @@ struct FlagInfoPage: View {
                 }
                 .padding(.bottom,4)
                 Divider()
+                // TODO need load from backend
                 LazyVGrid(columns: columns) {
                     FlagCardItem()
                         .onTapGesture {
@@ -80,10 +82,10 @@ struct FlagInfoPage: View {
             .tint(.yellow.opacity(0.8))
         }
         .navigationDestination(isPresented: $jumpToSignPage) {
-            SignInPage(info: Cdr_SignInInfo(),parentPage: "flagInfo")
+            SignInPage(signInId: nil)
         }
         .navigationDestination(isPresented: $jumpToSignInFlagPage) {
-            SubmitSignInPage()
+            SubmitSignInPage(flagId: flagInfo.id)
         }
     }
 }

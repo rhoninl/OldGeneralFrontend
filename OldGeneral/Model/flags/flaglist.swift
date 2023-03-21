@@ -57,7 +57,24 @@ func getFlagInfo(_ flagId: String) -> Cdr_FlagDetailInfo? {
         let response = try call.response.wait()
         return response.info
     } catch {
-        print("error to get flag detail")
+        print("error to get flag detail\(error)")
+    }
+    return nil
+}
+
+func getSignInInfo(_ signInId: String) -> Cdr_SignInInfo? {
+    let request = Flags_GetSignInInfoRequest.with{ my in
+        my.requestID = generateUUID()
+        my.requestTime = getTimeStamp()
+        my.signInID = signInId
+    }
+    
+    do {
+        let call = try getAPIClient().getSignInInfo(request,callOptions: getOption())
+        let response = try call.response.wait()
+        return response.info
+    } catch {
+        print("error to get signin info\(error)")
         return nil
     }
 }

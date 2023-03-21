@@ -15,8 +15,8 @@ struct SubmitSignInPage: View {
     @State private var signInMessag:String = ""
     @State private var errorMessage: String?
     @State private var alert: Bool = false
-    private var flagId: String = "123"
-    private var signInId: String = "456"
+    @State var signInInfo: Cdr_SignInInfo = Cdr_SignInInfo()
+    var flagId: String = "123"
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
@@ -68,7 +68,14 @@ struct SubmitSignInPage: View {
                 .frame(width: 200,height: 200)
                 Spacer()
                 Button{
+                    signInInfo.id = generateUUID()
+                    signInInfo.flagID = flagId
+                    signInInfo.content = signInMessag
                     errorMessage = uploadImage()
+                    guard signInFlag(signInInfo) else {
+                        print("error to sign in")
+                        return
+                    }
                     alert = true
                 } label: {
                     Text("打卡")
@@ -116,7 +123,7 @@ struct SubmitSignInPage: View {
             return "图片信息错误，请重试"
         }
         
-        let pictureName = "\(userId)/\(flagId)/\(signInId)"
+        let pictureName = "\(userId)/\(flagId)/\(signInInfo.id)"
         
         guard sendPutRequest(fileName: pictureName, data: imageData) else {
             return "图片上传失败，请重试"

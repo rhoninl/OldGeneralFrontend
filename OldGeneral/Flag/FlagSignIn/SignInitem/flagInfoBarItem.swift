@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct flagInfoBarItem: View {
+    var info: Cdr_FlagDetailInfo = Cdr_FlagDetailInfo()
     var body: some View {
         HStack {
             VStack(alignment: .leading,spacing: 10){
-                Text("This is flagName")
-                Text("挑战金: 1000金")
+                Text(info.name)
+                Text("挑战金: \(info.challengeNum)金")
                     .fontWeight(.thin)
                     .font(.caption2)
             }

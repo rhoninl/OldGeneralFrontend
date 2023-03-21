@@ -12,6 +12,8 @@ struct FlagSquare: View {
     @State private var SearchString: String = ""
     @State var signInSquareStore: [Cdr_FlagSquareItemInfo] = []
     @State private var isFetching: Bool = false
+    @State private var lastSignInId: String = ""
+    @State private var hasAnyMore: Bool = true
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottomTrailing){
@@ -21,14 +23,16 @@ struct FlagSquare: View {
                         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
                             ForEach(signInSquareStore, id: \.self) { index in
                                 NavigationLink{
-                                    SignInPage(info: Cdr_SignInInfo())
+                                    SignInPage(signInId: index.signinID)
                                 } label: {
                                     FlagSquareItem(info: index)
                                         .scaledToFit()
                                 }
                                 .buttonStyle(.plain)
                                 .onAppear{
-                                    if !isFetching && index == signInSquareStore[signInSquareStore.count - 4] {
+                                    if !isFetching &&
+                                        hasAnyMore &&
+                                        index == signInSquareStore.last {
                                         print("fetch")
                                         Task{
                                             await fetchSquare()
@@ -73,12 +77,19 @@ struct FlagSquare: View {
         print("Search button clicked with text: \(SearchString)")
     }
     func fetchSquare() async {
+        guard hasAnyMore else {
+            print("has reached buttom")
+            return
+        }
         isFetching = true
-        defer {isFetching = false}
+        defer {
+            isFetching = false
+            lastSignInId = signInSquareStore.last!.signinID
+        }
         usleep(500000)
         let fetchedData = fetchFlagSquareList(currentPage)
-        guard fetchedData.count != 0 else {
-            return
+        if  fetchedData.count < pagesize {
+            hasAnyMore = false
         }
         currentPage += 1
         signInSquareStore += fetchedData
@@ -89,11 +100,16 @@ struct FlagSquare: View {
             return
         }
         isFetching = true
-        defer {isFetching = false}
-        let fetchedData = fetchFlagSquareList(0)
-        guard fetchedData.count != 0 else {
-            return
+        defer {
+            isFetching = false
+            lastSignInId = signInSquareStore.last!.signinID
         }
+        let fetchedData = fetchFlagSquareList(0)
+        
+        if  fetchedData.count < pagesize {
+            hasAnyMore = false
+        }
+        
         currentPage = 1
         signInSquareStore = fetchedData
     }

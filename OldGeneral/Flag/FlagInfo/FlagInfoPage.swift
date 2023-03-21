@@ -25,12 +25,12 @@ struct FlagInfoPage: View {
     
     var body: some View {
         VStack{
-            HStack{
-                circleImage(url: flagInfo.userAvatar)
-                    .frame(maxWidth: 30,maxHeight: 30)
-                Text(flagInfo.userName)
-            }
             ScrollView{
+                HStack{
+                    circleImage(url: flagInfo.userAvatar)
+                        .frame(width: 50,height: 50)
+                    Text(flagInfo.userName)
+                }
                 VStack{
                     HStack{
                         VStack(alignment: .leading,spacing: 10){
@@ -41,7 +41,7 @@ struct FlagInfoPage: View {
                         }
                         Spacer()
                     }
-                    .padding(.all,10)
+                    .padding([.leading,.bottom,.trailing],10)
                     HStack(spacing: 60){
                         FlagDetailInfoItem(description: "投币助力", data: String(flagInfo.siegeNum))
                         FlagDetailInfoItem(description: "挑战金币", data: String(flagInfo.challengeNum))

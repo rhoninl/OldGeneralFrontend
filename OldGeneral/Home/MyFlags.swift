@@ -13,9 +13,10 @@ struct MyFlags: View {
     @State private var jumpToFlagInfo: Bool = false
     @State private var flagInfo: Cdr_FlagDetailInfo? = nil
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading,spacing: 0){
             Text("我的Flag")
-                .padding(.leading,15)
+                .padding([.leading,.bottom],15)
+            
             Divider()
             List(data, id: \.self) { index in
                 Button {
@@ -23,6 +24,7 @@ struct MyFlags: View {
                     jumpToFlagInfo = true
                 } label: {
                     MyFlagItem(info: index)
+                        .frame(maxWidth: .infinity,maxHeight: .infinity)
                 }
             }
         }
@@ -45,6 +47,22 @@ struct MyFlags_Previews: PreviewProvider {
             my.currentTime = 10
             my.totalTime = 20
         }
-        MyFlags(data: [info])
+        let info1 = Cdr_FlagBasicInfo.with{ my in
+            my.name = "This is test flag"
+            my.status = "running"
+            my.startTime = 0
+            my.id = generateUUID()
+            my.currentTime = 10
+            my.totalTime = 20
+        }
+        let info2 = Cdr_FlagBasicInfo.with{ my in
+            my.name = "This is test flag"
+            my.status = "running"
+            my.startTime = 0
+            my.id = generateUUID()
+            my.currentTime = 10
+            my.totalTime = 20
+        }
+        MyFlags(data: [info,info1,info2])
     }
 }

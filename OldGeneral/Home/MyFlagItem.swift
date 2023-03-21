@@ -17,8 +17,8 @@ struct MyFlagItem: View {
                         .font(.title3)
                         .lineLimit(1)
                     Spacer()
-                    Text("\(info.currentTime)/\(info.totalTime)  >")
                 }
+                .padding(1)
                 HStack{
                     Text("创建时间: \(timestampToDate(info.startTime)) ")
                     HStack{
@@ -31,6 +31,7 @@ struct MyFlagItem: View {
                 .font(.caption2)
             }
             Spacer()
+            Text("\(info.currentTime)/\(info.totalTime)  >")
         }
     }
 }

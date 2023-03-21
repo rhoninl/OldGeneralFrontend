@@ -24,6 +24,7 @@ struct FlagSquare: View {
                                     SignInPage(info: Cdr_SignInInfo())
                                 } label: {
                                     FlagSquareItem(info: index)
+                                        .scaledToFit()
                                 }
                                 .buttonStyle(.plain)
                                 .onAppear{

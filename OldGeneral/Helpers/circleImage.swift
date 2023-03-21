@@ -14,13 +14,14 @@ struct circleImage: View {
         AsyncImage(url: URL(string: url)) { phase in
             switch phase {
             case .success(let image):
-                image.resizable()
-                    .aspectRatio(contentMode: .fit)
+                image
+                    .resizable()
+                    .scaledToFill()
                     .clipShape(Circle())
             default :
                 Image(defaultImage)
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .scaledToFill()
                     .clipShape(Circle())
             }
         }
@@ -29,6 +30,6 @@ struct circleImage: View {
 
 struct circleImage_Previews: PreviewProvider {
     static var previews: some View {
-        circleImage(url: "123")
+        circleImage(url: "https://as1.ftcdn.net/v2/jpg/03/03/97/00/1000_F_303970065_Yi0UpuVdTb4uJiEtRdF8blJLwcT4Qd4p.jpg")
     }
 }

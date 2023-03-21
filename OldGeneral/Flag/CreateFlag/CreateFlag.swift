@@ -125,7 +125,6 @@ struct CreateFlagView: View {
             .font(.caption)
             .onTapGesture {
                 print("lose focus")
-                // dismiss keyboard when tap the from
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
             }
             NavigationLink {

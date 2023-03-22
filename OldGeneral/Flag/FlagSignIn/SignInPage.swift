@@ -63,8 +63,8 @@ struct SignInPage: View {
                         return
                     }
                     self.flagInfo = getFlagInfo(info.flagID) ?? Cdr_FlagDetailInfo()
+                    image = getImageFromURL(info.pictureURL) ?? UIImage(named: "turtlerock")! 
                 }
-                image = getImageFromURL(info.pictureURL) ?? UIImage(named: "turtlerock")! 
             }
             if isShowingFullSizeImage {
                 FullScreenImageOverlay(image: image)

@@ -28,7 +28,7 @@ struct FlagCardItem: View {
             .overlay(alignment: .bottomLeading) {
                 Text("进度 \(info.currentTime)/\(totalNum)")
                     .padding(.all,4)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color("white"))
                     .background(.primary.opacity(0.6))
                     .cornerRadius(5)
                     .padding(.all,4)
@@ -39,6 +39,7 @@ struct FlagCardItem: View {
                     .font(.caption)
                     .lineLimit(1)
                     .padding([.leading,.bottom],2)
+                    .foregroundColor(.black)
                 Spacer()
             }
             .padding(.all,4)

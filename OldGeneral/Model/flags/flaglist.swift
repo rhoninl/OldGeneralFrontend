@@ -57,7 +57,7 @@ func getFlagInfo(_ flagId: String) -> Cdr_FlagDetailInfo? {
         let response = try call.response.wait()
         return response.info
     } catch {
-        print("error to get flag detail\(error)")
+        print("error to get flag detail \(error)")
     }
     return nil
 }

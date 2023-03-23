@@ -11,10 +11,9 @@ struct flagInfoBarItem: View {
     var info: Cdr_FlagDetailInfo = Cdr_FlagDetailInfo()
     var body: some View {
         HStack {
-            VStack(alignment: .leading,spacing: 10){
+            VStack(alignment: .leading,spacing: 5){
                 Text(info.name)
                 Text("挑战金: \(info.challengeNum)金")
-                    .fontWeight(.thin)
                     .font(.caption2)
             }
             Spacer()
@@ -38,6 +37,10 @@ struct flagInfoBarItem: View {
 
 struct flagInfoBarItem_Previews: PreviewProvider {
     static var previews: some View {
-        flagInfoBarItem()
+        let info = Cdr_FlagDetailInfo.with{ my in
+            my.name = "this is name"
+            my.challengeNum = 100
+        }
+        flagInfoBarItem(info: info)
     }
 }

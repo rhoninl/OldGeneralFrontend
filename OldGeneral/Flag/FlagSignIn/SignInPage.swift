@@ -26,7 +26,8 @@ struct SignInPage: View {
                         Text(info.content)
                         Image(uiImage: image)
                             .resizable()
-                            .frame(maxWidth: 100,maxHeight: 110)
+                            .scaledToFill()
+                            .frame(width: 100,height: 140)
                             .cornerRadius(5)
                             .onTapGesture {
                                 isShowingFullSizeImage = true

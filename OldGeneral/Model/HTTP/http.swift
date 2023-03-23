@@ -46,7 +46,7 @@ func getImageFromURL(_ url: String) -> UIImage? {
             print("Error loading image: \(error?.localizedDescription ?? "Unknown error")")
             return
         }
-        image = UIImage(data: data)!
+        image = UIImage(data: data) ?? UIImage(named: "avatar")!
         semaphore.signal()
     }.resume()
     semaphore.wait()

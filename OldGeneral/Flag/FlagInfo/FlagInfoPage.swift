@@ -18,7 +18,6 @@ struct FlagInfoPage: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var jumpToSignInFlagPage:Bool = false
     
-    let columns = [GridItem(.flexible()), GridItem(.flexible())]
     private var usericon: Image = Image(systemName: "square.and.arrow.up.fill")
     private var isOwner: Bool = false
     @State private var jumpToSignPage: Bool = false
@@ -54,18 +53,17 @@ struct FlagInfoPage: View {
                 }
                 .padding(.bottom,4)
                 Divider()
-                // TODO need load from backend
-                LazyVGrid(columns: columns) {
-                    FlagCardItem()
-                        .onTapGesture {
-                            guard parentPage != "signInPage" else {
-                                self.presentationMode.wrappedValue.dismiss()
-                                return
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
+                    ForEach(flagInfo.signUpInfo, id: \.self) { index in
+                        FlagCardItem(info: index,totalNum: flagInfo.totalTime)
+                            .onTapGesture {
+                                guard parentPage != "signInPage" else {
+                                    self.presentationMode.wrappedValue.dismiss()
+                                    return
+                                }
+                                jumpToSignPage = true
                             }
-                            jumpToSignPage = true
-                        }
-                    FlagCardItem()
-                    FlagCardItem()
+                    }
                 }
                 .padding(.all,30)
                 .frame(maxHeight: .infinity)
@@ -85,7 +83,7 @@ struct FlagInfoPage: View {
             SignInPage(signInId: nil)
         }
         .navigationDestination(isPresented: $jumpToSignInFlagPage) {
-            SubmitSignInPage(flagId: flagInfo.id)
+            SubmitSignInPage(flagId: flagInfo.id,signInTime: Int64(flagInfo.signUpInfo.count + 1))
         }
     }
 }
@@ -101,6 +99,7 @@ struct FlagInfoPage_Previews: PreviewProvider {
             my.starNum = 33
             my.userName = "username"
             my.userAvatar = "https://as1.ftcdn.net/v2/jpg/03/03/97/00/1000_F_303970065_Yi0UpuVdTb4uJiEtRdF8blJLwcT4Qd4p.jpg"
+            my.signUpInfo = [Cdr_SignInInfo(),Cdr_SignInInfo()]
         }
         FlagInfoPage(info)
     }

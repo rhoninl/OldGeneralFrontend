@@ -43,6 +43,13 @@ struct FlagSquare: View {
                         }
                     }
                     .padding([.leading,.trailing],10)
+                    .refreshable {
+                        Task {
+                            usleep(500000)
+                            signInSquareStore = []
+                            await initSquare()
+                        }
+                    }
                 }
                 
                 NavigationLink {

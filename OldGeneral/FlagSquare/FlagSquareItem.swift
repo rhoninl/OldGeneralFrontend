@@ -10,48 +10,49 @@ import SwiftUI
 struct FlagSquareItem: View {
     var info: Cdr_FlagSquareItemInfo = Cdr_FlagSquareItemInfo()
     var body: some View {
-            AsyncImage(url: URL(string: info.pictureURL)){ phase in
-                switch phase {
-                case .empty:
-                    ProgressView("Loading...")
-                case .success(let image):
-                    image
-                        .resizable()
-                        .scaledToFill()
-                default :
-                    Image("avatar")
-                        .resizable()
-                }
+        AsyncImage(url: URL(string: info.pictureURL)){ phase in
+            switch phase {
+            case .empty:
+                ProgressView("Loading...")
+            case .success(let image):
+                image
+                    .resizable()
+                    .scaledToFill()
+            default :
+                Image("avatar")
+                    .resizable()
             }
-            .overlay() {
+        }
+        .overlay() {
+            VStack{
+                Spacer()
                 VStack{
-                    Spacer()
-                    VStack{
-                        HStack {
-                            Text(info.content)
-                                .font(.subheadline)
-                                .lineLimit(1)
-                                .padding(.leading,4)
-                            Spacer()
-                        }
-                        HStack{
-                            Text(info.userName)
-                                .lineLimit(1)
-                            Spacer()
-                            Text("挑战金：\(info.challengeNum)金")
-                                .lineLimit(1)
-                                .foregroundColor(Color("Money"))
-                        }
-                        .font(.caption2)
-                        .padding([.leading,.bottom],4)
+                    HStack {
+                        Text(info.content)
+                            .font(.subheadline)
+                            .lineLimit(1)
+                            .padding(.leading,4)
+                        Spacer()
                     }
-                    .padding(.top,5)
-                    .background(Color.init(red: 0.9, green: 0.9, blue: 0.9))
+                    HStack{
+                        Text(info.userName)
+                            .lineLimit(1)
+                        Spacer()
+                        Text("挑战金：\(info.challengeNum)金")
+                            .lineLimit(1)
+                            .foregroundColor(Color("Money"))
+                    }
+                    .font(.caption2)
+                    .padding([.leading,.bottom],4)
                 }
-                .frame(width: 180,height: 250)
+                .padding(.top,5)
+                .background(Color.init(red: 0.98, green: 0.98, blue: 0.98))
             }
             .frame(width: 180,height: 250)
-            .cornerRadius(5)
+        }
+        .frame(width: 180,height: 250)
+        .cornerRadius(5)
+        .foregroundColor(.black)
     }
 }
 

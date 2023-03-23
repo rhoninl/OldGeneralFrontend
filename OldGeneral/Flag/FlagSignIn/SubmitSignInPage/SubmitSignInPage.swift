@@ -17,6 +17,7 @@ struct SubmitSignInPage: View {
     @State private var alert: Bool = false
     @State var signInInfo: Cdr_SignInInfo = Cdr_SignInInfo()
     var flagId: String = "123"
+    var signInTime: Int64 = 100
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
@@ -71,6 +72,7 @@ struct SubmitSignInPage: View {
                     signInInfo.id = generateUUID()
                     signInInfo.flagID = flagId
                     signInInfo.content = signInMessag
+                    signInInfo.currentTime = signInTime
                     errorMessage = uploadImage()
                     guard signInFlag(signInInfo) else {
                         print("error to sign in")

@@ -17,19 +17,16 @@ struct flagInfoBarItem: View {
                     .font(.caption2)
             }
             Spacer()
-            Button{
-                
-            } label:{
-               Text("围观")
-                    .padding([.leading,.trailing],10)
-            }
-            .buttonStyle(.borderedProminent)
-            .tint(.yellow.opacity(0.7))
+            Text("详情")
+                .padding([.leading,.trailing],15)
+                .padding([.top,.bottom],7)
+            .background(.yellow.opacity(0.7))
+            .cornerRadius(7)
             .foregroundColor(.primary.opacity(0.7))
         }
         .font(.caption)
         .lineLimit(1)
-        .padding(.all,6)
+        .padding(.all,10)
         .background(.yellow.opacity(0.2))
         .cornerRadius(8)
     }

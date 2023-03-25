@@ -8,20 +8,13 @@
 import SwiftUI
 
 struct FlagInfoPage: View {
-    init (_ info: Cdr_FlagDetailInfo, parentPage: String = "default") {
+    init (_ info: Cdr_FlagDetailInfo) {
         flagInfo = info
-        isOwner = userId == info.userID
-        self.parentPage = parentPage
     }
     var flagInfo: Cdr_FlagDetailInfo
-    var parentPage: String
     @Environment(\.presentationMode) var presentationMode
     @State private var jumpToSignInFlagPage:Bool = false
-    
     private var usericon: Image = Image(systemName: "square.and.arrow.up.fill")
-    private var isOwner: Bool = false
-    @State private var jumpToSignPage: Bool = false
-    @State private var signInId: String = ""
     
     var body: some View {
         VStack{
@@ -55,14 +48,12 @@ struct FlagInfoPage: View {
                 Divider()
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
                     ForEach(flagInfo.signUpInfo, id: \.self) { index in
-                        FlagCardItem(info: index,totalNum: flagInfo.totalTime)
-                            .onTapGesture {
-                                guard parentPage != "signInPage" else {
-                                    self.presentationMode.wrappedValue.dismiss()
-                                    return
-                                }
-                                jumpToSignPage = true
-                            }
+                        NavigationLink {
+                            SignInPage(signInId: index.id,parentPage: "flagInfo")
+                        } label: {
+                            FlagCardItem(info: index,totalNum: flagInfo.totalTime)
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
                 .padding(.all,30)
@@ -71,7 +62,7 @@ struct FlagInfoPage: View {
             Button {
                jumpToSignInFlagPage = true
             } label: {
-                Text(isOwner ? "打卡" : "围观分钱")
+                Text(userId == flagInfo.userID ? "打卡" : "围观分钱")
                     .frame(maxWidth: .infinity)
                     .foregroundColor(.primary)
             }
@@ -79,17 +70,23 @@ struct FlagInfoPage: View {
             .padding()
             .tint(.yellow.opacity(0.8))
         }
-        .navigationDestination(isPresented: $jumpToSignPage) {
-            SignInPage(signInId: nil)
-        }
+//        .navigationDestination(isPresented: $jumpToSignPage) {
+//            SignInPage(signInId: signInId,parentPage: "flagInfo")
+//        }
         .navigationDestination(isPresented: $jumpToSignInFlagPage) {
             SubmitSignInPage(flagId: flagInfo.id,signInTime: Int64(flagInfo.signUpInfo.count + 1))
         }
+    }
+    func log() -> Bool {
+        return false
     }
 }
 
 struct FlagInfoPage_Previews: PreviewProvider {
     static var previews: some View {
+        let signinInfo = Cdr_SignInInfo.with{ my in
+            my.id = "12"
+        }
         let info = Cdr_FlagDetailInfo.with{ my in
             my.id = "flagId"
             my.name = "flagName"
@@ -99,7 +96,7 @@ struct FlagInfoPage_Previews: PreviewProvider {
             my.starNum = 33
             my.userName = "username"
             my.userAvatar = "https://as1.ftcdn.net/v2/jpg/03/03/97/00/1000_F_303970065_Yi0UpuVdTb4uJiEtRdF8blJLwcT4Qd4p.jpg"
-            my.signUpInfo = [Cdr_SignInInfo(),Cdr_SignInInfo()]
+            my.signUpInfo = [signinInfo]
         }
         FlagInfoPage(info)
     }

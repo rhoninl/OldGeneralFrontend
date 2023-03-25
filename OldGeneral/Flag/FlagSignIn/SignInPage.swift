@@ -54,7 +54,7 @@ struct SignInPage: View {
                 }
             }
             .navigationDestination(isPresented: $jumpToFlagPage) {
-                FlagInfoPage(flagInfo,parentPage: "signInPage")
+                FlagInfoPage(flagInfo)
             }
             .onAppear {
                 if signInId != nil {

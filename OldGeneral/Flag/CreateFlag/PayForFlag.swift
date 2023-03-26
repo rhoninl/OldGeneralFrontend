@@ -137,7 +137,7 @@ struct PayForFlag: View {
                         flagInfo.startTime = startDate
                         flagInfo.challengeNum = goldNum
                         flagInfo.userID = userId
-                        guard updateMoney(money * -1) else {
+                        guard UpdateMoney(money * -1,content: "创建Flag: \(flagName)") else {
                             return
                         }
                         alert = true

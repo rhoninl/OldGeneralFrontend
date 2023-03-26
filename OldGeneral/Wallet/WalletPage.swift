@@ -48,6 +48,7 @@ struct WalletPage: View {
 
 struct WalletPage_Previews: PreviewProvider {
     static var previews: some View {
+        if preview(){}
         WalletPage()
     }
 }

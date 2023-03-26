@@ -11,6 +11,7 @@ struct RechargePage: View {
     let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     @State private var money: Int64 = 6
     @State private var alert: Bool = false
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack{
             Spacer()
@@ -44,7 +45,7 @@ struct RechargePage: View {
             .padding()
             Spacer()
             Button {
-                guard updateMoney(moneyToGold(money)) else {
+                guard UpdateMoney(moneyToGold(money),content: "充值\(money)元") else {
                     print("充值失败")
                     return
                 }
@@ -56,7 +57,9 @@ struct RechargePage: View {
             }
             .alert(isPresented: $alert) {
                 Alert(title: Text("充值 \(money)元 成功"), message: Text("余额在24小时之内到账，请注意查收")
-                      , dismissButton: .default(Text("我知道了！")))
+                      , dismissButton: .default(Text("我知道了！"),action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }))
             }
             .padding([.leading,.trailing],10)
             .tint(.yellow)

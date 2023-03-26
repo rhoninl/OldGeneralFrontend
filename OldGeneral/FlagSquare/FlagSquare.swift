@@ -45,7 +45,7 @@ struct FlagSquare: View {
                     .padding([.leading,.trailing],10)
                     .refreshable {
                         Task {
-                            usleep(500000)
+                            try await Task.sleep(nanoseconds: UInt64(MS * 500))
                             signInSquareStore = []
                             await initSquare()
                         }
@@ -93,7 +93,6 @@ struct FlagSquare: View {
             isFetching = false
             lastSignInId = signInSquareStore.last!.signinID
         }
-        usleep(500000)
         let fetchedData = fetchFlagSquareList(currentPage)
         if  fetchedData.count < pagesize {
             hasAnyMore = false

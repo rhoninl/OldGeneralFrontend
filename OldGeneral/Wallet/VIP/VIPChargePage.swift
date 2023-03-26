@@ -12,6 +12,7 @@ struct VIPChargePage: View {
     var expiryTime: String = "2022-10-10"
     @State private var price: Int = 18
     @State private var chargeAlert: Bool = false
+    
     var body: some View {
         VStack(){
             HStack{

@@ -7,6 +7,9 @@
 
 import Foundation
 
+let MS = 1000000
+let S = 1000 * MS
+
 func getTimeStamp() -> Int64 {
     return Int64(Date().timeIntervalSince1970 * 1000000)
 }

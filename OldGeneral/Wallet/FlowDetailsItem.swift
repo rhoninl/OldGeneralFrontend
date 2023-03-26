@@ -8,22 +8,26 @@
 import SwiftUI
 
 struct FlowDetailItem: View {
-    private var FlagName: String = "This is Flag Name (Info)"
-    private var TimeStamp: String = "2023-01-01 12:12"
-    private var GoldChange: Int = -10
+    var info: Cdr_WaterFlow = Cdr_WaterFlow.with{ my in
+        my.id = "123"
+        my.goldNum = 444
+        my.content = "创建Flag"
+        my.createdAt = getTimeStamp()
+    }
+
     var body: some View {
         HStack{
             VStack(alignment: .leading){
-                Text(FlagName)
+                Text(info.content)
                 HStack{
-                    Text(TimeStamp)
+                    Text(timestampToDate(info.createdAt)+" "+timestampToTime(info.createdAt))
                         .font(.caption2)
                         .foregroundColor(.gray)
                 }
             }
             Spacer()
-            Text("\(GoldChange)")
-                .foregroundColor(GoldChange < 0 ? .primary : .orange)
+            Text("\(info.goldNum > 0 ? "+ "+String(info.goldNum) : "- " + String(info.goldNum * -1))")
+                .foregroundColor(info.goldNum < 0 ? .primary : .orange)
         }
         .padding(.all,3)
     }

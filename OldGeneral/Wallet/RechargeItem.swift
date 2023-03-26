@@ -8,21 +8,20 @@
 import SwiftUI
 
 struct RechargeItem: View {
-    var goldNum: Int
-    var money: Int
+    var money: Int64
     var choose: Bool
     var body: some View {
         VStack{
             HStack{
                 Spacer()
-                Text("VIP + \(goldNum / 7)")
+                Text("VIP + \(moneyToVIPPlus(money))")
                     .foregroundColor(.white)
                     .padding(.all,4)
                     .background(.red)
                     .cornerRadius(10)
             }
             .font(.footnote)
-            Text("💰 \(goldNum)")
+            Text("💰 \(moneyToGold(money))")
                 .padding(.all,2)
             HStack{
                 Text("¥ \(money)")
@@ -41,6 +40,6 @@ struct RechargeItem: View {
 
 struct RechargeItem_Previews: PreviewProvider {
     static var previews: some View {
-        RechargeItem(goldNum: 42,money: 6,choose: false)
+        RechargeItem(money: 6,choose: false)
     }
 }

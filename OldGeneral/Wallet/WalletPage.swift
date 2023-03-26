@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct WalletPage: View {
-    private var GoldNum: Int = 10
+    @State private var goldNum: Int64 = -1
     var body: some View {
         VStack{
             VStack (alignment: .leading){
                 HStack{
-                    Text("我的金币\n \(GoldNum) 💰")
+                    Text("我的金币\n \(goldNum) 💰")
                     Spacer()
                 }
                 .padding(.all,5)
@@ -37,9 +37,12 @@ struct WalletPage: View {
                 Spacer()
             }
             FlowDetailsPage()
-            .cornerRadius(20)
+            .cornerRadius(10)
         }
         .padding()
+        .onAppear {
+            goldNum = getCurrentMoney()
+        }
     }
 }
 

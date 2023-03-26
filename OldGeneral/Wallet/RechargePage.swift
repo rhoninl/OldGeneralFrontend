@@ -9,34 +9,34 @@ import SwiftUI
 
 struct RechargePage: View {
     let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
-    @State private var money: Int = 6
+    @State private var money: Int64 = 6
     @State private var alert: Bool = false
     var body: some View {
         VStack{
             Spacer()
             Text("选择一个金额")
             LazyVGrid(columns: columns) {
-                RechargeItem(goldNum: 42, money: 6,choose: money == 6)
+                RechargeItem(money: 6,choose: money == 6)
                     .onTapGesture {
                         money = 6
                     }
-                RechargeItem(goldNum: 85, money: 12, choose: money == 12)
+                RechargeItem(money: 12, choose: money == 12)
                     .onTapGesture {
                         money = 12
                     }
-                RechargeItem(goldNum: 222, money: 30, choose: money == 30)
+                RechargeItem(money: 30, choose: money == 30)
                     .onTapGesture {
                         money = 30
                     }
-                RechargeItem(goldNum: 288, money: 40, choose: money == 40)
+                RechargeItem(money: 40, choose: money == 40)
                     .onTapGesture {
                         money = 40
                     }
-                RechargeItem(goldNum: 480, money: 68, choose: money == 68)
+                RechargeItem(money: 68, choose: money == 68)
                     .onTapGesture {
                         money = 68
                     }
-                RechargeItem(goldNum: 696, money: 98, choose: money == 98)
+                RechargeItem(money: 98, choose: money == 98)
                     .onTapGesture {
                         money = 98
                     }
@@ -44,6 +44,10 @@ struct RechargePage: View {
             .padding()
             Spacer()
             Button {
+                guard updateMoney(moneyToGold(money)) else {
+                    print("充值失败")
+                    return
+                }
                 alert = true
             } label: {
                 Text("支 付")

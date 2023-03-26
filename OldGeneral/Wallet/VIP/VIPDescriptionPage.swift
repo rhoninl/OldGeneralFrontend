@@ -18,7 +18,7 @@ struct VIPDescriptionPage: View {
             
             LazyVGrid(columns: columns,spacing: 20) {
                 VIPPrivilegesItem(icon: Image(systemName: "cup.and.saucer.fill"), text: "请假次数翻倍", subText: "单休变双休")
-                VIPPrivilegesItem(icon: Image(systemName: "creditcard.fill"), text: "充值享折扣", subText: "VIP加送15%金币")
+                VIPPrivilegesItem(icon: Image(systemName: "creditcard.fill"), text: "充值享折扣", subText: "VIP加送\(Int64(VIPMultiplier * 100 ) - 100)%金币")
                 VIPPrivilegesItem(icon: Image(systemName: "paperplane.fill"), text: "会员Flag推荐", subText: "更多曝光，流量加权")
                 VIPPrivilegesItem(icon: Image(systemName: "phone.fill"), text: "专属客服", subText: "1对1 客服 7*24 在线")
                 VIPPrivilegesItem(icon: Image(systemName: "table.badge.more"), text: "更多特权", subText: "尽情期待")

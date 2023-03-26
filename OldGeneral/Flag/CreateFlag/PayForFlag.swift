@@ -11,7 +11,7 @@ struct PayForFlag: View {
     var flagName: String = ""
     var startDate: Int64 = today()
     var totalTime: Int64 = 0
-    var goldNum: Int64 = 399
+    @State private var goldNum: Int64 = -1
     @State private var alert: Bool = false
     @State private var money: Int64 = 6
     @State private var flagInfo = Cdr_FlagBasicInfo()
@@ -102,10 +102,10 @@ struct PayForFlag: View {
                                 if newValue > 9999 {
                                     money = Int64(String(money).prefix(4)) ?? 0
                                     CheckMoney()
-                                } else if newValue > goldNum {
-                                    money = goldNum
                                 } else if newValue <= 6 {
                                     money = 6
+                                } else if newValue > goldNum {
+                                    money = goldNum
                                 }
                             }
                         
@@ -137,11 +137,15 @@ struct PayForFlag: View {
                         flagInfo.startTime = startDate
                         flagInfo.challengeNum = goldNum
                         flagInfo.userID = userId
+                        guard updateMoney(money * -1) else {
+                            return
+                        }
                         alert = true
                     } label: {
                         Text("支付")
                             .frame(maxWidth: .infinity)
                     }
+                    .disabled(goldNum < 6)
                     .padding()
                     .buttonStyle(.borderedProminent)
                     .tint(.yellow)
@@ -160,6 +164,9 @@ struct PayForFlag: View {
             }
         }
         .foregroundColor(.primary)
+        .onAppear{
+            goldNum = getCurrentMoney()
+        }
     }
     func CheckMoney() {
         if money > goldNum {

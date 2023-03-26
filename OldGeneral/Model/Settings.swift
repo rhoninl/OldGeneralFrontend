@@ -16,6 +16,7 @@ let keyChainName = "com.oldgeneral"
 let pictureServerAddress = "https://oldgeneral.obs.cn-north-4.myhuaweicloud.com:443/avatars/"
 let hwAccessKeyId = ""
 let pagesize:Int64 = 20
+let VIPMultiplier: Float = 1.3
 var ispreview: Bool = false
 func preview() -> Bool {
     ispreview = true

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RechargeItem: View {
     var money: Int64
-    var choose: Bool
+    @Binding var currentMoney: Int64
     var body: some View {
         VStack{
             HStack{
@@ -31,7 +31,7 @@ struct RechargeItem: View {
             .foregroundColor(.gray)
         }
         .frame(width: 100)
-        .background(.opacity(choose ? 0.2 : 0.1))
+        .background(.opacity(currentMoney == money ? 0.2 : 0.1))
         .cornerRadius(10)
         .lineLimit(1)
         .padding()
@@ -40,6 +40,6 @@ struct RechargeItem: View {
 
 struct RechargeItem_Previews: PreviewProvider {
     static var previews: some View {
-        RechargeItem(money: 6,choose: false)
+        RechargeItem(money: 6,currentMoney: .constant(10))
     }
 }

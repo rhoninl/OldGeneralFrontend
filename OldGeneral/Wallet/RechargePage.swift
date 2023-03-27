@@ -17,27 +17,27 @@ struct RechargePage: View {
             Spacer()
             Text("选择一个金额")
             LazyVGrid(columns: columns) {
-                RechargeItem(money: 6,choose: money == 6)
+                RechargeItem(money: 6, currentMoney: $money)
                     .onTapGesture {
                         money = 6
                     }
-                RechargeItem(money: 12, choose: money == 12)
+                RechargeItem(money: 12, currentMoney: $money)
                     .onTapGesture {
                         money = 12
                     }
-                RechargeItem(money: 30, choose: money == 30)
+                RechargeItem(money: 30, currentMoney: $money)
                     .onTapGesture {
                         money = 30
                     }
-                RechargeItem(money: 40, choose: money == 40)
+                RechargeItem(money: 40, currentMoney: $money)
                     .onTapGesture {
                         money = 40
                     }
-                RechargeItem(money: 68, choose: money == 68)
+                RechargeItem(money: 68, currentMoney: $money)
                     .onTapGesture {
                         money = 68
                     }
-                RechargeItem(money: 98, choose: money == 98)
+                RechargeItem(money: 98, currentMoney: $money)
                     .onTapGesture {
                         money = 98
                     }

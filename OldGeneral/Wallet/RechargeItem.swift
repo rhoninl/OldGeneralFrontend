@@ -35,6 +35,9 @@ struct RechargeItem: View {
         .cornerRadius(10)
         .lineLimit(1)
         .padding()
+        .onTapGesture {
+            currentMoney = money
+        }
     }
 }
 

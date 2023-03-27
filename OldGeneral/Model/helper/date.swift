@@ -9,6 +9,10 @@ import Foundation
 
 let MS = 1000000
 let S = 1000 * MS
+let Minute = 60 * S
+let Hour = 60 * Minute
+let Days = 24 * Hour
+let Month = 30 * Days
 
 func getTimeStamp() -> Int64 {
     return Int64(Date().timeIntervalSince1970 * 1000000)

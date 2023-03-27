@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct VIPPage: View {
-    let username: String
+    @State private var vipInfo: Int64 = 0
     var body: some View {
         VStack(spacing: 0){
             HStack{
-                VIPChargePage(username: username)
+                VIPChargePage()
                     .padding()
             }
                 .background(.black)
@@ -25,6 +25,7 @@ struct VIPPage: View {
 
 struct VIPPage_Previews: PreviewProvider {
     static var previews: some View {
-        VIPPage(username: "This is username")
+        VIPPage()
+            .environmentObject(userInfoShared())
     }
 }

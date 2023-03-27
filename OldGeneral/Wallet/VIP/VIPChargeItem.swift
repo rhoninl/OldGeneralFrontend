@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct VIPChargeItem: View {
-    var time: String
-    var primaryPrice: Int
-    var nowPrice: Int
-    var isChoose: Bool
+    @Binding var currentTime: Int64
+    var chargeTime: Int64
+    var primaryPrice: Int64
+    var nowPrice: Int64
     var body: some View {
         VStack(spacing: 10){
-            Text(time)
+            Text("\(chargeTime)个月")
             Text("原价¥\(primaryPrice)")
                 .font(.caption2)
                 .strikethrough()
@@ -27,14 +27,17 @@ struct VIPChargeItem: View {
             }
         }
         .padding()
-        .background(isChoose ?  Color.primary.opacity(0.2) : Color("ChargeCard"))
+        .background(chargeTime == currentTime ?  Color.primary.opacity(0.2) : Color("ChargeCard"))
         .cornerRadius(5)
-        .foregroundColor(isChoose ? Color("ChargeCard") : Color.black.opacity(0.8))
+        .foregroundColor(chargeTime == currentTime ? Color("ChargeCard") : Color.black.opacity(0.8))
+        .onTapGesture {
+            currentTime = chargeTime
+        }
     }
 }
 
 struct VIPChargeItem_Previews: PreviewProvider {
     static var previews: some View {
-        VIPChargeItem(time: "1个月", primaryPrice: 20, nowPrice: 30, isChoose: false)
+        VIPChargeItem(currentTime:.constant(10), chargeTime: 20, primaryPrice: 1, nowPrice: 10)
     }
 }

@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct VIPChargePage: View {
-    var username: String
-    var expiryTime: String = "2022-10-10"
-    @State private var price: Int = 18
+    @EnvironmentObject var userInfo: userInfoShared
+    @State private var time: Int64 = 1
     @State private var chargeAlert: Bool = false
+    @Environment(\.presentationMode) var presentationMode
+    
     
     var body: some View {
         VStack(){
             HStack{
                 VStack(alignment: .leading,spacing: 6){
-                    Text(username)
-                    Text("开通VIP专享超值特权 \(expiryTime)")
+                    Text(userInfo.data.name)
+                    Text("\(isVIP ? "过期时间：" + timestampToDate(vipEndTime) : "开通VIP专享超值特权" )")
                         .font(.caption2)
                 }
                 .foregroundColor(.white)
@@ -26,21 +27,15 @@ struct VIPChargePage: View {
             }
             .padding()
             HStack(spacing: 20){
-                VIPChargeItem(time: "1个月", primaryPrice: 20, nowPrice: 18, isChoose: price == 18)
-                    .onTapGesture {
-                        price = 18
-                    }
-                VIPChargeItem(time: "3个月", primaryPrice: 50, nowPrice: 45, isChoose: price == 45)
-                    .onTapGesture {
-                        price = 45
-                    }
-                VIPChargeItem(time: "12个月", primaryPrice: 216, nowPrice: 138, isChoose: price == 138)
-                    .onTapGesture {
-                        price = 138
-                    }
+                VIPChargeItem(currentTime:$time, chargeTime: 1, primaryPrice: 20, nowPrice: vipTimeToPrice(1))
+                VIPChargeItem(currentTime:$time, chargeTime: 3, primaryPrice: 50, nowPrice: vipTimeToPrice(3))
+                VIPChargeItem(currentTime:$time, chargeTime: 12, primaryPrice: 216, nowPrice: vipTimeToPrice(12))
             }
             .padding(.bottom,10)
             Button {
+                guard ChargeVIP(time) else {
+                    return
+                }
                 chargeAlert = true
             } label: {
                 Text("立即开通会员")
@@ -51,10 +46,11 @@ struct VIPChargePage: View {
             .buttonStyle(.borderedProminent)
             .tint(Color("ChargeCard"))
             .cornerRadius(20)
-            .alert(Text("充值\(getCurrentTime())成功"), isPresented: $chargeAlert) {
-                
-            } message: {
-                Text("会员将在24小时之内到账，请注意查收")
+            .alert(isPresented: $chargeAlert) {
+                Alert(title: Text("充值\(getCurrentTime())成功"), message: Text("会员将在24小时之内到账，请注意查收")
+                      , dismissButton: .default(Text("我知道了！"),action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }))
             }
             
         }
@@ -66,12 +62,12 @@ struct VIPChargePage: View {
     }
     func getCurrentTime() -> String {
         var s: String
-        switch price {
-        case 18:
+        switch time {
+        case 1:
             s = "1个月"
-        case 45:
+        case 3:
             s = "3个月"
-        case 138:
+        case 12:
             s = "12个月"
         default:
             s = "wrong"
@@ -82,6 +78,7 @@ struct VIPChargePage: View {
 
 struct VIPChargePage_Previews: PreviewProvider {
     static var previews: some View {
-        VIPChargePage(username: "Hello")
+        VIPChargePage()
+            .environmentObject(userInfoShared())
     }
 }

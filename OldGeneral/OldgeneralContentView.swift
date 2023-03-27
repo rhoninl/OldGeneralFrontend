@@ -43,6 +43,7 @@ struct OldgeneralContentView: View {
     var body: some View {
         NavigationStack{
             if CheckLoginStatus(){
+                if GetVipEndTime() {}
                 Main()
             }else {
                 LoginPage()

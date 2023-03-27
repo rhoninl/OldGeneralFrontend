@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeView: View {
-    private var username: String = "TestUserName"
     private var Flags: Int = 123
     private var Achieves: Int = 456
     private var Sieges: Int = 789
@@ -70,7 +69,7 @@ struct HomeView: View {
                     AccountButton()
                 }
                 NavigationLink {
-                    VIPPage(username: username)
+                    VIPPage()
                 } label: {
                     VIPButton()
                 }

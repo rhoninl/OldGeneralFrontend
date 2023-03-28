@@ -27,7 +27,6 @@ func GetVipEndTime() -> Bool {
         let response = try call.response.wait()
         vipEndTime = response.endTime
         isVIP = vipEndTime > getTimeStamp()
-        print(vipEndTime)
     }catch {
         print("error when get vip status \(error)")
         return false

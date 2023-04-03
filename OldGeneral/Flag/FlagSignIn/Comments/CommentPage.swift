@@ -16,8 +16,9 @@ struct CommentPage: View {
     @State private var lastCommentId: String = ""
     @State private var hasMore: Bool = true
     @FocusState private var isFocus: Bool
+    @EnvironmentObject var userInfo: userInfoShared
     var body: some View {
-        ZStack{
+        VStack{
             ScrollView{
                 LazyVGrid(columns: [GridItem(.flexible())],alignment: .leading) {
                     ForEach(commentList, id: \.self) { index in
@@ -31,15 +32,18 @@ struct CommentPage: View {
                                         }
                                     }
                             }
+                        if index != commentList.last {
+                            Divider()
+                        }
                     }
                 }
+                .padding(.top,5)
             }
             .onTapGesture {
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 isCommenting = false
             }
             VStack{
-                Spacer()
                 if isCommenting {
                     TextField("Enter your comment", text: $comment)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -49,13 +53,7 @@ struct CommentPage: View {
                             isFocus.toggle()
                         }
                         .onSubmit{
-                            print("submit \(comment)")
-                            guard commentSignin(signInId: signInId ?? "", content: comment) else {
-                                print("error to comment signin")
-                                return
-                            }
-                            comment = ""
-                            isCommenting = false
+                            commentflag()
                         }
                         .submitLabel(.done)
                     
@@ -93,6 +91,26 @@ struct CommentPage: View {
         }
         commentList += fetchedData
     }
+    
+    func commentflag() {
+        defer {isCommenting = false}
+        print("submit \(comment)")
+        guard !comment.isEmpty else {
+            print("empty input")
+            return
+        }
+        guard commentSignin(signInId: signInId ?? "", content: comment) else {
+            print("error to comment signin")
+            return
+        }
+        let mycomment = Cdr_CommentInfo.with{ my in
+            my.content = comment
+            my.createdAt = getTimeStamp()
+            my.userInfo = userInfo.data
+        }
+        commentList.insert(mycomment, at: 0)
+        comment = ""
+    }
 }
 
 struct CommentPage_Previews: PreviewProvider {
@@ -111,5 +129,6 @@ struct CommentPage_Previews: PreviewProvider {
         }
         if preview() {}
         CommentPage(signInId: "id",commentList: [comment1,comment2])
+            .environmentObject(userInfoShared())
     }
 }

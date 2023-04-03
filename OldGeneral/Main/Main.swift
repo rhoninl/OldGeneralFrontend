@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Main: View {
+    @EnvironmentObject var userInfo: userInfoShared
     var body: some View {
         TabView {
             FlagSquare()
@@ -22,11 +23,19 @@ struct Main: View {
                 }
         }
         .navigationBarBackButtonHidden()
+        .onAppear {
+            if ispreview {
+                return
+            }
+            userInfo.fetchUserInfo(userId)
+        }
     }
 }
 
 struct Main_Previews: PreviewProvider {
     static var previews: some View {
+        if preview(){}
         Main()
+            .environmentObject(userInfoShared())
     }
 }

@@ -16,13 +16,13 @@ struct Commentitem: View {
                 case .success(let image):
                     image.resizable()
                          .clipShape(Circle())
-                         .frame(width: 50,height: 50)
+                         .frame(width: 40,height: 40)
                          .padding(.trailing,10)
                 default :
                     Image("avatar")
                         .resizable()
                         .clipShape(Circle())
-                        .frame(width: 50,height: 50)
+                        .frame(width: 40,height: 40)
                         .padding(.trailing,10)
                 }
             }
@@ -31,13 +31,13 @@ struct Commentitem: View {
                 Text(comment.content)
             }
             .lineLimit(1)
-            .font(.footnote)
+            .font(.caption)
             Spacer()
             Text(timestampToTime(comment.createdAt))
                 .font(.caption)
                 
         }
-        .padding()
+        .padding(5)
     }
 }
 

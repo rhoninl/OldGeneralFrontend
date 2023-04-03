@@ -15,7 +15,6 @@ struct SignInPage: View {
     @State private var isShowingFullSizeImage: Bool = false
     var parentPage: String = "default"
     @State private var image: UIImage = UIImage(named: "turtlerock")!
-    
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
@@ -79,6 +78,8 @@ struct SignInPage: View {
 
 struct SignInPage_Previews: PreviewProvider {
     static var previews: some View {
+        if preview(){}
         SignInPage(signInId: nil)
+            .environmentObject(userInfoShared())
     }
 }

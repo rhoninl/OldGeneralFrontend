@@ -20,7 +20,7 @@ struct SignInPage: View {
 
     var body: some View {
         ZStack{
-            ScrollView {
+            VStack{
                 HStack{
                     VStack(alignment: .leading){
                         Text(info.content)
@@ -49,9 +49,7 @@ struct SignInPage: View {
                     Spacer()
                 }
                 Divider()
-                LazyVGrid(columns: [GridItem(.flexible())],alignment: .leading) {
-                    commentitem()
-                }
+                CommentPage(signInId: signInId)
             }
             .navigationDestination(isPresented: $jumpToFlagPage) {
                 FlagInfoPage(flagInfo)

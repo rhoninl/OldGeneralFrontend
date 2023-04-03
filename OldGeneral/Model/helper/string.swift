@@ -8,5 +8,6 @@
 import Foundation
 
 func generateUUID() -> String {
-    return UUID().uuidString
+    return UUID().uuidString.uppercased()
+    
 }

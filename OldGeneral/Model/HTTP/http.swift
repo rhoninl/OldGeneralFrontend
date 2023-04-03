@@ -40,7 +40,7 @@ func getImageFromURL(_ url: String) -> UIImage? {
     let semaphore = DispatchSemaphore(value: 0)
     var image: UIImage = UIImage()
     
-    var request = URLRequest(url: URL(string: url)!)
+    let request = URLRequest(url: URL(string: url)!)
     URLSession.shared.dataTask(with: request) { data, response, error in
         guard let data = data, error == nil else {
             print("Error loading image: \(error?.localizedDescription ?? "Unknown error")")

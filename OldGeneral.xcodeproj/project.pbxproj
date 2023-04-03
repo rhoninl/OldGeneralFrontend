@@ -26,8 +26,9 @@
 		712968F129B4A81A00526A0C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712968F029B4A81A00526A0C /* Settings.swift */; };
 		7129698929B4DE9900526A0C /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129698829B4DE9900526A0C /* user.swift */; };
 		713808BA29BF594B00947E81 /* circleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713808B929BF594B00947E81 /* circleImage.swift */; };
-		713808BD29BF68A500947E81 /* commentitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713808BC29BF68A500947E81 /* commentitem.swift */; };
+		713808BD29BF68A500947E81 /* Commentitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713808BC29BF68A500947E81 /* Commentitem.swift */; };
 		713808BF29BF68EC00947E81 /* flagInfoBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713808BE29BF68EC00947E81 /* flagInfoBarItem.swift */; };
+		7146D82229D9CD3F009C049E /* comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7146D82129D9CD3F009C049E /* comment.swift */; };
 		714D408529C0A32500324586 /* SubmitSignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D408429C0A32500324586 /* SubmitSignInPage.swift */; };
 		714D408729C0AEDD00324586 /* imagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D408629C0AEDD00324586 /* imagePicker.swift */; };
 		714D408929C0C1D800324586 /* fullScreenPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D408829C0C1D800324586 /* fullScreenPage.swift */; };
@@ -37,6 +38,9 @@
 		7151160C29B0E411006A40DD /* VIPChargeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151160B29B0E411006A40DD /* VIPChargeItem.swift */; };
 		7151160E29B0E7C1006A40DD /* VIPChargePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7151160D29B0E7C1006A40DD /* VIPChargePage.swift */; };
 		715A51DD29C2C9B200C3A2E9 /* secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 715A51DC29C2C9B200C3A2E9 /* secret.xcconfig */; };
+		716A30FD29D95E0600926EC6 /* description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716A30FC29D95E0600926EC6 /* description.swift */; };
+		716A30FF29D95F7F00926EC6 /* siegeflag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716A30FE29D95F7F00926EC6 /* siegeflag.swift */; };
+		716A310429D971C900926EC6 /* CommentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716A310329D971C900926EC6 /* CommentPage.swift */; };
 		716C7F4A29BCC1A00066B9CF /* createFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C7F4929BCC1A00066B9CF /* createFlag.swift */; };
 		7173001129B31C7200714912 /* FlagDetailInfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7173001029B31C7200714912 /* FlagDetailInfoItem.swift */; };
 		7173001329B3218B00714912 /* FlagCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7173001229B3218B00714912 /* FlagCardItem.swift */; };
@@ -202,8 +206,9 @@
 		712968F029B4A81A00526A0C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		7129698829B4DE9900526A0C /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		713808B929BF594B00947E81 /* circleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleImage.swift; sourceTree = "<group>"; };
-		713808BC29BF68A500947E81 /* commentitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commentitem.swift; sourceTree = "<group>"; };
+		713808BC29BF68A500947E81 /* Commentitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commentitem.swift; sourceTree = "<group>"; };
 		713808BE29BF68EC00947E81 /* flagInfoBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flagInfoBarItem.swift; sourceTree = "<group>"; };
+		7146D82129D9CD3F009C049E /* comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comment.swift; sourceTree = "<group>"; };
 		714D408429C0A32500324586 /* SubmitSignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitSignInPage.swift; sourceTree = "<group>"; };
 		714D408629C0AEDD00324586 /* imagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagePicker.swift; sourceTree = "<group>"; };
 		714D408829C0C1D800324586 /* fullScreenPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fullScreenPage.swift; sourceTree = "<group>"; };
@@ -213,6 +218,9 @@
 		7151160B29B0E411006A40DD /* VIPChargeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPChargeItem.swift; sourceTree = "<group>"; };
 		7151160D29B0E7C1006A40DD /* VIPChargePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPChargePage.swift; sourceTree = "<group>"; };
 		715A51DC29C2C9B200C3A2E9 /* secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = secret.xcconfig; sourceTree = "<group>"; };
+		716A30FC29D95E0600926EC6 /* description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = description.swift; sourceTree = "<group>"; };
+		716A30FE29D95F7F00926EC6 /* siegeflag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = siegeflag.swift; sourceTree = "<group>"; };
+		716A310329D971C900926EC6 /* CommentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPage.swift; sourceTree = "<group>"; };
 		716C7F4929BCC1A00066B9CF /* createFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createFlag.swift; sourceTree = "<group>"; };
 		7173001029B31C7200714912 /* FlagDetailInfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagDetailInfoItem.swift; sourceTree = "<group>"; };
 		7173001229B3218B00714912 /* FlagCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagCardItem.swift; sourceTree = "<group>"; };
@@ -388,6 +396,7 @@
 			children = (
 				7102FF6A29BC872200B9DA35 /* flaglist.swift */,
 				716C7F4929BCC1A00066B9CF /* createFlag.swift */,
+				716A30FE29D95F7F00926EC6 /* siegeflag.swift */,
 			);
 			path = flags;
 			sourceTree = "<group>";
@@ -417,10 +426,17 @@
 		713808BB29BF67FD00947E81 /* SignInitem */ = {
 			isa = PBXGroup;
 			children = (
-				713808BC29BF68A500947E81 /* commentitem.swift */,
 				713808BE29BF68EC00947E81 /* flagInfoBarItem.swift */,
 			);
 			path = SignInitem;
+			sourceTree = "<group>";
+		};
+		7146D82029D9CD35009C049E /* comment */ = {
+			isa = PBXGroup;
+			children = (
+				7146D82129D9CD3F009C049E /* comment.swift */,
+			);
+			path = comment;
 			sourceTree = "<group>";
 		};
 		714D408329C0A30D00324586 /* SubmitSignInPage */ = {
@@ -441,6 +457,15 @@
 				7151160D29B0E7C1006A40DD /* VIPChargePage.swift */,
 			);
 			path = VIP;
+			sourceTree = "<group>";
+		};
+		716A310029D9718D00926EC6 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				713808BC29BF68A500947E81 /* Commentitem.swift */,
+				716A310329D971C900926EC6 /* CommentPage.swift */,
+			);
+			path = Comments;
 			sourceTree = "<group>";
 		};
 		719A61B929444B1100E9E7AD = {
@@ -508,6 +533,7 @@
 		71A5A00129B0F19A00A60D31 /* FlagSignIn */ = {
 			isa = PBXGroup;
 			children = (
+				716A310029D9718D00926EC6 /* Comments */,
 				714D408329C0A30D00324586 /* SubmitSignInPage */,
 				713808BB29BF67FD00947E81 /* SignInitem */,
 				7173001429B329AA00714912 /* SignInPage.swift */,
@@ -936,6 +962,7 @@
 		71FB60432944B5C0004079E2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7146D82029D9CD35009C049E /* comment */,
 				71D0F83429D1DFFC00ED4C16 /* vip */,
 				71B305A529D042BC00B31785 /* wallet */,
 				7102FF6929BC86FD00B9DA35 /* flags */,
@@ -943,6 +970,7 @@
 				7126105429B377BE00CBC493 /* grpc */,
 				71BEA7BE29AB810800C8C3DE /* HTTP */,
 				712968F029B4A81A00526A0C /* Settings.swift */,
+				716A30FC29D95E0600926EC6 /* description.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1255,6 +1283,7 @@
 				71C24ACD29C7273D003A4057 /* api.pb.swift in Sources */,
 				714D408929C0C1D800324586 /* fullScreenPage.swift in Sources */,
 				71D0F82229D1D82200ED4C16 /* cdr.pb.swift in Sources */,
+				716A30FF29D95F7F00926EC6 /* siegeflag.swift in Sources */,
 				7103952E298E52B80035400F /* FlagSquare.swift in Sources */,
 				71D0F81B29D1D82200ED4C16 /* user.grpc.swift in Sources */,
 				71A5A00F29B0FFE100A60D31 /* SexItem.swift in Sources */,
@@ -1321,6 +1350,7 @@
 				71BEA7CA29ABAA8E00C8C3DE /* SettingsPage.swift in Sources */,
 				71BEA7D129ABB07D00C8C3DE /* UserInfoEditPage.swift in Sources */,
 				71C24AB029C7273D003A4057 /* vip.pb.swift in Sources */,
+				7146D82229D9CD3F009C049E /* comment.swift in Sources */,
 				7173001529B329AA00714912 /* SignInPage.swift in Sources */,
 				7193433D298E4D6B007C8E6A /* Home.swift in Sources */,
 				71BEA7CE29ABAF9600C8C3DE /* VIPPage.swift in Sources */,
@@ -1330,12 +1360,13 @@
 				71C24AB329C7273D003A4057 /* flags.pb.swift in Sources */,
 				71D0F81929D1D82200ED4C16 /* message.proto in Sources */,
 				714D408729C0AEDD00324586 /* imagePicker.swift in Sources */,
+				716A30FD29D95E0600926EC6 /* description.swift in Sources */,
 				71D0F81229D1D82200ED4C16 /* vip.proto in Sources */,
 				71C8269A29ACDDC80084885B /* FlowDetailsItem.swift in Sources */,
 				71C24ACA29C7273D003A4057 /* wallet.pb.swift in Sources */,
 				71C24AC229C7273D003A4057 /* cdr.pb.swift in Sources */,
 				71D0F82929D1D82200ED4C16 /* wallet.proto in Sources */,
-				713808BD29BF68A500947E81 /* commentitem.swift in Sources */,
+				713808BD29BF68A500947E81 /* Commentitem.swift in Sources */,
 				7151160C29B0E411006A40DD /* VIPChargeItem.swift in Sources */,
 				71A5E52929A8FE670080124E /* SearchBar.swift in Sources */,
 				71039537298E67BB0035400F /* QAButton.swift in Sources */,
@@ -1354,6 +1385,7 @@
 				71D0F82129D1D82200ED4C16 /* cdr.proto in Sources */,
 				716C7F4A29BCC1A00066B9CF /* createFlag.swift in Sources */,
 				71C24AB729C7273D003A4057 /* flags.grpc.swift in Sources */,
+				716A310429D971C900926EC6 /* CommentPage.swift in Sources */,
 				71BEA7C729ABA73C00C8C3DE /* error.swift in Sources */,
 				71D0F81D29D1D82200ED4C16 /* user.pb.swift in Sources */,
 				7126105C29B37C8100CBC493 /* string.swift in Sources */,
@@ -1531,6 +1563,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1566,6 +1599,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

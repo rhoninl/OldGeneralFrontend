@@ -26,7 +26,7 @@ struct FlagSquareItem: View {
         .overlay() {
             VStack{
                 Spacer()
-                VStack{
+                VStack(spacing: 5){
                     HStack {
                         Text(info.content)
                             .font(.subheadline)

@@ -22,6 +22,8 @@ struct FlagInfoPage: View {
     @State private var alertSiege: Bool = false
     @State private var showResult: Bool = false
     @State private var errMsg: String = ""
+    @State private var rotate: Bool = true
+    @State private var askForSkip: Bool = false
     
     var body: some View {
         ZStack {
@@ -67,6 +69,24 @@ struct FlagInfoPage: View {
                     .padding(.all,30)
                     .frame(maxHeight: .infinity)
                 }
+                .overlay(alignment: .bottomTrailing) {
+                    if isOwner {
+                        HStack{
+                            Spacer()
+                            Button {
+                                rotate.toggle()
+                                askForSkip.toggle()
+                            } label: {
+                                Text("不想打卡?")
+                            }
+                            .rotationEffect(.degrees(rotate ? 360 : 0))
+                            .animation(.spring(), value: rotate)
+                            .buttonStyle(.bordered)
+                            .tint(.indigo)
+                            .padding(.trailing,10)
+                        }
+                    }
+                }
                 Button {
                     if isOwner {
                         jumpToSignInFlagPage = true
@@ -85,6 +105,18 @@ struct FlagInfoPage: View {
             .navigationDestination(isPresented: $jumpToSignInFlagPage) {
                 SubmitSignInPage(flagId: flagInfo.id,signInTime: Int64(flagInfo.signUpInfo.count + 1))
             }
+            .onAppear{
+                Task {
+                    do {
+                        while true {
+                            rotate.toggle()
+                            try await Task.sleep(nanoseconds: UInt64(3 * S))
+                        }
+                    } catch {
+                        print(error)
+                    }
+                }
+            }
             .alert(isPresented: $alertSiege) {
                 Alert(title: Text("围观分钱"), message: Text(ConfirmSiegeDesctiption)
                       , primaryButton: .default(Text("支付10金币")){
@@ -94,6 +126,9 @@ struct FlagInfoPage: View {
                         self.showResult = false
                     }
                 },secondaryButton: .destructive(Text("放弃资格")))
+            }
+            .alert(isPresented: $askForSkip) {
+                Alert(title: Text("您目前有 100 张🎭，您是否使用一张来跳过今天的打卡？"), primaryButton: .default(Text("不，我不是小丑(不使用)")), secondaryButton: .default(Text("是的 我就是小丑(使用)")))
             }
             if showResult {
                 RoundedRectangle(cornerRadius: 16)

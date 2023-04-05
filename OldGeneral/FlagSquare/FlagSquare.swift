@@ -108,7 +108,7 @@ struct FlagSquare: View {
         isFetching = true
         defer {
             isFetching = false
-            lastSignInId = signInSquareStore.last!.signinID
+            lastSignInId = signInSquareStore.last?.signinID ?? ""
         }
         let fetchedData = fetchFlagSquareList(0)
         

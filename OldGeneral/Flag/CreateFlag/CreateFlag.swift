@@ -89,7 +89,7 @@ struct CreateFlagView: View {
                         Text("天")
                     }
                     HStack{
-                        Text("你将获得 \(days / 7) 副面具🎭, 并获得 \(days >= 30 ? 1 : 0) 个备用戏台🏬.")
+                        Text("你将获得 \(GetMaskNumByDay(days)) 副面具🎭, 并获得 \(GetResurrectNumByDay(days)) 个备用戏台🏬.")
                         Spacer()
                         Image(systemName: "questionmark.circle.fill")
                             .onTapGesture {

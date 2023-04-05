@@ -44,3 +44,21 @@ func signInFlag(_ info: Cdr_SignInInfo) -> Bool {
     }
     return false
 }
+
+func SkipFlag(_ flagId: String) -> Bool {
+    let request = Flags_AskForSkipRequest.with { my in
+        my.requestID = generateUUID()
+        my.requestTime = getTimeStamp()
+        my.userID = userId
+        my.flagID = flagId
+    }
+    
+    do {
+        let call = try getAPIClient().askForSkip(request,callOptions: getOption())
+        _ = try call.response.wait()
+        return true
+    } catch {
+        print("error to skip the flag")
+    }
+    return false
+}

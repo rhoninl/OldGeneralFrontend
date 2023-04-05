@@ -24,6 +24,7 @@ struct FlagInfoPage: View {
     @State private var errMsg: String = ""
     @State private var rotate: Bool = true
     @State private var askForSkip: Bool = false
+    @State private var showHoliday: Bool = false
     
     var body: some View {
         ZStack {
@@ -56,21 +57,32 @@ struct FlagInfoPage: View {
                     }
                     .padding(.bottom,4)
                     Divider()
+                    HStack{
+                        Spacer()
+                        Text("\(showHoliday ? "◉" : "○") 显示假期")
+                            .padding([.trailing,.top],10)
+                            .font(.custom("", size: 15))
+                            .onTapGesture {
+                                showHoliday.toggle()
+                            }
+                    }
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
                         ForEach(flagInfo.signUpInfo, id: \.self) { index in
-                            NavigationLink {
-                                SignInPage(signInId: index.id,parentPage: "flagInfo")
-                            } label: {
-                                FlagCardItem(info: index,totalNum: flagInfo.totalTime)
+                            if showHoliday || index.isSkip == 0 {
+                                NavigationLink {
+                                    SignInPage(signInId: index.id,parentPage: "flagInfo")
+                                } label: {
+                                    FlagCardItem(info: index,totalNum: flagInfo.totalTime)
+                                }
+                                .buttonStyle(.plain)
                             }
-                            .buttonStyle(.plain)
                         }
                     }
-                    .padding(.all,30)
+                    .padding([.leading,.bottom,.trailing],30)
                     .frame(maxHeight: .infinity)
                 }
                 .overlay(alignment: .bottomTrailing) {
-                    if isOwner {
+                    if isOwner && flagInfo.totalMaskNum > flagInfo.usedMaskNum {
                         HStack{
                             Spacer()
                             Button {
@@ -128,7 +140,13 @@ struct FlagInfoPage: View {
                 },secondaryButton: .destructive(Text("放弃资格")))
             }
             .alert(isPresented: $askForSkip) {
-                Alert(title: Text("您目前有 100 张🎭，您是否使用一张来跳过今天的打卡？"), primaryButton: .default(Text("不，我不是小丑(不使用)")), secondaryButton: .default(Text("是的 我就是小丑(使用)")))
+                Alert(title: Text("您目前有 \(flagInfo.totalMaskNum - flagInfo.usedMaskNum) 张🎭，您是否使用一张来跳过今天的打卡？"), primaryButton: .default(Text("不，我不是小丑(不使用)")), secondaryButton: .default(Text("是的 我就是小丑(使用)"),action: {
+                    guard SkipFlag(flagInfo.id) else {
+                        print("failed to skip flag")
+                        return
+                    }
+                    presentationMode.wrappedValue.dismiss()
+                }))
             }
             if showResult {
                 RoundedRectangle(cornerRadius: 16)

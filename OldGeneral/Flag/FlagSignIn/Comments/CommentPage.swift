@@ -19,26 +19,21 @@ struct CommentPage: View {
     @EnvironmentObject var userInfo: userInfoShared
     var body: some View {
         VStack{
-            ScrollView{
-                LazyVGrid(columns: [GridItem(.flexible())],alignment: .leading) {
-                    ForEach(commentList, id: \.self) { index in
-                        Commentitem(comment: index)
-                            .onAppear{
-                                if index == commentList.last &&
-                                    hasMore &&
-                                    !isFetching {
-                                        Task{
-                                            await fetchComment()
-                                        }
+            List {
+                ForEach(commentList, id: \.id) { index in
+                    Commentitem(comment: index)
+                        .onAppear{
+                            if index == commentList.last &&
+                                !isFetching {
+                                    Task{
+                                        await fetchComment()
                                     }
-                            }
-                        if index != commentList.last {
-                            Divider()
+                                }
                         }
-                    }
                 }
-                .padding(.top,5)
             }
+            .listStyle(.plain)
+            .padding(.top,5)
             .onTapGesture {
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 isCommenting = false
@@ -82,6 +77,11 @@ struct CommentPage: View {
         if ispreview {
             return
         }
+        guard hasMore else {
+            print("dont have any more")
+            return
+        }
+        
         isFetching = true
         defer {isFetching = false}
         

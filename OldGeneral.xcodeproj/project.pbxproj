@@ -162,6 +162,7 @@
 		71DC818629B34D9600572FAD /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 71DC818529B34D9600572FAD /* GRPC */; };
 		71DC818829B34D9600572FAD /* protoc-gen-grpc-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 71DC818729B34D9600572FAD /* protoc-gen-grpc-swift */; };
 		71F16DA129A797C6009F602F /* MyFlagItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F16DA029A797C6009F602F /* MyFlagItem.swift */; };
+		71FA296629DCFCDD00911553 /* props.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA296529DCFCDD00911553 /* props.swift */; };
 		BA25FF53C8C36D57C95880AB /* Pods_OldGeneral_OldGeneralUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFF5CB5BFF17400C1768C00 /* Pods_OldGeneral_OldGeneralUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -339,6 +340,7 @@
 		71D0F80D29D1D82200ED4C16 /* api_grpc.pb.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = api_grpc.pb.go; sourceTree = "<group>"; };
 		71D0F83529D1E00600ED4C16 /* vip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vip.swift; sourceTree = "<group>"; };
 		71F16DA029A797C6009F602F /* MyFlagItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFlagItem.swift; sourceTree = "<group>"; };
+		71FA296529DCFCDD00911553 /* props.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = props.swift; sourceTree = "<group>"; };
 		7B2B7126118C106ED3AB4DC4 /* Pods-OldGeneralTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OldGeneralTests.release.xcconfig"; path = "Target Support Files/Pods-OldGeneralTests/Pods-OldGeneralTests.release.xcconfig"; sourceTree = "<group>"; };
 		CFE81309D67EFFA8037328BD /* Pods-OldGeneral-OldGeneralUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OldGeneral-OldGeneralUITests.release.xcconfig"; path = "Target Support Files/Pods-OldGeneral-OldGeneralUITests/Pods-OldGeneral-OldGeneralUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DAC9C328DF9DC48133DB2B0B /* Pods-OldGeneral.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OldGeneral.debug.xcconfig"; path = "Target Support Files/Pods-OldGeneral/Pods-OldGeneral.debug.xcconfig"; sourceTree = "<group>"; };
@@ -941,6 +943,14 @@
 			path = vip;
 			sourceTree = "<group>";
 		};
+		71FA296429DCFCCF00911553 /* props */ = {
+			isa = PBXGroup;
+			children = (
+				71FA296529DCFCDD00911553 /* props.swift */,
+			);
+			path = props;
+			sourceTree = "<group>";
+		};
 		71FB60422944B5B2004079E2 /* VIews */ = {
 			isa = PBXGroup;
 			children = (
@@ -962,6 +972,7 @@
 		71FB60432944B5C0004079E2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				71FA296429DCFCCF00911553 /* props */,
 				7146D82029D9CD35009C049E /* comment */,
 				71D0F83429D1DFFC00ED4C16 /* vip */,
 				71B305A529D042BC00B31785 /* wallet */,
@@ -1318,6 +1329,7 @@
 				71737176299F7ACA009DF509 /* PayForFlag.swift in Sources */,
 				71C8269529ACD90D0084885B /* FlowDetailsPage.swift in Sources */,
 				71B305AA29D0901800B31785 /* waterflow.swift in Sources */,
+				71FA296629DCFCDD00911553 /* props.swift in Sources */,
 				71C24AC529C7273D003A4057 /* iam.grpc.swift in Sources */,
 				71D0F82A29D1D82200ED4C16 /* wallet.grpc.swift in Sources */,
 				71A5E50429A7A2830080124E /* MyFlags.swift in Sources */,

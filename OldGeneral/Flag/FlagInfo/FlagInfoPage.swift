@@ -11,11 +11,15 @@ struct FlagInfoPage: View {
     init (_ info: Cdr_FlagDetailInfo) {
         flagInfo = info
         isOwner = info.userID == userId
+        if isOwner {
+            needSignInToday = CheckFlagNeedSigninToday(info)
+        }
     }
     private var flagInfo: Cdr_FlagDetailInfo
     private var isOwner: Bool = false
     @Environment(\.presentationMode) var presentationMode
     private var usericon: Image = Image(systemName: "square.and.arrow.up.fill")
+    private var needSignInToday = true
     
     
     @State private var jumpToSignInFlagPage:Bool = false
@@ -60,7 +64,7 @@ struct FlagInfoPage: View {
                     HStack{
                         Spacer()
                         Text("\(showHoliday ? "◉" : "○") 显示假期")
-                            .padding([.trailing,.top],10)
+                            .padding(10)
                             .font(.custom("", size: 15))
                             .onTapGesture {
                                 showHoliday.toggle()
@@ -106,13 +110,14 @@ struct FlagInfoPage: View {
                         alertSiege = true
                     }
                 } label: {
-                    Text(isOwner ? "打卡" : "围观分钱")
+                    Text(isOwner ? needSignInToday ? "打卡" : "今日不可打卡" : "围观分钱")
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.primary)
                 }
                 .buttonStyle(.borderedProminent)
                 .padding()
                 .tint(.yellow.opacity(0.8))
+                .disabled(isOwner && !needSignInToday)
             }
             .navigationDestination(isPresented: $jumpToSignInFlagPage) {
                 SubmitSignInPage(flagId: flagInfo.id,signInTime: Int64(flagInfo.signUpInfo.count + 1))

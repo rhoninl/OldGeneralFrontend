@@ -18,6 +18,7 @@ func CreateFlag(data: Cdr_FlagBasicInfo) -> Bool {
     do {
         let call = try getAPIClient().createFlag(request,callOptions: getOption())
         _ = try call.response.wait()
+        needRefreshMyFlag = true
         return true
     } catch {
         print("create flag failed!, error: \(error)")
@@ -38,6 +39,7 @@ func signInFlag(_ info: Cdr_SignInInfo) -> Bool {
     do {
         let call = try getAPIClient().signInFlag(request,callOptions: getOption())
         _ = try call.response.wait()
+        needRefreshMyFlag = true
         return true
     } catch {
         print("signin flag failed!, error: \(error)")
@@ -56,9 +58,24 @@ func SkipFlag(_ flagId: String) -> Bool {
     do {
         let call = try getAPIClient().askForSkip(request,callOptions: getOption())
         _ = try call.response.wait()
+        needRefreshMyFlag = true
         return true
     } catch {
         print("error to skip the flag")
     }
     return false
+}
+
+func CheckFlagNeedSigninToday(_ info: Cdr_FlagDetailInfo) -> Bool {
+    let calendar = Calendar.current
+
+    let startTime = Date(timeIntervalSince1970: Double(info.createdAt) / Double(MS))
+    let currentTime = Date()
+
+    let components = calendar.dateComponents([.day], from: startTime, to: currentTime)
+    let days = components.day!
+
+    print(days)
+    print(info.currentTime)
+    return days == info.currentTime
 }

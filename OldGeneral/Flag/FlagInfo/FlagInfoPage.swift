@@ -67,9 +67,10 @@ struct FlagInfoPage: View {
                             showHoliday.toggle()
                         } label: {
                             Text("\(showHoliday ? "◉" : "○") 显示假期")
+                                .padding(10)
                                 .font(.custom("", size: 15))
                                 .foregroundColor(.primary)
-                        }.padding(10)
+                        }
                     }
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
                         ForEach(flagInfo.signUpInfo, id: \.self) { index in

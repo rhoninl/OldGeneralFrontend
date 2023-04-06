@@ -88,7 +88,7 @@ struct FlagInfoPage: View {
                     .frame(maxHeight: .infinity)
                 }
                 .overlay(alignment: .bottomTrailing) {
-                    if isOwner && flagInfo.totalMaskNum > flagInfo.usedMaskNum {
+                    if isOwner && needSignInToday && flagInfo.totalMaskNum > flagInfo.usedMaskNum {
                         HStack{
                             Spacer()
                             Button {

@@ -63,12 +63,13 @@ struct FlagInfoPage: View {
                     Divider()
                     HStack{
                         Spacer()
-                        Text("\(showHoliday ? "◉" : "○") 显示假期")
-                            .padding(10)
-                            .font(.custom("", size: 15))
-                            .onTapGesture {
-                                showHoliday.toggle()
-                            }
+                        Button {
+                            showHoliday.toggle()
+                        } label: {
+                            Text("\(showHoliday ? "◉" : "○") 显示假期")
+                                .font(.custom("", size: 15))
+                                .foregroundColor(.primary)
+                        }.padding(10)
                     }
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
                         ForEach(flagInfo.signUpInfo, id: \.self) { index in

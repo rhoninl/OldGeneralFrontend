@@ -26,9 +26,8 @@ struct FlagSquare: View {
                                     SignInPage(signInId: index.signinID)
                                 } label: {
                                     FlagSquareItem(info: index)
-                                        .scaledToFit()
                                 }
-                                .buttonStyle(.plain)
+                                .buttonStyle(.borderless)
                                 .onAppear{
                                     if !isFetching &&
                                         hasAnyMore &&

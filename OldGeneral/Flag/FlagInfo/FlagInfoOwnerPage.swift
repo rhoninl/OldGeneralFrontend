@@ -49,7 +49,7 @@ struct FlagInfoOwnerPage: View {
             .tint(Color("YellowCardColor"))
             .padding()
             .disabled(!needSignInToday)
-            .background(.white)
+            .background(Color("white"))
         }
         .navigationDestination(isPresented: $jumpToSignInFlagPage) {
             SubmitSignInPage(flagId: flagInfo.id,signInTime: Int64(flagInfo.signUpInfo.count + 1))

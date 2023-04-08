@@ -79,4 +79,3 @@ func CheckFlagNeedSigninToday(_ info: Cdr_FlagDetailInfo) -> Bool {
     print(info.currentTime)
     return days == info.currentTime
 }
-

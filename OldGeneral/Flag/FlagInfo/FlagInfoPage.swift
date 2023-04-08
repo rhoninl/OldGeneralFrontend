@@ -11,9 +11,10 @@ struct FlagInfoPage: View {
     init (_ info: Cdr_FlagDetailInfo) {
         flagInfo = info
         isOwner = info.userID == userId
-        if isOwner {
-            needSignInToday = CheckFlagNeedSigninToday(info)
-        }
+//        if isOwner {
+//            needSignInToday = CheckFlagNeedSigninToday(info)
+//            needResurrect = flagInfo.status == "resurrect" 
+//        }
     }
     private var flagInfo: Cdr_FlagDetailInfo
     private var isOwner: Bool = false
@@ -22,14 +23,12 @@ struct FlagInfoPage: View {
     private var needSignInToday = true
     
     
-    @State private var jumpToSignInFlagPage:Bool = false
     @State private var alertSiege: Bool = false
     @State private var showResult: Bool = false
     @State private var errMsg: String = ""
-    @State private var rotate: Bool = true
-    @State private var askForSkip: Bool = false
     @State private var showHoliday: Bool = false
-    
+    @State private var needResurrect: Bool = false
+
     var body: some View {
         ZStack {
             VStack{
@@ -87,100 +86,15 @@ struct FlagInfoPage: View {
                     .padding([.leading,.bottom,.trailing],30)
                     .frame(maxHeight: .infinity)
                 }
-                .overlay(alignment: .bottomTrailing) {
-                    if isOwner && needSignInToday && flagInfo.totalMaskNum > flagInfo.usedMaskNum {
-                        HStack{
-                            Spacer()
-                            Button {
-                                rotate.toggle()
-                                askForSkip.toggle()
-                            } label: {
-                                Text("不想打卡?")
-                            }
-                            .rotationEffect(.degrees(rotate ? 360 : 0))
-                            .animation(.spring(), value: rotate)
-                            .buttonStyle(.bordered)
-                            .tint(.indigo)
-                            .padding(.trailing,10)
-                        }
-                    }
-                }
-                Button {
+                .overlay(alignment: .bottom) {
                     if isOwner {
-                        jumpToSignInFlagPage = true
+                        FlagInfoOwnerPage(info: flagInfo)
                     } else {
-                        alertSiege = true
-                    }
-                } label: {
-                    Text(isOwner ? needSignInToday ? "打卡" : "今日不可打卡" : "围观分钱")
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.primary)
-                }
-                .buttonStyle(.borderedProminent)
-                .padding()
-                .tint(.yellow.opacity(0.8))
-                .disabled(isOwner && !needSignInToday)
-            }
-            .navigationDestination(isPresented: $jumpToSignInFlagPage) {
-                SubmitSignInPage(flagId: flagInfo.id,signInTime: Int64(flagInfo.signUpInfo.count + 1))
-            }
-            .onAppear{
-                Task {
-                    do {
-                        while true {
-                            rotate.toggle()
-                            try await Task.sleep(nanoseconds: UInt64(3 * S))
-                        }
-                    } catch {
-                        print(error)
+                        FlagInfoOthersPage(info: flagInfo)
                     }
                 }
             }
-            .alert(isPresented: $alertSiege) {
-                Alert(title: Text("围观分钱"), message: Text(ConfirmSiegeDesctiption)
-                      , primaryButton: .default(Text("支付10金币")){
-                    TrytoSiege()
-                    showResult = true
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                        self.showResult = false
-                    }
-                },secondaryButton: .destructive(Text("放弃资格")))
-            }
-            .alert(isPresented: $askForSkip) {
-                Alert(title: Text("您目前有 \(flagInfo.totalMaskNum - flagInfo.usedMaskNum) 张🎭，您是否使用一张来跳过今天的打卡？"), primaryButton: .default(Text("不，我不是小丑(不使用)")), secondaryButton: .default(Text("是的 我就是小丑(使用)"),action: {
-                    guard SkipFlag(flagInfo.id) else {
-                        print("failed to skip flag")
-                        return
-                    }
-                    presentationMode.wrappedValue.dismiss()
-                }))
-            }
-            if showResult {
-                RoundedRectangle(cornerRadius: 16)
-                    .foregroundColor(Color("AlertCardColor"))
-                    .frame(width: 250, height: 250)
-                    .overlay(
-                        VStack(spacing: 20) {
-                            Text(errMsg == "" ? "🎉": "×")
-                                .font(.custom("", size: 100))
-                            Text(errMsg == "" ? "围观成功": errMsg)
-                                .font(.title3)
-                        }
-                    )
-            }
         }
-    }
-    func TrytoSiege() {
-        guard getCurrentMoney() >= 10 else {
-            errMsg = "余额不足，请先充值"
-            return
-        }
-        guard SiegeFlag(flagInfo.id) else {
-            errMsg = "围观失败"
-            return
-        }
-        
-        errMsg = ""
     }
 }
 
@@ -197,7 +111,7 @@ struct FlagInfoPage_Previews: PreviewProvider {
             my.status = "进行中"
             my.starNum = 33
             my.userName = "username"
-            my.userID = "123"
+//            my.userID = "123"
             my.userAvatar = "https://as1.ftcdn.net/v2/jpg/03/03/97/00/1000_F_303970065_Yi0UpuVdTb4uJiEtRdF8blJLwcT4Qd4p.jpg"
             my.signUpInfo = [signinInfo]
         }

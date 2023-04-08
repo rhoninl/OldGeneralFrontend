@@ -44,7 +44,7 @@ struct SubmitSignInPage: View {
                         .overlay(alignment: .topTrailing) {
                             Text(" × ")
                                 .font(.title2)
-                                .background(.white)
+                                .background(Color("white"))
                                 .onTapGesture {
                                     selectedImage = nil
                                 }
@@ -69,16 +69,19 @@ struct SubmitSignInPage: View {
                 .frame(width: 200,height: 200)
                 Spacer()
                 Button{
+                    defer { alert = true}
                     signInInfo.id = generateUUID()
                     signInInfo.flagID = flagId
                     signInInfo.content = signInMessag
                     signInInfo.currentTime = signInTime
                     errorMessage = uploadImage()
+                    guard errorMessage == nil else {
+                        return
+                    }
                     guard signInFlag(signInInfo) else {
                         print("error to sign in")
                         return
                     }
-                    alert = true
                 } label: {
                     Text("打卡")
                         .padding(.all,1)

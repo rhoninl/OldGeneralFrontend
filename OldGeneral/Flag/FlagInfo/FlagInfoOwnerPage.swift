@@ -19,6 +19,7 @@ struct FlagInfoOwnerPage: View {
     @State private var askForSkip: Bool = false
     @State private var rotate: Bool = false
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var notice: messageNotice
     
     var body: some View {
         VStack {
@@ -26,8 +27,8 @@ struct FlagInfoOwnerPage: View {
                 HStack{
                     Spacer()
                     Button {
-                        rotate.toggle()
                         askForSkip.toggle()
+                        rotate.toggle()
                     } label: {
                         Text("不想打卡?")
                     }
@@ -36,6 +37,16 @@ struct FlagInfoOwnerPage: View {
                     .buttonStyle(.borderedProminent)
                     .tint(.indigo.opacity(0.7))
                     .padding(.trailing,10)
+                    .alert(isPresented: $askForSkip) {
+                        Alert(title: Text("您目前有 \(flagInfo.totalMaskNum - flagInfo.usedMaskNum) 张🎭，您是否使用一张来跳过今天的打卡？"), primaryButton: .default(Text("不，我不是小丑(不使用)")),
+                            secondaryButton: .default(Text("是的 我就是小丑(使用)"),action: {
+                            guard SkipFlag(flagInfo.id) else {
+                                print("failed to skip flag")
+                                return
+                            }
+                            presentationMode.wrappedValue.dismiss()
+                        }))
+                    }
                 }
             }
             Button {
@@ -50,28 +61,27 @@ struct FlagInfoOwnerPage: View {
             .padding()
             .disabled(!needSignInToday)
             .background(Color("white"))
+            .alert(isPresented: $needResurrect) {
+                Alert(title: Text(ResurrectFlagDescription), primaryButton: .default(Text("确认复活"),action: {
+                    guard ResurrectFlag(flagInfo.id) else {
+                        notice.ShowMessage(message: "复活失败", emoji: "😭")
+                        return
+                    }
+                    notice.ShowMessage(message: "复活成功", emoji: "😇")
+                }), secondaryButton: .default(Text("放弃挑战")))
+            }
         }
         .navigationDestination(isPresented: $jumpToSignInFlagPage) {
             SubmitSignInPage(flagId: flagInfo.id,signInTime: Int64(flagInfo.signUpInfo.count + 1))
-        }
-        .alert(isPresented: $askForSkip) {
-            Alert(title: Text("您目前有 \(flagInfo.totalMaskNum - flagInfo.usedMaskNum) 张🎭，您是否使用一张来跳过今天的打卡？"), primaryButton: .default(Text("不，我不是小丑(不使用)")),
-                secondaryButton: .default(Text("是的 我就是小丑(使用)"),action: {
-                guard SkipFlag(flagInfo.id) else {
-                    print("failed to skip flag")
-                    return
-                }
-                presentationMode.wrappedValue.dismiss()
-            }))
-        }
-        .alert(isPresented: $needResurrect) {
-            Alert(title: Text(ResurrectFlagDescription), primaryButton: .default(Text("确认复活")), secondaryButton: .default(Text("放弃挑战")))
         }
         .onAppear{
             Task {
                 do {
                     needSignInToday = CheckFlagNeedSigninToday(flagInfo)
-                    needResurrect = flagInfo.status == "resurrect"
+                    needResurrect =
+                        flagInfo.status == "resurrect" &&
+                        flagInfo.usedResurrectNum < flagInfo.totalResurrectNum
+                        
                     while true {
                         rotate.toggle()
                         try await Task.sleep(nanoseconds: UInt64(3 * S))

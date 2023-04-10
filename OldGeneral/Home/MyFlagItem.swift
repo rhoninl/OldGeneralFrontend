@@ -60,6 +60,8 @@ func getColorByStatus(_ status: String) -> Color {
         return .red
     case "running":
         return .green
+    case "resurrect":
+        return .yellow
     default:
         return .primary
     }

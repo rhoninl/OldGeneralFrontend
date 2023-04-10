@@ -11,16 +11,11 @@ struct FlagInfoPage: View {
     init (_ info: Cdr_FlagDetailInfo) {
         flagInfo = info
         isOwner = info.userID == userId
-//        if isOwner {
-//            needSignInToday = CheckFlagNeedSigninToday(info)
-//            needResurrect = flagInfo.status == "resurrect" 
-//        }
     }
     private var flagInfo: Cdr_FlagDetailInfo
     private var isOwner: Bool = false
     @Environment(\.presentationMode) var presentationMode
     private var usericon: Image = Image(systemName: "square.and.arrow.up.fill")
-    private var needSignInToday = true
     
     
     @State private var alertSiege: Bool = false
@@ -111,7 +106,6 @@ struct FlagInfoPage_Previews: PreviewProvider {
             my.status = "进行中"
             my.starNum = 33
             my.userName = "username"
-//            my.userID = "123"
             my.userAvatar = "https://as1.ftcdn.net/v2/jpg/03/03/97/00/1000_F_303970065_Yi0UpuVdTb4uJiEtRdF8blJLwcT4Qd4p.jpg"
             my.signUpInfo = [signinInfo]
         }

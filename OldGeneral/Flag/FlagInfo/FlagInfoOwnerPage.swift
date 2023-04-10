@@ -68,7 +68,13 @@ struct FlagInfoOwnerPage: View {
                         return
                     }
                     notice.ShowMessage(message: "复活成功", emoji: "😇")
-                }), secondaryButton: .default(Text("放弃挑战")))
+                }), secondaryButton: .default(Text("放弃挑战"),action: {
+                    guard WaiverResurrect(flagInfo.id) else {
+                        notice.ShowMessage(message: "放弃失败，请联系管理员", emoji: "🙁")
+                        return
+                    }
+                    notice.ShowMessage(message: "成功放弃", emoji: "😅")
+                }))
             }
         }
         .navigationDestination(isPresented: $jumpToSignInFlagPage) {

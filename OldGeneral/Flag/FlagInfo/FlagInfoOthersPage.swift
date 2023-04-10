@@ -22,12 +22,13 @@ struct FlagInfoOthersPage: View {
             Button {
                 alertSiege = true
             } label: {
-                Text("围观分钱")
+                Text(canSiege ? "围观分钱" : "已围观")
                     .frame(maxWidth: .infinity)
                     .foregroundColor(.primary)
             }
             .buttonStyle(.borderedProminent)
             .tint(Color("YellowCardColor"))
+            .disabled(!canSiege)
             .padding()
         }
         .alert(isPresented: $alertSiege) {
@@ -39,6 +40,10 @@ struct FlagInfoOthersPage: View {
                 }
                 notice.ShowMessage(message: "围观成功", emoji: "🎉")
             },secondaryButton: .destructive(Text("放弃资格")))
+        }
+        .onAppear {
+            canSiege = flagInfo.status == "running" &&
+                    !CheckFlagisSieged(flagInfo.id)
         }
     }
     func TrytoSiege() {

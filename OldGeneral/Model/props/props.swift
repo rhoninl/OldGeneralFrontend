@@ -34,3 +34,22 @@ func ResurrectFlag(_ flagId: String) -> Bool {
     }
     return false
 }
+
+func WaiverResurrect(_ flagId: String) -> Bool {
+    let request = Flags_WaiverResurrectRequest.with{ my in
+        my.requestID = generateUUID()
+        my.requestTime = getTimeStamp()
+        my.flagID = flagId
+    }
+    
+    do {
+        let call = try getAPIClient().waiverResurrect(request,callOptions: getOption())
+        _ = try call.response.wait()
+        needRefreshMyFlag = true
+        return true
+    } catch {
+        print("error to waiver Resurrect \(error)")
+    }
+    
+    return false
+}

@@ -72,7 +72,6 @@
 		71A5E52C29A90F5E0080124E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5E52B29A90F5E0080124E /* Message.swift */; };
 		71B305A329D0321B00B31785 /* rpc_wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B305A229D0321B00B31785 /* rpc_wallet.swift */; };
 		71B305A729D042C900B31785 /* wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B305A629D042C900B31785 /* wallet.swift */; };
-		71B305AA29D0901800B31785 /* waterflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B305A929D0901800B31785 /* waterflow.swift */; };
 		71BEA7B829AA2D9B00C8C3DE /* http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7B729AA2D9B00C8C3DE /* http.swift */; };
 		71BEA7BA29AA49FD00C8C3DE /* token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7B929AA49FD00C8C3DE /* token.swift */; };
 		71BEA7BD29AA5E8B00C8C3DE /* WalletPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEA7BC29AA5E8B00C8C3DE /* WalletPage.swift */; };
@@ -255,7 +254,6 @@
 		71A5E52B29A90F5E0080124E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		71B305A229D0321B00B31785 /* rpc_wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpc_wallet.swift; sourceTree = "<group>"; };
 		71B305A629D042C900B31785 /* wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wallet.swift; sourceTree = "<group>"; };
-		71B305A929D0901800B31785 /* waterflow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waterflow.swift; sourceTree = "<group>"; };
 		71BEA7B729AA2D9B00C8C3DE /* http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = http.swift; sourceTree = "<group>"; };
 		71BEA7B929AA49FD00C8C3DE /* token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = token.swift; sourceTree = "<group>"; };
 		71BEA7BC29AA5E8B00C8C3DE /* WalletPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletPage.swift; sourceTree = "<group>"; };
@@ -642,7 +640,6 @@
 			isa = PBXGroup;
 			children = (
 				71B305A629D042C900B31785 /* wallet.swift */,
-				71B305A929D0901800B31785 /* waterflow.swift */,
 			);
 			path = wallet;
 			sourceTree = "<group>";
@@ -1336,7 +1333,6 @@
 				71D0F81329D1D82200ED4C16 /* flags.pb.swift in Sources */,
 				71737176299F7ACA009DF509 /* PayForFlag.swift in Sources */,
 				71C8269529ACD90D0084885B /* FlowDetailsPage.swift in Sources */,
-				71B305AA29D0901800B31785 /* waterflow.swift in Sources */,
 				71FA296629DCFCDD00911553 /* props.swift in Sources */,
 				71C24AC529C7273D003A4057 /* iam.grpc.swift in Sources */,
 				71D0F82A29D1D82200ED4C16 /* wallet.grpc.swift in Sources */,

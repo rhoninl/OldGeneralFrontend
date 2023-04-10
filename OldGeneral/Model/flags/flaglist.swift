@@ -27,12 +27,12 @@ func fetchMyFlagList() -> [Cdr_FlagBasicInfo] {
     }
 }
 
-func fetchFlagSquareList(_ current_page: Int64) -> [Cdr_FlagSquareItemInfo] {
+func fetchFlagSquareList(_ lastSignInId: String) -> [Cdr_FlagSquareItemInfo] {
     let request = Flags_FetchFlagSquareRequest.with{ my in
         my.requestID = generateUUID()
         my.requestTime = getTimeStamp()
         my.pageSize = pagesize
-        my.page = current_page
+        my.lastSigninID = lastSignInId
     }
     
     do {

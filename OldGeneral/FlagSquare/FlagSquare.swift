@@ -46,6 +46,7 @@ struct FlagSquare: View {
                         Task {
                             try await Task.sleep(nanoseconds: UInt64(MS * 500))
                             signInSquareStore = []
+                            hasAnyMore = true
                             await initSquare()
                         }
                     }
@@ -92,7 +93,7 @@ struct FlagSquare: View {
             isFetching = false
             lastSignInId = signInSquareStore.last!.signinID
         }
-        let fetchedData = fetchFlagSquareList(currentPage)
+        let fetchedData = fetchFlagSquareList(signInSquareStore.last?.signinID ?? "")
         if  fetchedData.count < pagesize {
             hasAnyMore = false
         }
@@ -109,7 +110,8 @@ struct FlagSquare: View {
             isFetching = false
             lastSignInId = signInSquareStore.last?.signinID ?? ""
         }
-        let fetchedData = fetchFlagSquareList(0)
+        let fetchedData = fetchFlagSquareList(signInSquareStore.last?.signinID ?? ""
+        )
         
         if  fetchedData.count < pagesize {
             hasAnyMore = false

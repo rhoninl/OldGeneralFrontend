@@ -25,3 +25,22 @@ func SiegeFlag(_ flagId: String) -> Bool {
     }
     return false
 }
+
+func CheckFlagisSieged(_ flagId: String) -> Bool {
+    let request = Flags_CheckIsSiegeRequest.with{ my in
+        my.requestID = generateUUID()
+        my.requestTime = getTimeStamp()
+        my.userID = userId
+        my.flagID = flagId
+    }
+    
+    do {
+        let call = try getAPIClient().checkIsSiege(request,callOptions: getOption())
+        let response = try call.response.wait()
+        return response.isSiege
+    } catch {
+        print("error to check sieged \(error)")
+    }
+    
+    return false
+}

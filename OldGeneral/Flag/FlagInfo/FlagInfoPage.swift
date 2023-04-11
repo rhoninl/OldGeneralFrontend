@@ -15,7 +15,7 @@ struct FlagInfoPage: View {
     private var flagInfo: Cdr_FlagDetailInfo
     private var isOwner: Bool = false
     @Environment(\.presentationMode) var presentationMode
-    private var usericon: Image = Image(systemName: "square.and.arrow.up.fill")
+    private var usericon: Image = Image("avatar")
     
     
     @State private var alertSiege: Bool = false

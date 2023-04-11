@@ -14,10 +14,12 @@ struct FlagInfoOwnerPage: View {
     var flagInfo: Cdr_FlagDetailInfo
     
     @State private var needSignInToday: Bool = false
+    @State private var todayHasSignined:Bool = false
     @State private var needResurrect: Bool = false
     @State private var jumpToSignInFlagPage:Bool = false
     @State private var askForSkip: Bool = false
     @State private var rotate: Bool = false
+    @State private var signInText: String = "打卡"
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var notice: messageNotice
     
@@ -52,7 +54,7 @@ struct FlagInfoOwnerPage: View {
             Button {
                 jumpToSignInFlagPage = true
             } label: {
-                Text(needSignInToday ? "打卡" : "今日不可打卡" )
+                Text(signInText)
                     .frame(maxWidth: .infinity)
                     .foregroundColor(.primary)
             }
@@ -81,13 +83,13 @@ struct FlagInfoOwnerPage: View {
             SubmitSignInPage(flagId: flagInfo.id,signInTime: Int64(flagInfo.signUpInfo.count + 1))
         }
         .onAppear{
+            (needSignInToday,todayHasSignined) = CheckFlagNeedSigninToday(flagInfo)
+            needResurrect =
+                flagInfo.status == "resurrect" &&
+                flagInfo.usedResurrectNum < flagInfo.totalResurrectNum
+            signInText = updateSignInText()
             Task {
                 do {
-                    needSignInToday = CheckFlagNeedSigninToday(flagInfo)
-                    needResurrect =
-                        flagInfo.status == "resurrect" &&
-                        flagInfo.usedResurrectNum < flagInfo.totalResurrectNum
-                        
                     while true {
                         rotate.toggle()
                         try await Task.sleep(nanoseconds: UInt64(3 * S))
@@ -98,6 +100,26 @@ struct FlagInfoOwnerPage: View {
             }
         }
     }
+    func updateSignInText() -> String {
+        guard flagInfo.currentTime < flagInfo.totalTime else {
+            return "已挑战成功"
+        }
+        
+        guard flagInfo.status == "running" else {
+            return "当前状态不可打卡"
+        }
+        
+        guard !needSignInToday else {
+            return "打卡"
+        }
+        
+        guard !todayHasSignined else {
+            return "今日已打卡"
+        }
+        
+        return "系统异常，请联系管理员"
+    }
+
 }
 
 struct FlagInfoOwnerPage_Previews: PreviewProvider {

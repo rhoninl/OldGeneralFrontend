@@ -13,16 +13,16 @@ struct FlagInfoOthersPage: View {
     }
     @EnvironmentObject var notice: messageNotice
     @State private var flagInfo: Cdr_FlagDetailInfo
+    @State private var siegeText: String = "围观"
     @State private var canSiege: Bool = false
     @State private var alertSiege: Bool = false
     @State private var showResult: Bool = false
-    @State private var errMsg:String = ""
     var body: some View {
         VStack{
             Button {
                 alertSiege = true
             } label: {
-                Text(canSiege ? "围观分钱" : "已围观")
+                Text(siegeText)
                     .frame(maxWidth: .infinity)
                     .foregroundColor(.primary)
             }
@@ -31,36 +31,44 @@ struct FlagInfoOthersPage: View {
             .disabled(!canSiege)
             .padding()
         }
+        .background(Color("white"))
         .alert(isPresented: $alertSiege) {
             Alert(title: Text("围观分钱"), message: Text(ConfirmSiegeDesctiption)
                   , primaryButton: .default(Text("支付10金币")){
-                TrytoSiege()
-                guard errMsg == "" else {
+                
+                guard !trytoSiege() else {
                     return
                 }
                 notice.ShowMessage(message: "围观成功", emoji: "🎉")
             },secondaryButton: .destructive(Text("放弃资格")))
         }
         .onAppear {
-            canSiege = flagInfo.status == "running" &&
-                    !CheckFlagisSieged(flagInfo.id)
+            siegeText = updateSiegeText()
         }
     }
-    func TrytoSiege() {
+    func trytoSiege() -> Bool {
         guard getCurrentMoney() >= 10 else {
-            errMsg = "余额不足，请先充值"
-            print(errMsg)
-            notice.ShowMessage(message: errMsg, emoji: "😭")
-            return
+            notice.ShowMessage(message: "余额不足，请先充值", emoji: "😭")
+            return false
         }
         guard SiegeFlag(flagInfo.id) else {
-            errMsg = "围观失败"
-            print(errMsg)
-            notice.ShowMessage(message: errMsg, emoji: "😭")
-            return
+            notice.ShowMessage(message: "围观失败", emoji: "😭")
+            return false
         }
         
-        errMsg = ""
+        return true
+    }
+    func updateSiegeText() -> String {
+        guard flagInfo.status == "running" else {
+            return "当前状态不可围观"
+        }
+        
+        guard CheckFlagisSieged(flagInfo.id) else {
+            return "已围观"
+        }
+        
+        canSiege = true
+        return "围观分钱"
     }
 }
 

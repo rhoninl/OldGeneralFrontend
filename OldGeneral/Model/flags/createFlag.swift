@@ -66,7 +66,7 @@ func SkipFlag(_ flagId: String) -> Bool {
     return false
 }
 
-func CheckFlagNeedSigninToday(_ info: Cdr_FlagDetailInfo) -> Bool {
+func CheckFlagNeedSigninToday(_ info: Cdr_FlagDetailInfo) -> (Bool,Bool) {
     let calendar = Calendar.current
 
     let startTime = calendar.startOfDay(for: Date(timeIntervalSince1970: Double(info.createdAt) / Double(MS)))
@@ -77,5 +77,5 @@ func CheckFlagNeedSigninToday(_ info: Cdr_FlagDetailInfo) -> Bool {
 
     print(days)
     print(info.currentTime)
-    return days == info.currentTime
+    return (days == info.currentTime, info.currentTime == days + 1)
 }

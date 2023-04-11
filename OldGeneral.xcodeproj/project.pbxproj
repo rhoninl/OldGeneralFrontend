@@ -17,6 +17,7 @@
 		71039537298E67BB0035400F /* QAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71039536298E67BB0035400F /* QAButton.swift */; };
 		71039539298E68410035400F /* VIPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71039538298E68410035400F /* VIPButton.swift */; };
 		7103953C298F585F0035400F /* CreateFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7103953B298F585F0035400F /* CreateFlag.swift */; };
+		71074F5929E4F3DA00954469 /* flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71074F5829E4F3DA00954469 /* flags.swift */; };
 		7116F29429B8C18B0080DAE5 /* systemMessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116F29329B8C18B0080DAE5 /* systemMessageItem.swift */; };
 		7116F29729B8C8210080DAE5 /* frendMessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116F29629B8C8210080DAE5 /* frendMessageItem.swift */; };
 		7126105629B377DF00CBC493 /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7126105529B377DF00CBC493 /* api.swift */; };
@@ -199,6 +200,7 @@
 		71039536298E67BB0035400F /* QAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAButton.swift; sourceTree = "<group>"; };
 		71039538298E68410035400F /* VIPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPButton.swift; sourceTree = "<group>"; };
 		7103953B298F585F0035400F /* CreateFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlag.swift; sourceTree = "<group>"; };
+		71074F5829E4F3DA00954469 /* flags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flags.swift; sourceTree = "<group>"; };
 		7116F29329B8C18B0080DAE5 /* systemMessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = systemMessageItem.swift; sourceTree = "<group>"; };
 		7116F29629B8C8210080DAE5 /* frendMessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frendMessageItem.swift; sourceTree = "<group>"; };
 		7126105529B377DF00CBC493 /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
@@ -401,6 +403,7 @@
 				7102FF6A29BC872200B9DA35 /* flaglist.swift */,
 				716C7F4929BCC1A00066B9CF /* createFlag.swift */,
 				716A30FE29D95F7F00926EC6 /* siegeflag.swift */,
+				71074F5829E4F3DA00954469 /* flags.swift */,
 			);
 			path = flags;
 			sourceTree = "<group>";
@@ -1313,6 +1316,7 @@
 				71D0F81029D1D82200ED4C16 /* vip.pb.swift in Sources */,
 				71C24AB229C7273D003A4057 /* vip.proto in Sources */,
 				71A5A00B29B0F9C700A60D31 /* UploadSexPage.swift in Sources */,
+				71074F5929E4F3DA00954469 /* flags.swift in Sources */,
 				712968F129B4A81A00526A0C /* Settings.swift in Sources */,
 				71D0F82F29D1D82200ED4C16 /* api.pb.swift in Sources */,
 				7173001329B3218B00714912 /* FlagCardItem.swift in Sources */,

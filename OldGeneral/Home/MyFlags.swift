@@ -11,7 +11,7 @@ struct MyFlags: View {
     var data: [Cdr_FlagBasicInfo]
 
     @State private var jumpToFlagInfo: Bool = false
-    @State private var flagInfo: Cdr_FlagDetailInfo? = nil
+    @State private var flagInfo: Cdr_FlagDetailInfo = Cdr_FlagDetailInfo()
     var body: some View {
         VStack(alignment: .leading,spacing: 0){
             Text("我的Flag")
@@ -20,7 +20,7 @@ struct MyFlags: View {
             Divider()
             List(data, id: \.self) { index in
                 Button {
-                    flagInfo = getFlagInfo(index.id)
+                    flagInfo = getFlagInfo(index.id) ?? Cdr_FlagDetailInfo()
                     jumpToFlagInfo = true
                 } label: {
                     MyFlagItem(info: index)
@@ -30,9 +30,7 @@ struct MyFlags: View {
         }
         .listStyle(.plain)
         .navigationDestination(isPresented: $jumpToFlagInfo) {
-            if flagInfo != nil {
-                FlagInfoPage(flagInfo!)
-            }
+            FlagInfoPage(flagInfo: $flagInfo)
         }
     }
 }

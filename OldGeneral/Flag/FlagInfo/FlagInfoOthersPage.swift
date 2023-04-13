@@ -8,11 +8,8 @@
 import SwiftUI
 
 struct FlagInfoOthersPage: View {
-    init(info: Cdr_FlagDetailInfo) {
-        flagInfo = info
-    }
     @EnvironmentObject var notice: messageNotice
-    @State private var flagInfo: Cdr_FlagDetailInfo
+    @State var flagInfo: Cdr_FlagDetailInfo
     @State private var siegeText: String = "围观"
     @State private var canSiege: Bool = false
     @State private var alertSiege: Bool = false
@@ -74,7 +71,7 @@ struct FlagInfoOthersPage: View {
 
 struct FlagInfoOthersPage_Previews: PreviewProvider {
     static var previews: some View {
-        FlagInfoOthersPage(info: Cdr_FlagDetailInfo())
+        FlagInfoOthersPage(flagInfo: Cdr_FlagDetailInfo())
             .environmentObject(messageNotice())
     }
 }

@@ -16,6 +16,7 @@ struct SubmitSignInPage: View {
     @State private var errorMessage: String?
     @State private var alert: Bool = false
     @State var signInInfo: Cdr_SignInInfo = Cdr_SignInInfo()
+    @Binding var needFetch: Bool
     var flagId: String = "123"
     var signInTime: Int64 = 100
     @Environment(\.presentationMode) var presentationMode
@@ -109,6 +110,7 @@ struct SubmitSignInPage: View {
             Alert(title: Text("打卡\(errorMessage == nil ? "成功" : "失败" )"), message:  Text("\(errorMessage == nil ? "恭喜您打卡成功" : errorMessage!)")
                   , dismissButton: .default(Text("知道了"),action: {
                 if errorMessage == nil {
+                    needFetch = true
                     self.presentationMode.wrappedValue.dismiss()
                 }
             }))
@@ -140,6 +142,6 @@ struct SubmitSignInPage: View {
 
 struct SubmitSignInPage_Previews: PreviewProvider {
     static var previews: some View {
-        SubmitSignInPage()
+        SubmitSignInPage(needFetch: .constant(false))
     }
 }

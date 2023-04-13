@@ -8,21 +8,13 @@
 import SwiftUI
 
 struct FlagInfoPage: View {
-    init (_ info: Cdr_FlagDetailInfo) {
-        flagInfo = info
-        isOwner = info.userID == userId
-    }
-    private var flagInfo: Cdr_FlagDetailInfo
-    private var isOwner: Bool = false
+    @Binding public var flagInfo: Cdr_FlagDetailInfo
+    @State private var isOwner: Bool = false
     @Environment(\.presentationMode) var presentationMode
-    private var usericon: Image = Image("avatar")
-    
-    
-    @State private var alertSiege: Bool = false
-    @State private var showResult: Bool = false
     @State private var errMsg: String = ""
     @State private var showHoliday: Bool = false
     @State private var needResurrect: Bool = false
+    @State private var needFetch: Bool = false
 
     var body: some View {
         ZStack {
@@ -83,11 +75,18 @@ struct FlagInfoPage: View {
                 }
                 .overlay(alignment: .bottom) {
                     if isOwner {
-                        FlagInfoOwnerPage(info: flagInfo)
+                        FlagInfoOwnerPage(flagInfo: $flagInfo, needFetch: $needFetch)
                     } else {
-                        FlagInfoOthersPage(info: flagInfo)
+                        FlagInfoOthersPage(flagInfo: flagInfo)
                     }
                 }
+            }
+        }
+        .onAppear{
+            isOwner = flagInfo.userID == userId
+            if needFetch {
+                print("need fetch!")
+                flagInfo = getFlagInfo(flagInfo.id) ?? flagInfo
             }
         }
     }
@@ -109,6 +108,6 @@ struct FlagInfoPage_Previews: PreviewProvider {
             my.userAvatar = "https://as1.ftcdn.net/v2/jpg/03/03/97/00/1000_F_303970065_Yi0UpuVdTb4uJiEtRdF8blJLwcT4Qd4p.jpg"
             my.signUpInfo = [signinInfo]
         }
-        FlagInfoPage(info)
+        FlagInfoPage(flagInfo: .constant(info))
     }
 }

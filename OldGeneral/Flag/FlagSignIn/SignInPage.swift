@@ -51,7 +51,7 @@ struct SignInPage: View {
                 CommentPage(signInId: signInId)
             }
             .navigationDestination(isPresented: $jumpToFlagPage) {
-                FlagInfoPage(flagInfo)
+                FlagInfoPage(flagInfo: $flagInfo)
             }
             .onAppear {
                 if signInId != nil {

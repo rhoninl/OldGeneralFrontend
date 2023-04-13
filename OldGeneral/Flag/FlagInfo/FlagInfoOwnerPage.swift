@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct FlagInfoOwnerPage: View {
-    init(info: Cdr_FlagDetailInfo) {
-        flagInfo = info
-    }
-    var flagInfo: Cdr_FlagDetailInfo
+    @Binding var flagInfo: Cdr_FlagDetailInfo
+    @Binding var needFetch: Bool
     
     @State private var needSignInToday: Bool = false
     @State private var todayHasSignined:Bool = false
@@ -80,14 +78,14 @@ struct FlagInfoOwnerPage: View {
             }
         }
         .navigationDestination(isPresented: $jumpToSignInFlagPage) {
-            SubmitSignInPage(flagId: flagInfo.id,signInTime: Int64(flagInfo.signUpInfo.count + 1))
+            SubmitSignInPage(needFetch: $needFetch, flagId: flagInfo.id,signInTime: Int64(flagInfo.signUpInfo.count + 1))
         }
         .onAppear{
             (needSignInToday,todayHasSignined) = CheckFlagNeedSigninToday(flagInfo)
             needResurrect =
                 flagInfo.status == "resurrect" &&
                 flagInfo.usedResurrectNum < flagInfo.totalResurrectNum
-            signInText = updateSignInText()
+                signInText = updateSignInText()
             Task {
                 do {
                     while true {
@@ -131,6 +129,6 @@ struct FlagInfoOwnerPage_Previews: PreviewProvider {
             my.userAvatar = "https://as1.ftcdn.net/v2/jpg/03/03/97/00/1000_F_303970065_Yi0UpuVdTb4uJiEtRdF8blJLwcT4Qd4p.jpg"
             my.signUpInfo = []
         }
-        FlagInfoOwnerPage(info: info)
+        FlagInfoOwnerPage(flagInfo: .constant(info), needFetch: .constant(false))
     }
 }

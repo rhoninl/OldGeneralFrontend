@@ -77,7 +77,7 @@ struct FlagInfoPage: View {
                     if isOwner {
                         FlagInfoOwnerPage(flagInfo: $flagInfo, needFetch: $needFetch)
                     } else {
-                        FlagInfoOthersPage(flagInfo: flagInfo)
+                        FlagInfoOthersPage(flagInfo: flagInfo,needFetch: $needFetch)
                     }
                 }
             }

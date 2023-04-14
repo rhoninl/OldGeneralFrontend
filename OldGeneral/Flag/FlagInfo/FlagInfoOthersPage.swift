@@ -14,6 +14,7 @@ struct FlagInfoOthersPage: View {
     @State private var canSiege: Bool = false
     @State private var alertSiege: Bool = false
     @State private var showResult: Bool = false
+    @Binding var needFetch: Bool
     var body: some View {
         VStack{
             Button {
@@ -33,9 +34,11 @@ struct FlagInfoOthersPage: View {
             Alert(title: Text("围观分钱"), message: Text(ConfirmSiegeDesctiption)
                   , primaryButton: .default(Text("支付10金币")){
                 
-                guard !trytoSiege() else {
+                guard trytoSiege() else {
                     return
                 }
+                siegeText = updateSiegeText()
+                canSiege = false
                 notice.ShowMessage(message: "围观成功", emoji: "🎉")
             },secondaryButton: .destructive(Text("放弃资格")))
         }
@@ -60,7 +63,7 @@ struct FlagInfoOthersPage: View {
             return "当前状态不可围观"
         }
         
-        guard CheckFlagisSieged(flagInfo.id) else {
+        guard !CheckFlagisSieged(flagInfo.id) else {
             return "已围观"
         }
         
@@ -71,7 +74,7 @@ struct FlagInfoOthersPage: View {
 
 struct FlagInfoOthersPage_Previews: PreviewProvider {
     static var previews: some View {
-        FlagInfoOthersPage(flagInfo: Cdr_FlagDetailInfo())
+        FlagInfoOthersPage(flagInfo: Cdr_FlagDetailInfo(),needFetch: .constant(false))
             .environmentObject(messageNotice())
     }
 }

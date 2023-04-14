@@ -59,7 +59,7 @@ struct FlagInfoOwnerPage: View {
             .buttonStyle(.borderedProminent)
             .tint(Color("YellowCardColor"))
             .padding()
-            .disabled(!needSignInToday)
+            .disabled(flagInfo.status != "running" || !needSignInToday)
             .background(Color("white"))
             .alert(isPresented: $needResurrect) {
                 Alert(title: Text(ResurrectFlagDescription), primaryButton: .default(Text("确认复活"),action: {
